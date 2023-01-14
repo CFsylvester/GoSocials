@@ -1,0 +1,102 @@
+:root {
+    /* Colors */
+    --color-white: white; 
+    --color-black: black; 
+    /* Font */
+    --font-family: 'Open Sans', sans-serif;
+    --regular: 400;
+    --semibold: 600;
+    --bold: 700;
+    --extra-bold: 800; 
+}
+
+/* !important tag overides bootstrap base css */
+.jumbotron {
+    background-image: url(./assets/hero.jpg);
+    border-radius: 0px !important;
+    background-repeat: no-repeat;
+    height: 448px;
+    background-position: center;
+    background-size: cover;
+}
+
+@media (min-width: 768px) {  
+    .jumbotron {
+        height: 100vh; 
+    }
+}
+/* Bootstrap 5 introduces a new breakpoint to the grid system XXL. Below are the Bootstrap media queries used for the grid system breakpoints for you to add to your projects CSS file to customize things.
+
+Sections  show 
+What are the Bootstrap 5 Breakpoints?
+Bootstrap 5 grid tiers and media query breakpoints
+xs = Extra small <576px
+Max container width None (auto)
+
+sm = Small ≥576px
+Max container width 540px
+
+md = Medium ≥768px
+Max container width 720px
+
+lg = Large ≥992px
+Max container width 960px
+
+xl = Extra large ≥1200px
+Max container width 1140px
+
+xxl = Extra large ≥1400px
+Max container width 1320px
+
+Bootstrap 5 media queries code snippet */
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+*/
+ 
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Bootstrap 5 breakpoints
+*/
+ 
+/* 
+Extra small devices (portrait phones, less than 576px) 
+No media query since this is the default in Bootstrap because it is "mobile first"
+*/
+ 
+ 
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {  
+ 
+}
+ 
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+ 
+}
+ 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+ 
+}
+ 
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+    
+}
+ 
+/* Extra extra large devices (extra large desktops, 1400px and up) */
+@media (min-width: 1400px) {  
+    
+}
+ 
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Custom media queries
+*/
+ 
+/* Set width to make card deck cards 100% width */
+@media (max-width: 950px) { 
+ 
+}
