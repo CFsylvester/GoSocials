@@ -9,8 +9,28 @@
     --bold: 700;
     --extra-bold: 800; 
 }
-
 /* !important tag overides bootstrap base css */
+/* Base CSS */
+h1 {
+    font-family: var(--font-family) !important;
+    font-size: 3rem !important;
+    font-weight: 800 !important;
+    color: var(--color-white) !important;
+    letter-spacing: 1.2 !important;
+    margin: 0px;
+}
+
+.mobile {
+    display: block;
+}
+
+.columnFlex1{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content:flex-end; 
+}
+
+/* Index */
 .jumbotron {
     background-image: url(./assets/hero.jpg);
     border-radius: 0px !important;
@@ -18,13 +38,76 @@
     height: 448px;
     background-position: center;
     background-size: cover;
+    display: flex;
 }
 
+.jumbotron h1 {
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 335px;
+    margin: auto;
+    height: 270px;
+}
+  
+.header > div:first-child {
+    flex: 1 0 100%;
+}
+
+.lead {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: var(--color-white);
+    text-align: center;
+    margin: 35px 0;
+}
+
+hr {
+    width: 100%;
+    height: 3px;
+    margin: 0;
+    background-color: blue;
+}
+
+
 @media (min-width: 768px) {  
+    .header {
+        max-width: 545px; 
+        height: 170px;
+        margin: 0;
+        margin: 0;
+        position: absolute;
+        top: 15vh;
+        left: 12vw;
+    }
+
     .jumbotron {
         height: 100vh; 
     }
+
+    .jumbotron h1 {
+        text-align: left;
+    }
+
+    .mobile {
+        display: none !important; 
+    }
+
+    .lead {
+        text-align: left !important;
+        margin: 15px 0;
+    }
+
+    .columnFlex1 {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
 }
+
 /* Bootstrap 5 introduces a new breakpoint to the grid system XXL. Below are the Bootstrap media queries used for the grid system breakpoints for you to add to your projects CSS file to customize things.
 
 Sections  show 
