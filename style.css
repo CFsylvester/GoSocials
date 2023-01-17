@@ -100,19 +100,20 @@ p {
 
 .navbar-b {
     -webkit-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
-    background-color: transparent;
+    height: 100%;
+    min-height: 10vh;
+    transition: all 0.5s ease-in-out;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.5);
 }
 
-@supports (-webkit-backdrop-filter: blur(30px) saturate(160%) contrast(45%) brightness(140%)) or
-  (backdrop-filter: blur(30px) saturate(160%) contrast(45%) brightness(140%)) {
-  .navbar-b.navbar-reduce {
-    height: 100%;
+.transparent {
     transition: all 0.5s ease-in-out;
-    background-color: rgba(68, 67, 67, 0.2);
-    backdrop-filter: blur(20px) saturate(160%) contrast(45%) brightness(140%);
-    -webkit-backdrop-filter: blur(20px) saturate(160%) contrast(45%) brightness(140%);
-  }
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    height: 1vh;
+    background:linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
 }
 
 .navbar-reduce .navbar-nav {
@@ -120,9 +121,15 @@ p {
 }
 
 .navbar-nav {
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     justify-content: space-evenly;
+    align-items: flex-end;
+    margin: 0;
+}
+
+.navbar-reduce .navbar-nav {
+    padding-bottom: 0vh;
 }
 
 .navbar .show {
@@ -140,10 +147,10 @@ p {
 
 .dropdown-menu {
     border: none;
-    border-radius: 0px !important;
+    background: transparent;
     font-weight: var(--semibold);
     font-family: var(--font-family);
-    background-color: transparent;
+    transition: box-shadow 0.15s ease-in-out;
 }
 
 .nav-item.dropdown {
@@ -151,6 +158,7 @@ p {
 }
 
 .nav-item .nav-link {
+    text-align: right;
     font-weight: var(--bold);
     font-family: var(--font-family);
     color: var(--color-white);
@@ -253,8 +261,8 @@ hr {
     position: relative;
     width: 30vw;
     height: 30vw;
-    max-height: 500px;
-    max-width: 500px;
+    max-height: 450px;
+    max-width: 450px;
     background-position: right;
     background-size: cover;
     justify-content: center;
@@ -304,6 +312,17 @@ hr {
 
 
 @media (min-width: 1200px) {
+    .dropdown-menu{
+        background: rgba(0, 0, 0, 0.5);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+    }
+    .navbar-nav {
+        width: 90%;
+        max-width: 1200px;
+        justify-content: space-evenly;
+    }
     .nav-item.dropdown{
         display: flex;
     } 
