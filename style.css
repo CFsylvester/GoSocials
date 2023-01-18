@@ -3,6 +3,7 @@
     --color-hover: rgb(197, 197, 197); 
     --color-white: white; 
     --color-black: black; 
+    --color-grey: grey; 
     --color-primary-blue: #21b1dc; 
     --color-primary-green: #189b61; 
     --color-primary-dark-blue: #003563;
@@ -13,17 +14,53 @@
     --bold: 700;
     --extra-bold: 800; 
 }
+
+/* ------------------------------------------------ */
 /* !important tag overides bootstrap base css */
 /* Base CSS */
 
 h1 {
-    font-size: 2.5rem; 
+    font-size: 3rem; 
     font-family: var(--font-family) !important;
     font-weight: var(--extra-bold) !important;
     color: var(--color-white) !important;
     letter-spacing: 1.2 !important;
     margin: 0px;
 }
+
+h2 {
+    font-size: 2.5rem; 
+    font-family: var(--font-family) !important;
+    font-weight: var(--semibold) !important;
+    color: var(--color-black) !important;
+    letter-spacing: 1.2 !important;
+    margin: 0px;
+}
+
+h3 {
+    font-size: 2rem; 
+    font-family: var(--font-family) !important;
+    font-weight: var(--semibold) !important;
+    color: var(--color-black) !important;
+    letter-spacing: 1.2 !important;
+    margin: 0px;
+}
+
+h4 {
+    font-family: var(--font-family) !important;
+    font-weight: var(--semibold) !important;
+    letter-spacing: 1.2 !important;
+    margin: 0px;
+}
+
+h5 {
+    font-family: var(--font-family) !important;
+    font-weight: var(--semibold) !important;
+    color: var(--color-black) !important;
+    letter-spacing: 1.2 !important;
+    margin: 0px;
+}
+
 
 p {
     font-size: 1rem; 
@@ -33,6 +70,11 @@ p {
     letter-spacing: 1.2 !important;
     margin: 0px;
 }
+
+td p {
+    font-weight: var(--regular) !important;
+}
+
 .mobile {
     display: block;
 }
@@ -57,6 +99,10 @@ p {
 
 .light-blue {
     color: var(--color-primary-blue);
+}
+
+.grey {
+    color: var(--color-grey);
 }
 
 .btn {
@@ -88,10 +134,22 @@ p {
     background-color: var(--color-primary-blue);
 }
 
-.test {
-    height: 100vh;
+.btn-dark-blue {
+    background-color: var(--color-primary-dark-blue);
+}
+.btn-dark-blue:hover  {
+    background-color: var(--color-primary-dark-blue);
 }
 
+/* Start main under jumbotron */
+main {
+    position: absolute;
+    top: 448px;
+    height: 100%;
+    padding: 6vw;
+}
+
+/* ------------------------------------------------ */
 /* Navbar */
 .navbar {
     height: 10vh;
@@ -106,6 +164,7 @@ p {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     background: rgba(0, 0, 0, 0.5);
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
 }
 
 .transparent {
@@ -182,7 +241,67 @@ p {
 .container-fluid {
     margin: 0 6vw
 }
+/* ------------------------------------------------ */
+/* Table */
 
+/* Removing all unwanted border
+from left hand side by calling
+all the elements in the first
+column and removing their left
+border*/
+table tr td:first-child, th:first-child{
+    border-left: none;
+}
+         
+/* Removing all unwanted border
+from top of the table by calling
+all the elements in first row and
+removing their top border*/
+table tr:first-child td{
+    border-top: none;
+}
+
+table tr:first-child td:first-child {
+    vertical-align: bottom;
+    padding-bottom: 20px;
+}
+
+/* Add extra padding to buttons */
+table tr:first-child td:not(:first-child){
+    padding: 30px 0;
+}
+         
+/* Removing all unwanted border
+from right hand side by calling
+all the elements in last row and
+removing their right border*/
+table tr td:last-child, th:last-child{
+    border-right: none;
+}
+
+tr:nth-child(odd):not(:first-child) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+table tr td {
+    border: 1px solid var(--color-hover); 
+    width: 25%;
+    text-align: center;
+    height: 7vh;
+}
+
+table tr td:first-child{
+    text-align: left;
+    padding-left: 10px;
+}
+
+
+table {
+    width: 100%;
+    margin: 20vh 0;
+}
+
+/* ------------------------------------------------ */
 /* Index */
 .jumbotron {
     background-image: url(./assets/hero.jpg);
@@ -207,7 +326,7 @@ p {
     display: flex;
     flex-wrap: wrap;
     max-width: 335px;
-    margin: 10vh auto 0;
+    margin: 15vh auto 0;
     height: 270px;
 }
   
@@ -217,7 +336,7 @@ p {
 
 .lead {
     font-family: var(--font-family);
-    font-weight: 700;
+    font-weight: var(--bold) !important;
     font-size: 1.125rem;
     color: var(--color-white);
     text-align: center;
@@ -309,9 +428,14 @@ hr {
     height: 120px;
 }
 
-
-
+/* ------------------------------------------------ */
+/* Media Tablet */
 @media (min-width: 1200px) {
+    main {
+        top: 100vh !important;
+        width: 100%;
+    }
+
     .dropdown-menu{
         background: rgba(0, 0, 0, 0.5);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -331,7 +455,7 @@ hr {
     } 
 
     .header {
-        max-width: 545px; 
+        max-width: 570px; 
         height: 170px;
         margin: 0;
         margin: 0;
@@ -348,7 +472,7 @@ hr {
         text-align: left;
         white-space: normal !important;
         margin-bottom: 20px;
-        font-size: 3rem;
+        font-size: 3.125rem;
     }
 
     .mobile {
