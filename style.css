@@ -325,7 +325,7 @@ table tr td:first-child{
 
 table {
     width: 100%;
-    margin: 15vh 0 0 0;
+    margin: 10vh 0 0 0;
 }
 
 table tfoot tr:first-child td {
@@ -359,6 +359,25 @@ table tfoot tr:nth-child(3) td .line {
     border: 1px solid var(--color-black);
 }
 
+/* Table - Mobile */
+table.mobile {
+    width: 100vw;
+    margin: 10vh -6vw 0 -6vw;
+}
+table.mobile tr td:first-child {
+    text-align: left;
+    padding: 10px 10px 10px 50px;
+}
+table.mobile tr:first-child td:first-child {
+    vertical-align: middle;
+    /* padding-bottom: 20px; */
+}
+table.mobile tr:nth-child(2) {
+    border-left: 0px;
+}
+table.mobile thead tr td{
+    border-left: none;
+}
 /* ------------------------------------------------ */
 /* Index */
 .jumbotron {
@@ -521,8 +540,12 @@ hr {
 }
 
 .cards {
-    max-width: 500px;
-    height: 300px;
+    height: 55vw;
+    width: 100%;
+    min-height: 300px;
+    max-width: 35vw;
+    min-width: 300px;
+    max-height: 35vw;
     margin: 20px auto 0;
     display: flex;
     justify-content: center;
