@@ -32,7 +32,7 @@ h1 {
 }
 
 h2 {
-    font-size: 2.5rem; 
+    font-size: 2rem; 
     font-family: var(--font-family) !important;
     font-weight: var(--semibold) !important;
     color: var(--color-black) !important;
@@ -50,9 +50,9 @@ h3 {
 }
 
 h4 {
-    font-family: var(--font-family) !important;
-    font-weight: var(--semibold) !important;
-    letter-spacing: 1.2 !important;
+    font-family: var(--font-family);
+    font-weight: var(--semibold);
+    letter-spacing: 1.2;
     margin: 0px;
 }
 
@@ -80,10 +80,12 @@ td p {
 
 .mobile {
     display: block;
+    transition: all 0.16s ease-in;
 }
 
 .desktop {
     display: none;
+    transition: all 0.16s ease-in;
 }
 
 .columnFlex1{
@@ -94,6 +96,10 @@ td p {
 
 .green {
     color: var(--color-primary-green);
+}
+
+.green{
+    border-radius: 1px solid var(--color-primary-green);
 }
 
 .dark-blue {
@@ -127,7 +133,8 @@ td p {
 }
 
 .btn:active {
-    background-color: var(--color-white) !important;
+    color: var(--color-white) !important;
+    border: 2px solid var(--color-black) !important;
 }
 
 .btn-green {
@@ -154,6 +161,10 @@ td p {
 
 .semibold {
     font-weight: var(--semibold);
+}
+
+.extra-bold {
+    font-weight: var(--extra-bold);
 }
 
 /* ------------------------------------------------ */
@@ -251,7 +262,7 @@ td p {
 }
 
 .container-fluid {
-    margin: 0 6vw
+    margin: 0 3vw
 }
 /* ------------------------------------------------ */
 /* Table */
@@ -366,6 +377,7 @@ table tfoot tr:nth-child(3) td .line {
 .jumbotron h1 {
     text-align: center;
     white-space: nowrap;
+    font-size: 2.5rem;
 
 }
 
@@ -475,9 +487,105 @@ hr {
     height: 120px;
 }
 
+/* Carousel */
+#carousel {
+    padding: 5vh 0 0;
+}
+
+#carousel .packages {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.packages h4:hover {
+    cursor: pointer;
+    color: var(--color-hover);
+}
+
+.active#carousel-basic {
+    border-bottom: 3px solid var(--color-primary-green);
+    height: 45px;
+}
+
+.active#carousel-core {
+    border-bottom: 3px solid var(--color-primary-dark-blue);
+    height: 45px;
+}
+
+.active#carousel-enterprise{
+    border-bottom: 3px solid var(--color-primary-blue);
+    height: 45px;
+}
+
+.cards {
+    max-width: 500px;
+    height: 300px;
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: center;
+}
+
+.cards .colored-card .content .card-text {
+    height: 120px;
+    width: 120%;
+}
+
+
+.cards .colored-card {
+    border: 1px solid var(--color-hover);
+    position: absolute;
+    display: flex !important;
+    background-position: right;
+    height: 55vw;
+    width: 100%;
+    min-height: 300px;
+    max-width: 35vw;
+    min-width: 300px;
+    max-height: 35vw;
+    -webkit-animation: fadein 1s  forwards;
+    animation: fadein 1s forwards;
+    opacity: 1;
+    box-shadow: 0 0 25px rgb(0 0 0 / 0.5);
+   
+}
+
+.cards .colored-card.initial.hide {
+    display: none;
+    animation: none;
+    -webkit-animation: none;
+
+}
+
+.cards .colored-card.hide{
+    opacity: 0;
+    -webkit-animation: fadeout 0.5s linear forwards;
+    animation: fadeout 0.5s linear forwards;
+
+}
+
+.cards > div:first-child {
+    background-image: url(./assets/cards/card-green.png);
+}
+
+.cards > div:nth-child(2) {
+    background-image: url(./assets/cards/card-dark-blue.png);
+    margin: 0;
+}
+
+.cards > div:nth-child(3) {
+    background-image: url(./assets/cards/card-light-blue.png);
+}
+
 /* ------------------------------------------------ */
 /* Media Tablet */
-@media (min-width: 1200px) {
+@media (min-width: 500px){
+
+}
+
+@media (min-width: 992px) {
 
     .dropdown-menu{
         background: rgba(0, 0, 0, 1);
@@ -521,7 +629,10 @@ hr {
         margin-bottom: 20px;
         font-size: 3.125rem;
     }
-
+    section.grid {
+        MARGIN-TOP: 100vh;
+        PADDING: 6vw;
+    }
     .mobile {
         display: none !important; 
     }
@@ -617,4 +728,26 @@ Custom media queries
 /* Set width to make card deck cards 100% width */
 @media (max-width: 950px) { 
  
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+        z-index: 0;
+    }
+    to {
+        opacity: 1;
+        z-index: 100;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 1;
+        z-index: 100;
+    }
+    to {
+        opacity: 0;
+        z-index: 0;
+    }
 }
