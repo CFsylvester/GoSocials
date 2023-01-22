@@ -4,9 +4,12 @@
     --color-white: white; 
     --color-black: black; 
     --color-grey: grey; 
-    --color-primary-blue: #21b1dc; 
-    --color-primary-green: #189b61; 
-    --color-primary-dark-blue: #003563;
+    --color-primary-blue: rgb(33, 177, 220); 
+    --color-primary-blue75: rgba(33, 177, 220, 0.75); 
+    --color-primary-green: rgb(24, 155, 97); 
+    --color-primary-green75: rgba(4, 155, 97, 0.75);
+    --color-primary-dark-blue: rgb(0, 53, 99);
+    --color-primary-dark-blue75: rgba(0, 53, 99, 0.75);
     /* Font */
     --font-family: 'Open Sans', sans-serif;
     --regular: 400;
@@ -65,14 +68,14 @@ h5 {
 p {
     font-size: 1rem; 
     font-family: var(--font-family) !important;
-    font-weight: var(--semibold) !important;
+    font-weight: var(--semibold);
     color: var(--color-black);
     letter-spacing: 1.2 !important;
     margin: 0px;
 }
 
 td p {
-    font-weight: var(--regular) !important;
+    font-weight: var(--regular);
 }
 
 .mobile {
@@ -112,41 +115,45 @@ td p {
     font-weight: var(--bold);
     font-family: var(--font-family);
     color: var(--color-white);
+    transition: all 0.16s ease-in;
+    box-shadow: -1px 3px 3px 0 rgba(80, 80, 80, .2);
 }
 
 .btn:hover {
-    font-family: var(--font-family);
-    color: var(--color-hover);
+    font-family: var(--font-family); 
+    opacity: 0.5 !important;
+    color: var(--color-white);
+    box-shadow: 0 0 0 1px rgba(80, 80, 80, .5);
+}
+
+.btn:active {
+    background-color: var(--color-white) !important;
 }
 
 .btn-green {
     background-color: var(--color-primary-green);
 }
-
 .btn-green:hover {
-    background-color: var(--color-primary-green);
+    background-color: var(--color-primary-green75) !important;
 }
-
 .btn-light-blue {
     background-color: var(--color-primary-blue);
 }
-.btn-light-blue:hover  {
-    background-color: var(--color-primary-blue);
+.btn-light-blue:hover {
+    background-color: var(--color-primary-blue75) !important;
 }
-
 .btn-dark-blue {
     background-color: var(--color-primary-dark-blue);
 }
-.btn-dark-blue:hover  {
-    background-color: var(--color-primary-dark-blue);
+.btn-dark-blue:hover {
+    background-color: var(--color-primary-dark-blue75) !important;
 }
 
-/* Start main under jumbotron */
-main {
-    position: absolute;
-    top: 448px;
-    height: 100%;
-    padding: 6vw;
+
+
+
+.semibold {
+    font-weight: var(--semibold);
 }
 
 /* ------------------------------------------------ */
@@ -155,10 +162,15 @@ main {
     height: 10vh;
     padding: 0px;
 }
-
+.nav-item .dropdown-toggle {
+    padding: 0px 0px 8px 0px !important; 
+}
 .navbar-b {
     -webkit-transition: all .5s ease-in-out;
     height: 100%;
+    position: FIXED;
+    HEIGHT: FIT-CONTENT;
+    WIDTH: 100%;
     min-height: 10vh;
     transition: all 0.5s ease-in-out;
     backdrop-filter: blur(5px);
@@ -192,7 +204,7 @@ main {
 }
 
 .navbar .show {
-    padding: 0px;
+    padding: 0px 0 25px 0px;
 }
 
 .navbar-toggler {
@@ -243,6 +255,10 @@ main {
 }
 /* ------------------------------------------------ */
 /* Table */
+section.grid {
+    MARGIN-TOP: 448PX;
+    PADDING: 6vw;
+}
 
 /* Removing all unwanted border
 from left hand side by calling
@@ -292,13 +308,44 @@ table tr td {
 
 table tr td:first-child{
     text-align: left;
-    padding-left: 10px;
+    padding: 10px;
 }
 
 
 table {
     width: 100%;
-    margin: 20vh 0;
+    margin: 15vh 0 0 0;
+}
+
+table tfoot tr:first-child td {
+    border-bottom: none;
+}
+
+table tfoot tr:nth-child(2) td {
+    border-top: none;
+}
+
+table tfoot tr:nth-child(2) td div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+
+table tfoot tr:nth-child(3) td {
+    background-color: var(--color-white);
+}
+
+
+table tfoot tr:nth-child(3) td .line {
+    width: 30%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 1px;
+    border: 1px solid var(--color-black);
 }
 
 /* ------------------------------------------------ */
@@ -431,13 +478,9 @@ hr {
 /* ------------------------------------------------ */
 /* Media Tablet */
 @media (min-width: 1200px) {
-    main {
-        top: 100vh !important;
-        width: 100%;
-    }
 
     .dropdown-menu{
-        background: rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 1);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);
@@ -450,6 +493,10 @@ hr {
     .nav-item.dropdown{
         display: flex;
     } 
+   
+    .navbar .show {
+        padding: 0x !important;
+    }
     .desktop {
         display: block;
     } 
