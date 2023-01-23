@@ -394,7 +394,7 @@ table.mobile thead tr td{
 /* Texture - IPad */
 section.texture {
     padding: 6vw;
-    height: 72vh;
+    height: calc(70vh + 30vw);
     background-image: url(./assets/texture.jpg);
     background-position: center;
     background-size: cover;
@@ -425,6 +425,12 @@ section.texture {
 
 .texture .text {
     max-width: 350px;
+}
+
+/* Section 3 - Contact Form */
+section.form {
+    padding: 6vw;
+    margin-top: calc(20vh + 10vw);
 }
 
 /* ------------------------------------------------ */
@@ -726,6 +732,10 @@ hr {
     .columnFlex1 {
         flex-direction: column;
         justify-content: flex-start;
+    }
+
+    section.texture {
+        height: 85vh;
     }
 
     .texture .text {
