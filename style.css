@@ -268,7 +268,7 @@ td p {
 /* Table */
 section.grid {
     MARGIN-TOP: 448PX;
-    PADDING: 6vw;
+    padding-top: 20px;
 }
 
 /* Removing all unwanted border
@@ -361,16 +361,29 @@ table tfoot tr:nth-child(3) td .line {
 
 /* Table - Mobile */
 table.mobile {
-    width: 100vw;
-    margin: 10vh -6vw 0 -6vw;
+    display: table;
+    margin: 15vh 0 0 0;
+}
+table.mobile tr:nth-child(odd) td {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+table.mobile tr td:first-child {
+    width: 65vw;
+}
+table.mobile thead {
+    border-top: 1px solid var(--color-hover);
+}
+table.mobile thead tr td{
+   background-color: var(--color-white) !important;
 }
 table.mobile tr td:first-child {
     text-align: left;
-    padding: 10px 10px 10px 50px;
+    padding: 10px 10px 10px 30px;
 }
 table.mobile tr:first-child td:first-child {
     vertical-align: middle;
-    /* padding-bottom: 20px; */
+   border-right: 0px;
 }
 table.mobile tr:nth-child(2) {
     border-left: 0px;
@@ -378,15 +391,51 @@ table.mobile tr:nth-child(2) {
 table.mobile thead tr td{
     border-left: none;
 }
+/* Texture - IPad */
+section.texture {
+    padding: 6vw;
+    height: 72vh;
+    background-image: url(./assets/texture.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.texture .ipad {
+    height: 60vw;
+    min-height: 200px;
+    max-height: 535px;
+    width: 100%;
+    border-radius: 45px;
+    left: 25vw;
+    margin: auto;
+    max-width: 780px;
+    box-shadow: 0px 0px 15px -4px rgba(0,0,0,0.20);
+}
+
+.ipad img {
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    border-radius: 30px;
+}
+
+.texture .btn {
+    font-size: 0.9rem;
+}
+
+.texture .text {
+    max-width: 350px;
+}
+
 /* ------------------------------------------------ */
 /* Index */
 .jumbotron {
     background-image: url(./assets/hero.jpg);
+    background-position: center;
+    background-size: cover;
     border-radius: 0px !important;
     background-repeat: no-repeat;
     height: 448px;
-    background-position: center;
-    background-size: cover;
     display: flex;
     position: absolute;
     top: 0;
@@ -483,12 +532,7 @@ hr {
     align-items: end;
 }
 
-.content {
-    width: 70%;
-    height: 70%;
-    display: flex;
-    flex-direction: column;
-}
+
 
 .content h4 {
     text-transform: uppercase;
@@ -512,12 +556,15 @@ hr {
 }
 
 #carousel .packages {
-    max-width: 500px;
+    max-width: 320px;
     margin: auto;
     display: flex;
     justify-content: space-evenly;
 }
 
+.packages h4 {
+    font-size: 1.3rem;
+}
 
 .packages h4:hover {
     cursor: pointer;
@@ -526,53 +573,53 @@ hr {
 
 .active#carousel-basic {
     border-bottom: 3px solid var(--color-primary-green);
-    height: 45px;
+    height: 35px;
 }
 
 .active#carousel-core {
     border-bottom: 3px solid var(--color-primary-dark-blue);
-    height: 45px;
+    height: 35px;
 }
 
 .active#carousel-enterprise{
     border-bottom: 3px solid var(--color-primary-blue);
-    height: 45px;
+    height: 35px;
 }
 
 .cards {
     height: 55vw;
     width: 100%;
-    min-height: 300px;
+    min-height: 200px;
     max-width: 35vw;
-    min-width: 300px;
-    max-height: 35vw;
+    min-width: 270px;
+    max-height: 25vw;
     margin: 20px auto 0;
     display: flex;
     justify-content: center;
 }
 
-.cards .colored-card .content .card-text {
-    height: 120px;
-    width: 120%;
+.cards .content {
+    width: 80%;
 }
-
-
+       
+.cards .card-text {
+    height: 80px;
+    line-height: 1.2rem;
+}
 .cards .colored-card {
     border: 1px solid var(--color-hover);
     position: absolute;
     display: flex !important;
-    background-position: right;
-    height: 55vw;
+    background-position: top;
     width: 100%;
-    min-height: 300px;
-    max-width: 35vw;
-    min-width: 300px;
-    max-height: 35vw;
-    -webkit-animation: fadein 1s  forwards;
+    min-height: 250px;
+    max-width: 400px;
+    min-width: 270px;
+    max-height: 25vw;
+    -webkit-animation: fadein 1s forwards;
     animation: fadein 1s forwards;
     opacity: 1;
-    box-shadow: 0 0 25px rgb(0 0 0 / 0.5);
-   
+    box-shadow: 0 0 25px rgb(0 0 0 / 50%);
 }
 
 .cards .colored-card.initial.hide {
@@ -666,7 +713,12 @@ hr {
         letter-spacing: 1.2px;
         font-size: 1.5rem;
     }
-
+    .content {
+        width: 70%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+    }
     .colored-cards {
         display: flex;
     }
@@ -674,6 +726,10 @@ hr {
     .columnFlex1 {
         flex-direction: column;
         justify-content: flex-start;
+    }
+
+    .texture .text {
+        max-width: 900px;
     }
 }
 
