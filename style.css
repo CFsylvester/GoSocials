@@ -310,7 +310,7 @@ footer {
     width: 100%;
     padding: 0 6vw;
     display: flex;
-    height: 20vh;
+    min-height: 175px;
     justify-content: center;
     background-color: var(--color-primary-dark-blue);
 }
@@ -329,7 +329,7 @@ footer .text {
     position: relative;
     width: 100%;
     max-width: 200px;
-    height: 16vh;
+    height: 155px;
     margin: auto 0;
 }
 .footer-brand {
@@ -627,6 +627,7 @@ hr {
     justify-content: space-between;
     bottom: -1px;
     left: 6vw;
+    max-width: 1400px;
     right: 6vw;
     
 }
