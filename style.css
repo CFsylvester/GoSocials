@@ -362,7 +362,7 @@ table tfoot tr:nth-child(3) td .line {
 /* Table - Mobile */
 table.mobile {
     display: table;
-    margin: 15vh 0 0 0;
+    margin: 100px 0 0 0;
 }
 table.mobile tr:nth-child(odd) td {
     background-color: rgba(0, 0, 0, 0.05);
@@ -394,29 +394,35 @@ table.mobile thead tr td{
 /* Texture - IPad */
 section.texture {
     padding: 6vw;
-    height: calc(70vh + 30vw);
+    height: 175vw;
+    min-height: 200px;
+    max-height: 850px;
     background-image: url(./assets/texture.jpg);
     background-position: center;
     background-size: cover;
+    position: relative;
 }
 
 .texture .ipad {
     height: 60vw;
     min-height: 200px;
     max-height: 535px;
-    width: 100%;
+    width: 90%;
+    top: 100%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
     border-radius: 45px;
-    left: 25vw;
-    margin: auto;
     max-width: 780px;
-    box-shadow: 0px 0px 15px -4px rgba(0,0,0,0.20);
+    position: absolute;
+    box-shadow: 0px 0px 15px -4px rgb(0 0 0 / 20%);
 }
 
 .ipad img {
     background-position: center;
     background-size: cover;
     width: 100%;
-    border-radius: 30px;
+    border-radius: 8%;
+    box-shadow: 0px 0px 41px -4px rgb(0 0 0 / 97%);
 }
 
 .texture .btn {
@@ -433,6 +439,50 @@ section.form {
     margin-top: calc(20vh + 10vw);
 }
 
+input {
+    width: 90%;
+    border: none;
+    border-bottom: 1px solid var(--color-hover);
+    font-size: 1.10rem; 
+    font-family: var(--font-family) !important;
+    font-weight: var(--semibold);
+    letter-spacing: 1.2 !important;
+    color: var(--color-grey);
+    margin: 0px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: rgb(0 0 0 / 5%);
+}
+
+input::placeholder {
+    font-size: 1.10rem; 
+    font-family: var(--font-family) !important;
+    font-weight: var(--semibold);
+    letter-spacing: 1.2 !important;
+    color: var(--color-hover);
+}
+
+input:focus-visible {
+    outline: var(--color-hover) auto 1px;
+}
+
+form#contact_form {
+    margin-top: 6vw;
+}
+
+.display-contents {
+    display: contents;
+}
+.form .container .buttons {
+    width: 90%;
+    margin: 20px auto;
+    max-width: 465px;
+    display: flex;
+    flex-direction: column;
+    vertical-align: center;
+    justify-content: space-between;
+    align-items: center;
+}
 /* ------------------------------------------------ */
 /* Index */
 .jumbotron {
@@ -580,16 +630,19 @@ hr {
 .active#carousel-basic {
     border-bottom: 3px solid var(--color-primary-green);
     height: 35px;
+    animation: fadein 1s forwards;
 }
 
 .active#carousel-core {
     border-bottom: 3px solid var(--color-primary-dark-blue);
     height: 35px;
+    animation: fadein 1s forwards;
 }
 
 .active#carousel-enterprise{
     border-bottom: 3px solid var(--color-primary-blue);
     height: 35px;
+    animation: fadein 1s forwards;
 }
 
 .cards {
@@ -656,12 +709,24 @@ hr {
 }
 
 /* ------------------------------------------------ */
-/* Media Tablet */
-@media (min-width: 500px){
-
+/* SMALL */
+@media (min-width: 576px){
+    .form .container .buttons {
+       flex-direction: row;
+    }
+}
+/* MD */
+@media (min-width: 768px){
+    .form .container .buttons {
+        max-width: 400px;
+        margin: 60px auto;
+    }
 }
 
 @media (min-width: 992px) {
+    table.desktop {
+        display: table;
+    }
 
     .dropdown-menu{
         background: rgba(0, 0, 0, 1);
@@ -732,10 +797,6 @@ hr {
     .columnFlex1 {
         flex-direction: column;
         justify-content: flex-start;
-    }
-
-    section.texture {
-        height: 85vh;
     }
 
     .texture .text {
