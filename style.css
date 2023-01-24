@@ -264,6 +264,50 @@ td p {
 .container-fluid {
     margin: 0 3vw
 }
+/* ------------------FOOTER------------------------ */
+footer {
+    width: 100%;
+    padding: 0 6vw;
+    display: flex;
+    height: 20vh;
+    justify-content: center;
+    background-color: var(--color-primary-dark-blue);
+}
+
+footer p {
+    font-size: 0.85rem;
+    font-family: var(--font-family) !important;
+    font-weight: var(--regular);
+    color: var(--color-white);
+    letter-spacing: 1.2 !important;
+    bottom: 0vh;
+    position: absolute;
+}
+
+footer .text {
+    position: relative;
+    width: 100%;
+    max-width: 200px;
+    height: 16vh;
+    margin: auto 0;
+}
+.footer-brand {
+    width: 200px;
+    height: 90px;
+    border: 2px solid white;
+}
+.social-icons {
+    display: flex;
+    margin: 2vh 0;
+    width: 95px;
+    margin-left: 15px;
+}
+button.btn.circle {
+    width: 35px;
+    height: 35px;
+    margin: 0 5px;;
+    background-color: var(--color-white);
+}
 /* ------------------------------------------------ */
 /* Table */
 section.grid {
