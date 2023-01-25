@@ -223,7 +223,7 @@ label.hamburger {
     position: FIXED;
     HEIGHT: FIT-CONTENT;
     WIDTH: 100%;
-    min-height: 10vh;
+    min-height: 80px;
     transition: all 0.5s ease-in-out;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
