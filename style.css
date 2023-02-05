@@ -482,7 +482,7 @@ section.texture {
     height: 175vw;
     min-height: 200px;
     max-height: 850px;
-    background-image: url(./assets/texture.jpg);
+    background-image: url(./assets/index/texture.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -580,7 +580,7 @@ form#contact_form {
 /* ------------------------------------------------ */
 /* Index */
 .jumbotron {
-    background-image: url(./assets/hero.jpg);
+    background-image: url(./assets/heroes/index_hero.jpg);
     background-position: center;
     background-size: cover;
     border-radius: 0px !important;
@@ -803,7 +803,80 @@ hr {
     background-image: url(./assets/cards/card-light-blue.png);
 }
 
-/* ------------------------------------------------ */
+/* -------------WHY GOSOCIAL----------------- */
+/* Hero */
+.whyGoSocial .jumbotron {
+    background-image: url(./assets/heroes/why_goSocial_hero.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 0px !important;
+    background-repeat: no-repeat;
+    height: 448px;
+    display: flex;
+    position: relative;
+    top: 0;
+    width: 100%;
+}
+
+.jumbotron h1 {
+    text-align: center;
+    white-space: nowrap;
+    font-size: 2.5rem;
+
+}
+
+.whyGoSocial .header {
+    display: flex;
+    flex-wrap: wrap;
+    height: 270px;
+    position: relative;
+}
+
+.whyGoSocial .hero_image img {
+    background-image: url(./assets/whyGoSocial/hero_image.png);
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+  
+.header > div:first-child {
+    flex: 1 0 100%;
+}
+
+.lead {
+    font-family: var(--font-family);
+    font-weight: var(--bold) !important;
+    font-size: 1.125rem;
+    color: var(--color-white);
+    text-align: center;
+    margin: 35px 0;
+}
+
+hr {
+    width: 100%;
+    height: 3px;
+    margin: 0;
+    background-color: var(--color-primary-blue);
+    opacity: 1;
+    border-top: 0;
+}
+
+.hero_image {
+    width: 50%;
+    display: flex;
+    margin: 15vh 3vw;
+    height: 60vh;
+    position: relative;
+}
+/* Form */
+
+.whyGoSocial .form {
+    position: relative;
+    margin-top: 0;
+}
+
+/* -------------MEDIA QUERIEs----------------- */
 /* SMALL */
 @media (min-width: 576px){
     .form .container .buttons {
@@ -819,6 +892,7 @@ hr {
 }
 
 @media (min-width: 992px) {
+    /* Index */
     table.desktop {
         display: table;
     }
@@ -897,6 +971,14 @@ hr {
     .texture .text {
         max-width: 900px;
     }
+
+    /* Why GoSocial */
+
+    .whyGoSocial .jumbotron {
+        height: 100vh; 
+    }
+
+
 }
 
 /* Bootstrap 5 introduces a new breakpoint to the grid system XXL. Below are the Bootstrap media queries used for the grid system breakpoints for you to add to your projects CSS file to customize things.
