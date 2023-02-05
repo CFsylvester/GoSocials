@@ -193,9 +193,9 @@ label.hamburger {
     transition: 0.5s;
  }
  /* steps of 12 are optional, could also be 10, 13 etc */
- .line:nth-child(1) { top: 12px; }
- .line:nth-child(2) { top: 24px; }
- .line:nth-child(3) { top: 36px; }
+ .line:nth-child(1) { top: 0.5vh; }
+ .line:nth-child(2) { top: 31%; }
+ .line:nth-child(3) { top: 3.5vh; }
  
  /* translateY must be same as */
  #hamburger:checked + .hamburger .line:nth-child(1){
@@ -207,7 +207,7 @@ label.hamburger {
  }
  
  #hamburger:checked + .hamburger .line:nth-child(3){
-    transform: translateY(-12px) rotate(45deg);
+    transform: translateY(-15px) rotate(45deg);
  }
 /* Navbar */
 .navbar {
@@ -523,9 +523,12 @@ section.form {
     padding: 6vw;
     margin-top: calc(20vh + 10vw);
 }
-
+.form .container .row>* {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
 input {
-    width: 90%;
+    width: 96%;
     border: none;
     border-bottom: 1px solid var(--color-hover);
     font-size: 1.10rem; 
@@ -558,15 +561,21 @@ form#contact_form {
 .display-contents {
     display: contents;
 }
-.form .container .buttons {
-    width: 90%;
+.form_buttons {
+    width: 100%;
     margin: 20px auto;
-    max-width: 465px;
+    max-width: 420px;
     display: flex;
-    flex-direction: column;
     vertical-align: center;
     justify-content: space-between;
     align-items: center;
+}
+.form_buttons .btn {
+    font-size: 0.85rem;
+    height: 50px;
+}
+.form_buttons p {
+    margin: 10px;
 }
 /* ------------------------------------------------ */
 /* Index */
@@ -931,9 +940,11 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 */
  
  
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {  
- 
+/* Small devices (landscape phones, 400px and up) */
+@media (min-width: 400px) {  
+ .form_buttons .btn .mobile {
+    display: none;
+ }
 }
  
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
