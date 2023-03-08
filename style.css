@@ -78,7 +78,7 @@ td p {
     font-weight: var(--regular);
 }
 
-.mobile {
+.mobile, .mobile2 {
     display: block;
     transition: all 0.16s ease-in;
 }
@@ -194,12 +194,12 @@ label.hamburger {
  }
  /* steps of 12 are optional, could also be 10, 13 etc */
  .line:nth-child(1) { top: 0.5vh; }
- .line:nth-child(2) { top: 31%; }
+ .line:nth-child(2) { top: 26%; }
  .line:nth-child(3) { top: 3.5vh; }
  
  /* translateY must be same as */
  #hamburger:checked + .hamburger .line:nth-child(1){
-    transform: translateY(12px) rotate(-45deg);
+    transform: translateY(8px) rotate(-45deg);
  }
  
  #hamburger:checked + .hamburger .line:nth-child(2){
@@ -599,7 +599,7 @@ form#contact_form {
 
 }
 
-.header {
+.header, .header2 {
     display: flex;
     flex-wrap: wrap;
     max-width: 335px;
@@ -805,7 +805,7 @@ hr {
 
 /* -------------WHY GOSOCIAL----------------- */
 /* Hero */
-.whyGoSocial .jumbotron {
+.whyGoSocial .jumbotron2 {
     background-image: url(./assets/heroes/why_goSocial_hero.jpg);
     background-position: center;
     background-size: cover;
@@ -814,37 +814,80 @@ hr {
     height: 448px;
     display: flex;
     position: relative;
+    flex-direction: column;
     top: 0;
     width: 100%;
+    height: 100vh;
 }
 
-.jumbotron h1 {
+.flex-center{
+    justify-content: center;
+}
+
+.jumbotron2 h1 {
     text-align: center;
     white-space: nowrap;
-    font-size: 2.5rem;
-
+    font-size: 2rem;
+    font-weight: var(--semibold) !important;
 }
 
-.whyGoSocial .header {
+.jumbotron2 .lead2 {
+    font-weight: var(--semibold) !important;
+    font-size: 1rem;
+}
+.whyGoSocial .header2 {
     display: flex;
     flex-wrap: wrap;
     height: 270px;
     position: relative;
+    justify-content: center;
 }
 
-.whyGoSocial .hero_image img {
-    background-image: url(./assets/whyGoSocial/hero_image.png);
-    background-position: right;
-    background-size: contain;
-    background-repeat: no-repeat;
+.whyGoSocial .header2 .text-center{
     width: 100%;
+}
+
+
+.checkmark {
+    height: 10px;
+}
+
+
+.whyGoSocial .hero_image2 img {
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 315px;
+}
+
+.whyGoSocial .hero_image2 {
+    width: 315px;
+    display: flex;
+    margin: 5vh auto;
+    height: 40vh;
+    position: relative;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px auto;
+    text-align: center;
+    max-width: 450px;
+    width: 100%;
+}
+
+.header-nav a {
+    color: white !important; 
+    padding: 0 5px;
+    font-size: 0.75rem;
 }
   
 .header > div:first-child {
     flex: 1 0 100%;
 }
 
-.lead {
+.lead, .lead2 {
     font-family: var(--font-family);
     font-weight: var(--bold) !important;
     font-size: 1.125rem;
@@ -882,13 +925,16 @@ hr {
     .form .container .buttons {
        flex-direction: row;
     }
-}
-/* MD */
-@media (min-width: 768px){
     .form .container .buttons {
         max-width: 400px;
         margin: 60px auto;
     }
+    
+   
+}
+/* MD */
+@media (min-width: 768px){
+   
 }
 
 @media (min-width: 992px) {
@@ -972,11 +1018,7 @@ hr {
         max-width: 900px;
     }
 
-    /* Why GoSocial */
-
-    .whyGoSocial .jumbotron {
-        height: 100vh; 
-    }
+   
 
 
 }
@@ -1034,14 +1076,68 @@ No media query since this is the default in Bootstrap because it is "mobile firs
  
 }
  
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
- 
-}
- 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {  
-    
+    .whyGoSocial .hero_image2 {
+        width: fit-content;
+        display: flex;
+        margin: 5vh auto;
+        height: 50vh;
+        position: absolute;
+        right: 7vw;
+        top: 15%;
+    }
+    .whyGoSocial .hero_image2 img {
+       width: fit-content; 
+    }
+    .whyGoSocial .jumbotron2 {
+        flex-direction: row;
+    }
+    .whyGoSocial .jumbotron2 h1{
+        text-align: left;
+        white-space: normal !important;
+        margin-bottom: 20px;
+        font-size: 3.125rem;
+    }
+    .whyGoSocial .jumbotron2 .lead2 {
+        
+            text-align: left !important;
+            margin: 15px 0;
+            letter-spacing: 1.2px;
+            font-size: 1.5rem;
+        
+    }
+    .whyGoSocial .jumbotron2 .text-center {
+        text-align: left !important;
+    }
+    .whyGoSocial .header2 {
+        max-width: 570px; 
+        height: 170px;
+        margin: 0;
+        margin: 0;
+        position: absolute !important;
+        top: 25vh;
+        left: 6vw;
+        text-align: left;
+        justify-content: flex-start;
+    }
+
+     .whyGoSocial .jumbotron2 {
+        height: 80vh; 
+    }
+    .header-nav {
+        position: absolute;
+        bottom: 0;
+        max-width: 700px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 20px;
+        margin: auto;
+    }
+    .header-nav a {
+        font-size: 1.25rem;
+    }
 }
  
 /* Extra extra large devices (extra large desktops, 1400px and up) */
