@@ -1,6 +1,7 @@
 :root {
     /* Colors */
     --color-hover: rgb(197, 197, 197); 
+    --color-hover25: rgb(197, 197, 197, 0.25); 
     --color-white: white; 
     --color-black: black; 
     --color-grey: grey; 
@@ -706,11 +707,23 @@ hr {
     padding: 5vh 0 0;
 }
 
-#carousel .packages {
+#carousel .packages, .charts .packages {
     max-width: 320px;
     margin: auto;
     display: flex;
     justify-content: space-evenly;
+}
+
+
+
+.charts .packages {
+    text-align: center;
+}
+
+.charts .packages > h4 {
+    width: 27%;
+    margin: 0 4.5%;
+    font-size: 1rem;
 }
 
 .packages h4 {
@@ -727,17 +740,54 @@ hr {
     height: 35px;
     animation: fadein 1s forwards;
 }
-
-.active#carousel-core {
+.active#charts-basic {
+    border-bottom: 3px solid var(--color-primary-green);
+    height: 50px;
+    animation: fadein 1s forwards;
+}
+#charts-basic {
+    border-bottom: 3px solid var(--color-hover);
+    height: 50px;
+    animation: fadein 1s forwards;
+}
+#charts-enterprise {
+    border-bottom: 3px solid var(--color-hover);
+    height: 50px;
+    animation: fadein 1s forwards;
+}
+.active#carousel-core{
     border-bottom: 3px solid var(--color-primary-dark-blue);
     height: 35px;
     animation: fadein 1s forwards;
 }
+#carousel-core{
+    border-bottom: 3px solid var(--color-hover);
+    height: 35px;
+    animation: fadein 1s forwards;
+}
 
-.active#carousel-enterprise{
+.active#charts-core {
+    border-bottom: 3px solid var(--color-primary-dark-blue);
+    height: 50px;
+    animation: fadein 1s forwards;
+}
+#charts-core {
+    border-bottom: 3px solid var(--color-hover);
+    height: 50px;
+    animation: fadein 1s forwards;
+}
+
+.active#carousel-enterprise {
     border-bottom: 3px solid var(--color-primary-blue);
     height: 35px;
     animation: fadein 1s forwards;
+}
+
+.active#charts-enterprise {
+    border-bottom: 3px solid var(--color-primary-blue);
+    height: 50px;
+    animation: borderEnterprise 1s forwards;
+    text-align: center;
 }
 
 .cards {
@@ -917,6 +967,56 @@ hr {
 .whyGoSocial .form {
     position: relative;
     margin-top: 0;
+}
+
+/* Why GoSocial Charts */
+.charts .title {
+    margin: 5vh auto 0;
+    width: 60%;
+    text-align: center;
+}
+.charts-bars {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 320px;
+    margin: auto;
+    height: 150px;
+
+}
+
+.charts-bars .price {
+    opacity: 1;
+    line-height: 66px;
+    text-align: center;
+    animation: fadein 3s forwards;
+}
+
+#grey-bar, #basic-chart {
+    display: flex;
+    width: 320px;
+    height: 66px;
+    background-color: var(--color-hover25);
+}
+.dark-grey-fill {
+    height: 100%;
+    width: 40%;
+    background-color: var(--color-grey);
+    animation: fillGrey 0.5s ease;
+}
+
+.dark-grey-fill .price {
+    color: var(--color-white);
+}
+svg.graph-logo-industry-average {
+    height: 11px;
+    display: block;
+    align-self: center;
+    margin: 0 0 0 50px;
+    width: 125px;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./assets/logos/industy_average.svg)
 }
 
 /* -------------MEDIA QUERIEs----------------- */
@@ -1155,6 +1255,15 @@ Custom media queries
  
 }
 
+@keyframes fillGrey {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 40%
+    }
+}
+
 @keyframes fadein {
     from {
         opacity: 0;
@@ -1163,6 +1272,33 @@ Custom media queries
     to {
         opacity: 1;
         z-index: 100;
+    }
+}
+
+@keyframes borderCore {
+    from {
+        border-bottom: 3px solid var(--color-hover);
+    }
+    to {
+        border-bottom: 3px solid var(--color-primary-dark-blue);
+    }
+}
+
+@keyframes borderEnterprise {
+    from {
+        border-bottom: 3px solid var(--color-hover);
+    }
+    to {
+        border-bottom: 3px solid var(--color-primary-blue);
+    }
+}
+
+@keyframes borderBasic {
+    from {
+        border-bottom: 3px solid var(--color-hover);
+    }
+    to {
+        border-bottom: 3px solid var(--color-primary-green);
     }
 }
 

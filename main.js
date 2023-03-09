@@ -1,8 +1,11 @@
-
+// Index Page
 const carouselBasic = document.getElementById('carousel-basic')
 const carouselCore = document.getElementById('carousel-core')
 const carouselEnterprise = document.getElementById('carousel-enterprise')
 
+const chartsBasic = document.getElementById('charts-basic')
+const chartsCore = document.getElementById('charts-core')
+const chartsEnterprise = document.getElementById('charts-enterprise')
 
 const basicCard= document.getElementById('basic-card');
 const coreCard = document.getElementById('core-card');
@@ -47,6 +50,48 @@ const carouselClick = function() {
 
 }
 
+// Why GoSocial
+
+
+
+const chartsClick = function() {
+    if(this.id.trim() === "charts-core"){
+        // coreCard.classList.remove('initial');
+        // coreCard.classList.remove('hide');
+
+        chartsBasic.classList.remove("active");
+        chartsEnterprise.classList.remove("active");
+        chartsCore.classList.add("active");
+
+        // basicCard.classList.add('hide');
+        // enterpriseCard.classList.add('hide'); 
+    }
+
+    if(this.id.trim() === "charts-enterprise"){
+        // enterpriseCard.classList.remove('initial');
+        // enterpriseCard.classList.remove('hide');
+
+        chartsBasic.classList.remove("active");
+        chartsCore.classList.remove("active");
+        chartsEnterprise.classList.add("active");
+
+        // basicCard.classList.add('hide');
+        // coreCard.classList.add('hide'); 
+    }
+
+    if(this.id.trim() === "charts-basic"){
+        // basicCard.classList.remove('hide');
+
+        chartsCore.classList.remove("active");
+        chartsEnterprise.classList.remove("active");
+        chartsBasic.classList.add("active");
+
+        // coreCard.classList.add('hide');
+        // enterpriseCard.classList.add('hide'); 
+
+    }
+
+}
 // basicCard.addEventListener("animationend", (ev) => {
 //     if (ev.type === "animationend") {
 //       basicCard.style.display = "none";
@@ -65,9 +110,10 @@ const carouselClick = function() {
 //     }
 // }, false);
 
-carouselBasic.onclick = carouselClick;
-carouselCore.onclick = carouselClick;
-carouselEnterprise.onclick = carouselClick;
+if (carouselBasic !== null) carouselBasic.onclick = carouselClick;
+if (carouselCore !== null) carouselCore.onclick = carouselClick;
+if (carouselEnterprise !== null) carouselEnterprise.onclick = carouselClick;
 
-carouselCore.onload = hideMobileCards;
-carouselEnterprise.onload = hideMobileCards;
+if (chartsBasic !== null) chartsBasic.onclick = chartsClick;
+if (chartsCore !== null) chartsCore.onclick = chartsClick;
+if (chartsEnterprise !== null) chartsEnterprise.onclick = chartsClick;
