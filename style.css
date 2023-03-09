@@ -659,7 +659,7 @@ hr {
     position: relative;
     width: 30vw;
     height: 30vw;
-    max-height: 450px;
+    max-height: 380px;
     max-width: 450px;
     background-position: right;
     background-size: cover;
@@ -1000,13 +1000,28 @@ hr {
 .green-fill {
     display: flex;
     height: 100%;
+    width: 0%;
     background-color: var(--color-primary-green);
 }
+.start {
+    opacity: 0;
+}
+.dark-blue-fill {
+    display: flex;
+    height: 100%;
+    background-color: var(--color-primary-dark-blue);
+    width: 0%;
+}
+.dark-blue-fill.empty {
+    width: 0%;
+    animation: drainDarkBlue 0.5s ease;
+}
+
 .green-fill.empty {
     width: 0%;
     animation: drainGreen 0.5s ease;
 }
-.green-fill.empty .price, .green-fill.empty .graph-logo-basic{
+.green-fill.empty .price, .green-fill.empty .graph-logo-basic, .dark-blue-fill.empty .price, .dark-blue-fill.empty .graph-logo-basic{
     opacity: 0;
     animation: fadeout 0.5s forwards;
 
@@ -1015,10 +1030,14 @@ hr {
     width: 10%;
     animation: fillGreen 0.5s ease;
 }
-.green-fill.filled .price, .green-fill.filled .graph-logo-basic {
+.green-fill.filled .price, .green-fill.filled .graph-logo-basic,.dark-blue-fill.filled,  .dark-blue-fill.filled .price, .dark-blue-fill.filled .graph-logo-basic{
     opacity: 1;
-    animation: fadein 3s forwards;
+    animation: fadein 0.5s forwards;
 
+}
+.dark-blue-fill.filled {
+    width: 20%;
+    animation: fillDarkBlue 0.5s ease;
 }
 
 .green-fill .price {
@@ -1049,7 +1068,18 @@ svg.vector {
     justify-content: center;
     display: flex;
     text-align: center;
-    animation: fadein 3s forwards;
+    animation: fadein 1s forwards;
+    color: var(--color-white);
+}
+.dark-blue-fill .price p {
+    opacity: 1;
+    line-height: 66px;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    font-weight: var(--regular);
+    text-align: center;
+    animation: fadein 1s forwards;
     color: var(--color-white);
 }
 svg.graph-logo-industry-average {
@@ -1063,7 +1093,7 @@ svg.graph-logo-industry-average {
     background-image: url(./assets/logos/industy_average.svg)
 }
 svg.graph-logo-basic {
-    height: 11px;
+    height: 12px;
     display: block;
     align-self: center;
     margin: 0px 0 0 137px;
@@ -1331,6 +1361,24 @@ Custom media queries
 @keyframes drainGreen {
     from {
         width: 10%;
+    }
+    to {
+        width: 0%
+    }
+}
+
+@keyframes fillDarkBlue {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 20%
+    }
+}
+
+@keyframes drainDarkBlue {
+    from {
+        width: 20%;
     }
     to {
         width: 0%

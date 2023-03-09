@@ -11,7 +11,13 @@ const chartsBasic = document.getElementById('charts-basic')
 const chartsCore = document.getElementById('charts-core')
 const chartsEnterprise = document.getElementById('charts-enterprise')
 const greenChart = document.getElementById('green-chart')
+const darkBlueChart = document.getElementById('dark-blue-chart')
 
+const sleep = async (milliseconds) => {
+    await new Promise(resolve => {
+        return setTimeout(resolve, milliseconds)
+    });
+};
 
 const carouselClick = function() {
     if(this.innerHTML.trim() === "Core"){
@@ -52,32 +58,51 @@ const carouselClick = function() {
 
 }
 
-const chartsClick = function() {
+const chartsClick = async function() {
     if(this.id.trim() === "charts-core"){
-        greenChart.classList.remove("filled");
         greenChart.classList.add("empty"); 
+        greenChart.classList.remove("filled")
+        chartsEnterprise.classList.remove("active"); 
         chartsBasic.classList.remove("active"); 
+        
+        
+        await sleep(500);
+        chartsCore.classList.add("active"); 
+        darkBlueChart.classList.add("filled")
+        darkBlueChart.classList.remove("empty"); 
+        darkBlueChart.classList.remove("start")
+
+
     }
 
     if(this.id.trim() === "charts-enterprise"){
-        greenChart.classList.remove("filled");
         greenChart.classList.add("empty"); 
+        darkBlueChart.classList.add("empty"); 
+        greenChart.classList.remove("filled");
+        darkBlueChart.classList.remove("start")
+        darkBlueChart.classList.remove("filled")
         chartsBasic.classList.remove("active"); 
+        chartsCore.classList.remove("active"); 
+       
+
+        await sleep(500);
+        chartsEnterprise.classList.add("active"); 
+        
+
     }
 
     if(this.id.trim() === "charts-basic"){
-        greenChart.classList.remove("empty"); 
+        darkBlueChart.classList.add("empty")
+        darkBlueChart.classList.remove("filled")
+        darkBlueChart.classList.remove("start")
+
+
+        await sleep(500);
         greenChart.classList.add("filled");
+        chartsBasic.classList.remove("active"); 
+        chartsCore.classList.remove("active"); 
         chartsBasic.classList.add("active"); 
-
-        // basicCard.classList.remove('hide');
-
-        // chartsCore.classList.remove("active");
-        // chartsEnterprise.classList.remove("active");
-        // chartsBasic.classList.add("active");
-
-        // coreCard.classList.add('hide');
-        // enterpriseCard.classList.add('hide'); 
+        greenChart.classList.remove("empty"); 
 
     }
 
