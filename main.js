@@ -2,14 +2,16 @@
 const carouselBasic = document.getElementById('carousel-basic')
 const carouselCore = document.getElementById('carousel-core')
 const carouselEnterprise = document.getElementById('carousel-enterprise')
-
-const chartsBasic = document.getElementById('charts-basic')
-const chartsCore = document.getElementById('charts-core')
-const chartsEnterprise = document.getElementById('charts-enterprise')
-
 const basicCard= document.getElementById('basic-card');
 const coreCard = document.getElementById('core-card');
 const enterpriseCard = document.getElementById('enterprise-card')
+
+// Why Go Social
+const chartsBasic = document.getElementById('charts-basic')
+const chartsCore = document.getElementById('charts-core')
+const chartsEnterprise = document.getElementById('charts-enterprise')
+const greenChart = document.getElementById('green-chart')
+
 
 const carouselClick = function() {
     if(this.innerHTML.trim() === "Core"){
@@ -50,41 +52,29 @@ const carouselClick = function() {
 
 }
 
-// Why GoSocial
-
-
-
 const chartsClick = function() {
     if(this.id.trim() === "charts-core"){
-        // coreCard.classList.remove('initial');
-        // coreCard.classList.remove('hide');
-
-        chartsBasic.classList.remove("active");
-        chartsEnterprise.classList.remove("active");
-        chartsCore.classList.add("active");
-
-        // basicCard.classList.add('hide');
-        // enterpriseCard.classList.add('hide'); 
+        greenChart.classList.remove("filled");
+        greenChart.classList.add("empty"); 
+        chartsBasic.classList.remove("active"); 
     }
 
     if(this.id.trim() === "charts-enterprise"){
-        // enterpriseCard.classList.remove('initial');
-        // enterpriseCard.classList.remove('hide');
-
-        chartsBasic.classList.remove("active");
-        chartsCore.classList.remove("active");
-        chartsEnterprise.classList.add("active");
-
-        // basicCard.classList.add('hide');
-        // coreCard.classList.add('hide'); 
+        greenChart.classList.remove("filled");
+        greenChart.classList.add("empty"); 
+        chartsBasic.classList.remove("active"); 
     }
 
     if(this.id.trim() === "charts-basic"){
+        greenChart.classList.remove("empty"); 
+        greenChart.classList.add("filled");
+        chartsBasic.classList.add("active"); 
+
         // basicCard.classList.remove('hide');
 
-        chartsCore.classList.remove("active");
-        chartsEnterprise.classList.remove("active");
-        chartsBasic.classList.add("active");
+        // chartsCore.classList.remove("active");
+        // chartsEnterprise.classList.remove("active");
+        // chartsBasic.classList.add("active");
 
         // coreCard.classList.add('hide');
         // enterpriseCard.classList.add('hide'); 

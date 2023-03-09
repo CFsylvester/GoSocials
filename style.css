@@ -997,23 +997,37 @@ hr {
     background-color: var(--color-grey);
     animation: fillGrey 0.5s ease;
 }
-
 .green-fill {
+    display: flex;
     height: 100%;
-    width: 10%;
     background-color: var(--color-primary-green);
+}
+.green-fill.empty {
+    width: 0%;
+    animation: drainGreen 0.5s ease;
+}
+.green-fill.empty .price, .green-fill.empty .graph-logo-basic{
+    opacity: 0;
+    animation: fadeout 0.5s forwards;
+
+}
+.green-fill.filled {
+    width: 10%;
     animation: fillGreen 0.5s ease;
+}
+.green-fill.filled .price, .green-fill.filled .graph-logo-basic {
+    opacity: 1;
+    animation: fadein 3s forwards;
+
 }
 
 .green-fill .price {
-    opacity: 1;
     line-height: 66px;
     position: relative;
     justify-content: center;
     display: flex;
-    margin-left: 80px;
+    margin-left: 45px;
     text-align: center;
-    animation: fadein 3s forwards;
     color: var(--color-white);
 }
 svg.vector {
@@ -1052,8 +1066,9 @@ svg.graph-logo-basic {
     height: 11px;
     display: block;
     align-self: center;
-    margin: 0px 0 0 115px;
-    width: 155px;
+    margin: 0px 0 0 137px;
+    width: 165px;
+    position: absolute;
     background-position: center;
     background-size: cover;
     background-image: url(./assets/logos/goSocial_green.svg);
@@ -1310,6 +1325,15 @@ Custom media queries
     }
     to {
         width: 10%
+    }
+}
+
+@keyframes drainGreen {
+    from {
+        width: 10%;
+    }
+    to {
+        width: 0%
     }
 }
 
