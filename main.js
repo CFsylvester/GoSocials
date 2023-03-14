@@ -12,12 +12,7 @@ const chartsCore = document.getElementById('charts-core')
 const chartsEnterprise = document.getElementById('charts-enterprise')
 const greenChart = document.getElementById('green-chart')
 const darkBlueChart = document.getElementById('dark-blue-chart')
-
-const sleep = async (milliseconds) => {
-    await new Promise(resolve => {
-        return setTimeout(resolve, milliseconds)
-    });
-};
+const lightBlueChart = document.getElementById('light-blue-chart')
 
 const carouselClick = function() {
     if(this.innerHTML.trim() === "Core"){
@@ -58,55 +53,30 @@ const carouselClick = function() {
 
 }
 
-const chartsClick = async function() {
-    if(this.id.trim() === "charts-core"){
-        greenChart.classList.add("empty"); 
-        greenChart.classList.remove("filled")
-        chartsEnterprise.classList.remove("active"); 
-        chartsBasic.classList.remove("active"); 
-        
-        
-        await sleep(500);
-        chartsCore.classList.add("active"); 
-        darkBlueChart.classList.add("filled")
-        darkBlueChart.classList.remove("empty"); 
-        darkBlueChart.classList.remove("start")
-
-
-    }
-
-    if(this.id.trim() === "charts-enterprise"){
-        greenChart.classList.add("empty"); 
-        darkBlueChart.classList.add("empty"); 
-        greenChart.classList.remove("filled");
-        darkBlueChart.classList.remove("start")
-        darkBlueChart.classList.remove("filled")
-        chartsBasic.classList.remove("active"); 
-        chartsCore.classList.remove("active"); 
-       
-
-        await sleep(500);
-        chartsEnterprise.classList.add("active"); 
-        
-
-    }
-
-    if(this.id.trim() === "charts-basic"){
-        darkBlueChart.classList.add("empty")
-        darkBlueChart.classList.remove("filled")
-        darkBlueChart.classList.remove("start")
-
-
-        await sleep(500);
-        greenChart.classList.add("filled");
-        chartsBasic.classList.remove("active"); 
-        chartsCore.classList.remove("active"); 
-        chartsBasic.classList.add("active"); 
-        greenChart.classList.remove("empty"); 
-
-    }
-
+const chartsClick = function(e) {
+    $('#chart div').each(function(key, chart){
+        if($(this).data('percentage') !== $(e).data('percentage')) {
+            $(this).removeClass('active').animate({
+                'width' : '0%',
+                'opacity': '0'
+            }, 500)
+            $(this).find('.price').animate({
+                'opacity': '0'
+            }, 500)
+        }
+    })
+    
+    var percentage = $(e).data('percentage');
+    $(e).delay(500).addClass('active').animate({
+        'width' : percentage + '%',
+        'opacity': '1'
+    }, 500)
+    $(e).find('.price').animate({
+        'opacity': '1',
+        'width' : '100%'
+    }, 500)
 }
+
 // basicCard.addEventListener("animationend", (ev) => {
 //     if (ev.type === "animationend") {
 //       basicCard.style.display = "none";
@@ -129,6 +99,6 @@ if (carouselBasic !== null) carouselBasic.onclick = carouselClick;
 if (carouselCore !== null) carouselCore.onclick = carouselClick;
 if (carouselEnterprise !== null) carouselEnterprise.onclick = carouselClick;
 
-if (chartsBasic !== null) chartsBasic.onclick = chartsClick;
-if (chartsCore !== null) chartsCore.onclick = chartsClick;
-if (chartsEnterprise !== null) chartsEnterprise.onclick = chartsClick;
+if (chartsBasic !== null) chartsBasic.onclick =  () => chartsClick(greenChart);
+if (chartsCore !== null) chartsCore.onclick =  () => chartsClick(darkBlueChart);
+if (chartsEnterprise !== null) chartsEnterprise.onclick =  () => chartsClick(lightBlueChart);

@@ -14,6 +14,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <title>GoSocial</title>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js" integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
   </head>
   <body class="whyGoSocial">
     <!-- Navigation -->
@@ -132,7 +134,7 @@ A relentless drive towards cutting costs, allowing you to focus on reinvesting m
           <div class="mobile2 charts-bars">
             <div class="charts-container">
               <div id="chart">
-                <div id="green-chart" class="green-fill filled">
+                <div id="green-chart" data-percentage="10" class="green-fill filled">
                   <div class="price">
                     <svg class="vector">
   
@@ -143,10 +145,18 @@ A relentless drive towards cutting costs, allowing you to focus on reinvesting m
                   </div>
                   <svg class="graph-logo-basic"></svg>
                 </div>
-                <div id="dark-blue-chart" class="dark-blue-fill start">
+                <div id="dark-blue-chart" data-percentage="20" class="dark-blue-fill">
                   <div class="price">
-                    <p>
-                      $49/mo
+                    <p class="ml-1">
+                      $69/mo
+                    </p>
+                  </div>
+                  <svg class="graph-logo-basic"></svg>
+                </div>
+                <div id="light-blue-chart" data-percentage="25" class="light-blue-fill">
+                  <div class="price">
+                    <p class="ml-1">
+                      $99/mo
                     </p>
                   </div>
                   <svg class="graph-logo-basic"></svg>

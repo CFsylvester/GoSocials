@@ -1011,41 +1011,37 @@ hr {
     height: 100%;
     background-color: var(--color-primary-dark-blue);
     width: 0%;
-}
-.dark-blue-fill.empty {
-    width: 0%;
-    animation: drainDarkBlue 0.5s ease;
-}
-
-.green-fill.empty {
-    width: 0%;
-    animation: drainGreen 0.5s ease;
-}
-.green-fill.empty .price, .green-fill.empty .graph-logo-basic, .dark-blue-fill.empty .price, .dark-blue-fill.empty .graph-logo-basic{
     opacity: 0;
-    animation: fadeout 0.5s forwards;
-
+}
+.light-blue-fill {
+    display: flex;
+    height: 100%;
+    background-color: var(--color-primary-blue);
+    width: 0%;
+    opacity: 0;
 }
 .green-fill.filled {
     width: 10%;
-    animation: fillGreen 0.5s ease;
+    display: flex !important;
 }
-.green-fill.filled .price, .green-fill.filled .graph-logo-basic,.dark-blue-fill.filled,  .dark-blue-fill.filled .price, .dark-blue-fill.filled .graph-logo-basic{
-    opacity: 1;
-    animation: fadein 0.5s forwards;
-
+.hide {
+    display: none;
 }
 .dark-blue-fill.filled {
     width: 20%;
-    animation: fillDarkBlue 0.5s ease;
+    display: flex !important;
 }
-
+.light-blue-fill.filled {
+    width: 25%;
+    display: flex !important;
+}
 .green-fill .price {
     line-height: 66px;
     position: relative;
     justify-content: center;
     display: flex;
-    margin-left: 45px;
+    width: 100%;
+    margin-left: 60px;
     text-align: center;
     color: var(--color-white);
 }
@@ -1072,6 +1068,17 @@ svg.vector {
     color: var(--color-white);
 }
 .dark-blue-fill .price p {
+    opacity: 1;
+    line-height: 66px;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    font-weight: var(--regular);
+    text-align: center;
+    animation: fadein 1s forwards;
+    color: var(--color-white);
+}
+.light-blue-fill .price p {
     opacity: 1;
     line-height: 66px;
     position: relative;
@@ -1349,6 +1356,24 @@ Custom media queries
     }
 }
 
+@keyframes fillLightBlue {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 25%
+    }
+}
+
+@keyframes drainLightBlue {
+    from {
+        width: 25%;
+    }
+    to {
+        width: 0%
+    }
+}
+
 @keyframes fillGreen {
     from {
         width: 0%;
@@ -1431,5 +1456,13 @@ Custom media queries
     to {
         opacity: 0;
         z-index: 0;
+    }
+}
+@keyframes hideDisplay {
+    from {
+        display: flex;
+    }
+    to {
+        display: none;
     }
 }
