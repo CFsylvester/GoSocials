@@ -194,13 +194,13 @@ label.hamburger {
     transition: 0.5s;
  }
  /* steps of 12 are optional, could also be 10, 13 etc */
- .line:nth-child(1) { top: 0.5vh; }
- .line:nth-child(2) { top: 26%; }
- .line:nth-child(3) { top: 3.5vh; }
+ .line:nth-child(1) { top: 3px; }
+ .line:nth-child(2) { top: 15px; }
+ .line:nth-child(3) { top: 28px; }
  
  /* translateY must be same as */
  #hamburger:checked + .hamburger .line:nth-child(1){
-    transform: translateY(8px) rotate(-45deg);
+    transform: translateY(10px) rotate(-45deg);
  }
  
  #hamburger:checked + .hamburger .line:nth-child(2){
@@ -1110,7 +1110,7 @@ svg.graph-logo-basic {
     background-size: cover;
     background-image: url(./assets/logos/goSocial_green.svg);
 }
-
+svg.graph-logo-basic, svg.graph-logo-industry-average, .charts-bars, #grey-bar, #chart  {-moz-transition: all .5s ease-out;-o-transition: all .5s ease-out;transition: all .5s ease-out;}
 /* -------------MEDIA QUERIEs----------------- */
 /* SMALL */
 @media (min-width: 576px){
@@ -1269,18 +1269,29 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 }
  
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {  
+@media (min-width: 1245px) {  
     .whyGoSocial .hero_image2 {
         width: fit-content;
         display: flex;
         margin: 5vh auto;
         height: 50vh;
         position: absolute;
-        right: 7vw;
+        right: 3vw;
         top: 15%;
     }
+    /* #mobileCharts{
+        opacity: 0;
+    }
+    #desktopCharts{
+        opacity: 0;
+    } */
     .whyGoSocial .hero_image2 img {
        width: fit-content; 
+    }
+    .jumbotron_container {
+        position: relative;
+        width: 1245px;
+        margin: 0 auto;
     }
     .whyGoSocial .jumbotron2 {
         flex-direction: row;
@@ -1309,7 +1320,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         margin: 0;
         position: absolute !important;
         top: 25vh;
-        left: 6vw;
+        left: 3vw;
         text-align: left;
         justify-content: flex-start;
     }
@@ -1329,6 +1340,30 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     }
     .header-nav a {
         font-size: 1.25rem;
+    }
+    .charts-bars {
+        width: 1000px;
+    }
+    #grey-bar, #chart {
+        width: 1000px;
+    }
+    svg.vector {
+        display: none;
+    }
+    .green-fill .price {
+        margin-left: 0;
+    }
+    .green-fill .price p{
+        color: white;
+    }
+    .dark-grey-fill {
+        width: 50%;
+    }
+    svg.graph-logo-basic {
+        margin: 0px 0 0 815px;
+    }
+    svg.graph-logo-industry-average{
+        margin: 0 0 0 350px;
     }
 }
  
@@ -1352,7 +1387,7 @@ Custom media queries
         width: 0%;
     }
     to {
-        width: 40%
+        width: 50%
     }
 }
 

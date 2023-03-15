@@ -67,7 +67,7 @@ const chartsClick = function(e) {
     })
     
     var percentage = $(e).data('percentage');
-    $(e).delay(500).addClass('active').animate({
+    $(e).delay(500).animate({
         'width' : percentage + '%',
         'opacity': '1'
     }, 500)
@@ -75,6 +75,12 @@ const chartsClick = function(e) {
         'opacity': '1',
         'width' : '100%'
     }, 500)
+}
+
+const removeActive = function() {
+    $(chartsBasic).removeClass('active');
+    $(chartsCore).removeClass('active');
+    $(chartsEnterprise).removeClass('active');
 }
 
 // basicCard.addEventListener("animationend", (ev) => {
@@ -99,6 +105,6 @@ if (carouselBasic !== null) carouselBasic.onclick = carouselClick;
 if (carouselCore !== null) carouselCore.onclick = carouselClick;
 if (carouselEnterprise !== null) carouselEnterprise.onclick = carouselClick;
 
-if (chartsBasic !== null) chartsBasic.onclick =  () => chartsClick(greenChart);
-if (chartsCore !== null) chartsCore.onclick =  () => chartsClick(darkBlueChart);
-if (chartsEnterprise !== null) chartsEnterprise.onclick =  () => chartsClick(lightBlueChart);
+if (chartsBasic !== null) chartsBasic.onclick =  () => {removeActive(); chartsClick(greenChart); $(chartsBasic).addClass('active'); }
+if (chartsCore !== null) chartsCore.onclick =  () =>{removeActive(); chartsClick(darkBlueChart); $(chartsCore).addClass('active');} 
+if (chartsEnterprise !== null) chartsEnterprise.onclick =  () => {removeActive(); chartsClick(lightBlueChart); $(chartsEnterprise).addClass('active');}
