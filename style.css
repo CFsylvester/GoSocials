@@ -120,6 +120,7 @@ td p {
 }
 
 .btn {
+    white-space: nowrap; 
     border-radius: 25px;
     width: 175px;
     height: 40px;
@@ -1171,6 +1172,10 @@ svg.graph-logo-basic, svg.graph-logo-industry-average, .charts-bars, #grey-bar, 
     align-items: center;
 }
 
+.get-pricing p {
+    white-space: nowrap;
+}
+
 .get-pricing svg {
     height: 15px;
     width: 30px;
@@ -1194,42 +1199,68 @@ h2.title {
     margin: auto;
 }
 .mobile-card-carousel {
-    height: 200px;
+    position: relative;
+    height: 250px;
     color: black;
     font-size: 40px;
-    margin: 10px;
-    flex: 200px 0 0;
-  }
-  .cards-wrapper {
+    margin-right: 10px;
+    flex: 275px 0 0;
+}
+.mobile-card-carousel img {
+    height: 100%;
+    width: 100%;
+}
+.cards-wrapper {
     display: flex; 
     transition: ease 0.5s;
     padding-top: 20px;
-  }
-  .display-area {
+}
+.cards-wrapper .content {
+    position: absolute;
+    top: 30px;
+    width: 100% !important;
+}
+.cards-wrapper .content .title {
+    text-transform: capitalize;
+    font-size: 16pt;
+    font-family: var(--font-family);
+    color: var(--color-primary-dark-blue);
+    font-weight: var(--semibold);
+    margin: 5px 20px 10px;
+}
+.cards-wrapper .content .text {
+    margin: 0 20px;
+}
+.cards-wrapper .content .text p {
+    font-size: 10pt;
+}
+.display-area {
     width: 100%;
     overflow-x: hidden;
     margin: auto;
-  }
+}
   
-  .dots-wrapper {
+.dots-wrapper {
     display: flex;
-  }
+    margin-top: 15px;
+    margin-left: 5px;
+}
   
-  .dot {
+.dot {
     border: none;
     background: rgba(0, 0, 0, 0.2);
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     margin: 5px;
     border-radius: 50%;
     outline: none;
-  }
-  .dot:hover {
+}
+.dot:hover {
     background: rgba(0, 0, 0, 0.3);
-  }
-  .dot.active {
+}
+.dot.active {
     background: rgba(0, 0, 0, 0.5);
-  }
+}
 /* -------------MEDIA QUERIEs----------------- */
 /* SMALL */
 @media (min-width: 576px){
@@ -1373,19 +1404,21 @@ Bootstrap 5 breakpoints
 Extra small devices (portrait phones, less than 576px) 
 No media query since this is the default in Bootstrap because it is "mobile first"
 */
- 
- 
-/* Small devices (landscape phones, 400px and up) */
-@media (min-width: 400px) {  
-    .form_buttons .btn .mobile {
-        display: none;
-    }
+@media (min-width: 375px) {
     .textured .head .flex-container {
         flex-direction: row;
     }
     .get-pricing {
         margin-top: 0;
         margin-left: 25px;
+    }
+}
+ 
+ 
+/* Small devices (landscape phones, 400px and up) */
+@media (min-width: 400px) {  
+    .form_buttons .btn .mobile {
+        display: none;
     }
 }
  
