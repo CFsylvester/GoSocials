@@ -79,6 +79,10 @@ td p {
     font-weight: var(--regular);
 }
 
+.flex-row {
+    display: flex;
+}
+
 .mobile, .mobile2 {
     display: block;
     transition: all 0.16s ease-in;
@@ -608,6 +612,11 @@ form#contact_form {
     height: 270px;
 }
   
+.header2 .catchphrase {
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;
+}
 .header > div:first-child {
     flex: 1 0 100%;
 }
@@ -918,7 +927,7 @@ hr {
     width: 100%;
     display: flex;
     margin: 5vh auto;
-    height: 40vh;
+    height: 35vh;
     position: relative;
 }
 
@@ -993,6 +1002,7 @@ hr {
     display: flex;
     width: 320px;
     height: 66px;
+    position: relative;
     background-color: var(--color-hover25);
 }
 .dark-grey-fill {
@@ -1107,7 +1117,7 @@ svg.graph-logo-basic {
     height: 12px;
     display: block;
     align-self: center;
-    margin: 0px 0 0 137px;
+    right: 10px;
     width: 165px;
     position: absolute;
     background-position: center;
@@ -1120,7 +1130,109 @@ svg.graph-logo-basic, svg.graph-logo-industry-average, .charts-bars, #grey-bar, 
     text-align: left;
     min-width: 320px; 
     margin: 35px auto 0;
+    font-size: 12px;
 }
+/* Why GoSocial Difference MOBILE */
+.chef-container { 
+    max-height: 60vh;
+    overflow: HIDDEN;
+}
+.chef-container img {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+.textured {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-image: url(./assets/whyGoSocial/texture.png);
+}
+.head {
+    padding: 5vh;
+    padding-bottom: 0;
+    width: 100%;
+    min-width: 315px;
+    max-width: 400px;
+    margin: auto;
+}
+.textured .head .flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.get-pricing {
+    width: 125px;
+    margin-top: 25px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.get-pricing svg {
+    height: 15px;
+    width: 30px;
+    justify-content: center;
+    align-self: center;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(./assets/icons/Green_Arrow.svg);
+}
+
+.catchphrase {
+    text-transform: uppercase !important;
+    font-size: 12px;
+}
+h2.title {
+    margin: 15px 0;
+}
+#mobile-carousel {
+    padding: 5vh;
+    width: 100%;
+    min-width: 315px;
+    max-width: 400px;
+    margin: auto;
+}
+.mobile-card-carousel {
+    height: 200px;
+    color: black;
+    font-size: 40px;
+    margin: 10px;
+    flex: 200px 0 0;
+  }
+  .cards-wrapper {
+    display: flex; 
+    transition: ease 0.5s;
+  }
+  .display-area {
+    width: 100%;
+  /*   border: 1px solid black; */
+    overflow-x: hidden;
+    margin: auto;
+  }
+  
+  .dots-wrapper {
+    display: flex;
+  }
+  
+  .dot {
+    border: none;
+    background: rgba(0, 0, 0, 0.2);
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    border-radius: 50%;
+    outline: none;
+  }
+  .dot:hover {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  .dot.active {
+    background: rgba(0, 0, 0, 0.5);
+  }
 /* -------------MEDIA QUERIEs----------------- */
 /* SMALL */
 @media (min-width: 576px){
@@ -1268,9 +1380,16 @@ No media query since this is the default in Bootstrap because it is "mobile firs
  
 /* Small devices (landscape phones, 400px and up) */
 @media (min-width: 400px) {  
- .form_buttons .btn .mobile {
-    display: none;
- }
+    .form_buttons .btn .mobile {
+        display: none;
+    }
+    .textured .head .flex-container {
+        flex-direction: row;
+    }
+    .get-pricing {
+        margin-top: 0;
+        margin-left: 25px;
+    }
 }
  
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
