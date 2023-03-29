@@ -877,7 +877,7 @@ hr {
     flex-direction: column;
     top: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
 }
 
 .flex-center{
@@ -935,7 +935,7 @@ hr {
 .header-nav {
     display: flex;
     justify-content: space-around;
-    margin: -22px auto;
+    margin: 20px auto;
     text-align: center;
     max-width: 450px;
     width: 100%;
@@ -1007,6 +1007,7 @@ hr {
     background-color: var(--color-hover25);
 }
 .dark-grey-fill {
+    display: flex;
     height: 100%;
     width: 40%;
     background-color: var(--color-grey);
@@ -1074,6 +1075,7 @@ svg.vector {
 
 .dark-grey-fill .price {
     opacity: 1;
+    width: 100%;
     line-height: 66px;
     position: relative;
     justify-content: center;
@@ -1105,11 +1107,12 @@ svg.vector {
     color: var(--color-white);
 }
 svg.graph-logo-industry-average {
-    height: 11px;
+    height: 13px;
     display: block;
     align-self: center;
-    margin: 0 0 0 50px;
-    width: 125px;
+    right: 10px;
+    width: 165px;
+    position: absolute;
     background-position: center;
     background-size: cover;
     background-image: url(./assets/logos/industy_average.svg)
@@ -1184,7 +1187,14 @@ svg.graph-logo-basic, svg.graph-logo-industry-average, .charts-bars, #grey-bar, 
     margin: 0;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.green-arrow {
     background-image: url(./assets/icons/Green_Arrow.svg);
+}
+
+.blue-arrow {
+    background-image: url(./assets/icons/Blue-Arrow.svg);
 }
 
 .catchphrase {
@@ -1261,6 +1271,72 @@ h2.title {
 .dot.active {
     background: rgba(0, 0, 0, 0.5);
 }
+#blue-triangle-background {
+    position: relative;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 450px;
+    margin-top: 100px;
+    background-image: url(./assets/whyGoSocial/blue-triangle-background.png);
+}
+#white-triangle {
+    position: absolute;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 320px;
+    height: 250px;
+    margin: 0 auto;
+    top: -75px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(./assets/whyGoSocial/White_Triangle.png);
+}
+#white-triangle .container {
+    margin-top: 35px; 
+}
+#white-triangle .container h4{
+    font-size: 14pt;
+    white-space: nowrap;
+}
+#white-triangle .container p{
+    font-size: 7pt;
+    margin-top: 20px;
+    white-space: nowrap;
+}
+#white-triangle .container .checkmark {
+    height: 15px;
+}
+#blue-triangle-background .text {
+    position: absolute;
+    bottom: 0;
+    width: 300px;
+    top: 200px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+#blue-triangle-background .text p  {
+    color: var(--color-white);
+    font-size: 9pt;
+    line-height: 25px;
+}
+
+.container .get-pricing {
+    margin-left: 0px !important;
+    margin-top: 20px;
+}
+.get-pricing .uppercase {
+    margin-top: 0px !important;
+    text-transform: uppercase;
+    font-weight: var(--bold);
+}
+.get-pricing:hover {
+    cursor: pointer;
+}
 /* -------------MEDIA QUERIEs----------------- */
 /* SMALL */
 @media (min-width: 576px){
@@ -1271,7 +1347,37 @@ h2.title {
         max-width: 400px;
         margin: 60px auto;
     }
-    
+    .charts-bars {
+        width: 90%;
+        max-width: 1000px;
+    }
+    #grey-bar, #chart {
+        width: 100%;
+        max-width: 1000px;
+    }
+    svg.vector {
+        display: none;
+    }
+    .green-fill .price {
+        margin-left: 0;
+    }
+    .green-fill .price p{
+        color: white;
+    }
+    .dark-grey-fill {
+        width: 50%;
+    }
+    svg.graph-logo-basic {
+        margin: 0px 0 0 815px;
+    }
+    svg.graph-logo-industry-average{
+        margin: 0 0 0 350px;
+
+    }
+    .disclaimer {
+        width: 90%;
+        max-width: 1000px;
+    }
    
 }
 /* MD */
@@ -1360,7 +1466,18 @@ h2.title {
         max-width: 900px;
     }
 
-   
+    #blue-triangle-background:before {
+        height: 30%;
+    }
+    #blue-triangle-background {
+        background-image: url(./assets/whyGoSocial/blue-triangle-background-large.png);
+    }
+    #glow {
+        background-position: right;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url(./assets/whyGoSocial/texture.png);
+    }
 
 
 }
@@ -1500,32 +1617,9 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     .header-nav a {
         font-size: 1.25rem;
     }
-    .charts-bars {
-        width: 1000px;
-    }
-    #grey-bar, #chart {
-        width: 1000px;
-    }
-    svg.vector {
-        display: none;
-    }
-    .green-fill .price {
-        margin-left: 0;
-    }
-    .green-fill .price p{
-        color: white;
-    }
-    .dark-grey-fill {
-        width: 50%;
-    }
-    svg.graph-logo-basic {
-        margin: 0px 0 0 815px;
-    }
-    svg.graph-logo-industry-average{
-        margin: 0 0 0 350px;
-    }
-    .disclaimer {
-        width: 1000px;
+    
+    .header2 .catchphrase {
+        text-align: left;
     }
 }
  
