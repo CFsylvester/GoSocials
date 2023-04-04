@@ -103,18 +103,14 @@ dots.forEach((dot, idx) => {
   dot.addEventListener('click', (e) => {
     
     let clickedDotNum = e.target.dataset.num;
-    // console.log(clickedDotNum);
 //     if the dot clicked is already active, then do nothing
     if(clickedDotNum == activeDotNum) {
-      // console.log('active');
       return;
     }
     else {
-      // console.log('not active');
       // shift the wrapper
-      let displayArea = wrapper.parentElement.clientWidth;
-      // let pixels = -wrapper.clientWidth * clickedDotNum;
-      let pixels = (-displayArea + 40) * clickedDotNum
+      //let displayArea = wrapper.parentElement.clientWidth;
+      let pixels = (-275 * clickedDotNum)
       wrapper.style.transform = 'translateX('+ pixels + 'px)';
 //       remove the active class from the active dot
       dots[activeDotNum].classList.remove('active');

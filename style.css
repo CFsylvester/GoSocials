@@ -1037,7 +1037,7 @@ hr {
     opacity: 0;
 }
 .green-fill.filled {
-    width: 10%;
+    width: 13%;
     display: flex !important;
 }
 .hide {
@@ -1155,12 +1155,15 @@ svg.graph-logo-basic, svg.graph-logo-industry-average, .charts-bars, #grey-bar, 
     background-image: url(./assets/whyGoSocial/texture.png);
 }
 .head {
-    padding: 5vh;
+    padding: 5vh 0;
     padding-bottom: 0;
-    width: 100%;
+    width: 90%;
     min-width: 315px;
-    max-width: 400px;
+    max-width: 500px;
     margin: auto;
+}
+.head-container {
+    max-width: 400px;
 }
 .textured .head .flex-container {
     display: flex;
@@ -1205,8 +1208,10 @@ h2.title {
     margin: 15px 0;
 }
 #mobile-carousel {
-    width: 320px; 
-    margin: auto;
+    width: 90%;
+    min-width: 290px;
+    max-width: 740px;
+    margin-left: auto;
 }
 .mobile-card-carousel {
     position: relative;
@@ -1303,9 +1308,13 @@ h2.title {
     white-space: nowrap;
 }
 #white-triangle .container p{
-    font-size: 7pt;
-    margin-top: 20px;
+    font-size: 8pt;
+    margin-top: 15px;
     white-space: nowrap;
+}
+#white-triangle .container .break{
+    white-space: normal !important; 
+    margin-top: 10px;
 }
 #white-triangle .container .checkmark {
     height: 15px;
@@ -1328,14 +1337,19 @@ h2.title {
 .container .get-pricing {
     margin-left: 0px !important;
     margin-top: 20px;
+    width: 175px;
 }
 .get-pricing .uppercase {
     margin-top: 0px !important;
     text-transform: uppercase;
     font-weight: var(--bold);
+    font-size: 9pt !important;
 }
 .get-pricing:hover {
     cursor: pointer;
+}
+.chef-container-desktop {
+    display: none;
 }
 /* -------------MEDIA QUERIEs----------------- */
 /* SMALL */
@@ -1380,7 +1394,7 @@ h2.title {
     }
    
 }
-/* MD */
+/* MD 768 */
 @media (min-width: 768px){
    
 }
@@ -1479,7 +1493,119 @@ h2.title {
         background-image: url(./assets/whyGoSocial/texture.png);
     }
 
-
+    /* WHY */
+    .head {
+        display: flex;
+        padding: 0;
+        padding-bottom: 0;
+        width: 95%;
+        margin-left: auto;
+        margin-right: 0;
+        min-width: none;
+        max-width: none;
+    }
+    .head-container {
+        margin-right: 50px;
+        margin-top: 75px;
+    }
+    .chef-container {
+        display: none;
+    }
+    .chef-container-desktop {
+        display: block;
+        margin-left: auto;
+        position: relative;
+    }
+    .chef-container-desktop img {
+        max-height: 580px;
+        overflow: HIDDEN;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+    }
+    .cards-wrapper .content .title {
+        font-size: 20pt;
+    }
+    .display-area {
+        overflow-y: hidden;
+    }
+    .height-container {
+        max-height: 580px;
+        overflow: hidden;
+    }
+    #mobile-carousel {
+        display: none;
+    }
+    .mobile-card-carousel {
+        height: 300px;
+        flex: 350px 0 0;
+    }
+    .cards-wrapper {
+        padding-top: 0px;
+    }
+    div#desktop-card-carousel {
+        position: absolute;
+        bottom: -95px;
+    }
+    .head-container .title {
+        font-size: 2.5rem;
+    }
+    .content .text p, .head-container .textblock {
+        line-height: 30px;
+        font-size: 12.5pt !important;
+    }
+    #blue-triangle-background {
+        height: 550px;
+    }
+    #white-triangle {
+        width: 600px !important;
+        height: 450px !important;
+        top: 35px !important;
+        left: 5% !important;
+        right: auto; 
+        position: relative;
+    }
+    #white-triangle .container {
+        margin-top: 100px;
+        width: 90%;
+    }
+    #white-triangle .container h4 {
+        font-size: 20pt;
+    }
+    #white-triangle .container .checkmark {
+        height: 25px;
+        margin-right: 5px;
+    }
+    #white-triangle .container p {
+        font-size: 12pt !important;
+        margin-top: 30px;
+    }
+    #white-triangle .container .break {
+        margin-top: 25px;
+    }
+    .container .get-pricing {
+        margin-top: 30px;
+        width: 200px;
+        margin-bottom: 30px;
+    }
+    #blue-triangle-background .text {
+        width: 470px;
+        top: 130px;
+        right: 15%;
+        left: auto;
+        position: relative;
+    }
+    #blue-triangle-background .text p {
+        color: var(--color-white);
+        font-size: 16pt;
+        line-height: 38px;
+    }
+    #blue-triangle-background {
+        height: 550px;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 /* Bootstrap 5 introduces a new breakpoint to the grid system XXL. Below are the Bootstrap media queries used for the grid system breakpoints for you to add to your projects CSS file to customize things.
@@ -1546,14 +1672,16 @@ No media query since this is the default in Bootstrap because it is "mobile firs
  
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1245px) {  
+
     .whyGoSocial .hero_image2 {
         width: fit-content;
         display: flex;
         margin: 5vh auto;
         height: 50vh;
         position: absolute;
-        right: 3vw;
+        right: 0;
         top: 15%;
+        max-width: 520px;
     }
     /* #mobileCharts{
         opacity: 0;
@@ -1621,6 +1749,12 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     .header2 .catchphrase {
         text-align: left;
     }
+    #blue-triangle-background {
+        height: 550px;
+        display: flex;
+        flex-direction: row;
+    }
+   
 }
  
 /* Extra extra large devices (extra large desktops, 1400px and up) */
