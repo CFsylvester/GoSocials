@@ -986,7 +986,7 @@ hr {
 /* Why GoSocial Charts */
 .charts .title {
     margin: 5vh auto 0;
-    width: 60%;
+    width: 75%;
     text-align: center;
 }
 .charts-bars {
@@ -1128,13 +1128,17 @@ svg.graph-logo-basic {
     background-size: cover;
     background-image: url(./assets/logos/goSocial_green.svg);
 }
-svg.graph-logo-basic, svg.graph-logo-industry-average, .charts-bars, #grey-bar, #chart  {-moz-transition: all .5s ease-out;-o-transition: all .5s ease-out;transition: all .5s ease-out;}
+svg.graph-logo-basic, svg.graph-logo-industry-average, .charts-bars, #grey-bar, #chart  {
+    -moz-transition: all .5s ease-out;-o-transition: all .5s ease-out;transition: all .5s ease-out;
+}
+
 .disclaimer {
     width: 60%;
     text-align: left;
     min-width: 320px; 
     margin: 35px auto 0;
     font-size: 12px;
+    padding: 10px;
 }
 /* Why GoSocial Difference MOBILE */
 .chef-container { 
@@ -1392,6 +1396,9 @@ h2.title {
         width: 90%;
         max-width: 1000px;
     }
+    .charts .title {
+        width: 60%;
+    }
    
 }
 /* MD 768 */
@@ -1497,15 +1504,17 @@ h2.title {
     .head {
         display: flex;
         padding: 0;
+        justify-content: center;
         padding-bottom: 0;
-        width: 95%;
+        max-width: 1500px;
+        width: 100%;
         margin-left: auto;
-        margin-right: 0;
+        margin-right: auto;
         min-width: none;
-        max-width: none;
+        margin: auto; 
     }
     .head-container {
-        margin-right: 50px;
+        margin-left: 10%;
         margin-top: 75px;
     }
     .chef-container {
@@ -1513,7 +1522,6 @@ h2.title {
     }
     .chef-container-desktop {
         display: block;
-        margin-left: auto;
         position: relative;
     }
     .chef-container-desktop img {
@@ -1562,9 +1570,10 @@ h2.title {
         width: 600px !important;
         height: 450px !important;
         top: 35px !important;
-        left: 5% !important;
-        right: auto; 
+        right: auto;
         position: relative;
+        margin: 0;
+        margin-right: 100px;
     }
     #white-triangle .container {
         margin-top: 100px;
@@ -1590,21 +1599,20 @@ h2.title {
         margin-bottom: 30px;
     }
     #blue-triangle-background .text {
-        width: 470px;
-        top: 130px;
-        right: 15%;
-        left: auto;
+        width: 345px;
+        top: initial;
         position: relative;
+        margin: auto 0;
     }
     #blue-triangle-background .text p {
         color: var(--color-white);
-        font-size: 16pt;
-        line-height: 38px;
+        font-size: 12pt;
+        line-height: 30px;
     }
     #blue-triangle-background {
         height: 550px;
         display: flex;
-        flex-direction: column;
+        justify-content: center;
     }
 }
 
