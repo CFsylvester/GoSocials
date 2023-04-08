@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- Base CSS -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- Google Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>GoSocial</title>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js" integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
+  </head>
+  <body class="features">
+    <!-- Navigation -->
+    <nav class="navbar navbar-b navbar-reduce navbar-dark sticky-top navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html">Navbar</a>
+          <div class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <input type="checkbox" id="hamburger">
+            <label for="hamburger" class="hamburger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </label>
+        </div>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Plans & Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./why_goSocial.html">Why GoSocial</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Features
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Pre-Service Features</a></li>
+                  <li><a class="dropdown-item" href="#">During Service Features</a></li>
+                  <li><a class="dropdown-item" href="#">Post-Service Features</a></li>
+                  <li><a class="dropdown-item" href="#">GoSocial Pass</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+              </li>
+              <li class="nav-item desktop">
+                <button class="btn btn-green">
+                    Self-Serve Sign up
+                </button>
+              </li>
+              <li class="nav-item desktop">
+                <button class="btn btn-light-blue">
+                    Request a Demo
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+   <!-- Main Body -->
+    <main>
+      <!-- Jumbotron -->
+      <div class="jumbotron2">
+        <div class="jumbotron_container">
+          <div class="header2">
+            <div>
+              <p class="catchphrase">
+                Features
+              </p>
+              <h1>Simplicity and <br class='mobile2'/> Sophistication, <br class='mobile2'/> Powered by <br class='mobile2'/> GoSocial®</h1>
+            </div>
+            <div class="text-center">
+                <p class="lead2">
+                    See how GoSocial® can kickstart your restaurant operations and put them in overdrive. Run a smoother front of house and reconnect with guests at a low cost.
+                </p>
+                <button class="btn btn-light-blue">
+                  Connect with us
+                </button>
+            </div>
+          </div>
+          <div class="hero_image2">
+              <img src="./assets/features/Portal_Image.png"/>
+          </div>
+          <div class="header-nav">
+            <a href="#pre-service">
+              Pre-Service Features
+            </a>
+            <a href="#during-service">
+              During Service Features
+            </a>
+            <a href="#post-serivce">
+              Post-Service Features
+            </a>
+          </div>
+        </div>
+        
+      </div>
+      <!-- Charts -->
+      <div id="saving_money" class="charts mb-5">
+        <div class="title">
+          <h2 class="mb-4">
+            Low costs can add <br class="mobile"/> up to big savings
+          </h2>
+          <p>
+            Low costs can add up to big savings
+A relentless drive towards cutting costs, allowing you to focus on reinvesting more hard earned dollars back into your restaurant.
+          </p>
+        </div>
+        <div class="packages mt-5 mb-4">
+          <h4 class="bold active" id="charts-basic">
+            BASIC 
+            <br />
+            Plan
+          </h4>
+          <h4 class="bold" id="charts-core" >
+            CORE
+            <br />
+            Plan
+          </h4>
+          <h4 class="bold" id="charts-enterprise">
+            ENTERPRISE
+            <br />
+            Plan
+          </h4>
+        </div>
+        <div class="charts-bars">
+          <div class="charts-container">
+            <div id="chart">
+              <div id="green-chart" data-percentage="10" class="green-fill filled">
+                <div class="price">
+                  <svg class="vector">
+
+                  </svg>
+                  <p>
+                    $49/mo
+                  </p>
+                </div>
+                <svg class="graph-logo-basic"></svg>
+              </div>
+              <div id="dark-blue-chart" data-percentage="20" class="dark-blue-fill">
+                <div class="price">
+                  <p class="ml-1">
+                    $69/mo
+                  </p>
+                </div>
+                <svg class="graph-logo-basic"></svg>
+              </div>
+              <div id="light-blue-chart" data-percentage="25" class="light-blue-fill">
+                <div class="price">
+                  <p class="ml-1">
+                    $99/mo
+                  </p>
+                </div>
+                <svg class="graph-logo-basic"></svg>
+              </div>
+            </div>
+          </div>
+          <div id="grey-bar" class="mt-3">
+            <div class="dark-grey-fill">
+              <div class="price">
+                $199/mo
+              </div>
+              <svg class="graph-logo-industry-average"></svg>
+            </div>
+          </div>
+        </div>
+        <p class="disclaimer">
+          As of July 31, 2022, GoSocial’s interpretation of industry average pricing is displayed above in comparison to GoSocial’s Basic, Core and Enterprise plan pricing. Industry average pricing excludes per-cover fees on an in-house and out-of-house basis. GoSocial® does not charge per-cover fees. The displayed industry average pricing excludes GoSocial®. GoSocial’s interpretation for industry average pricing is an approximation of plans and pricing for similar industry services. There may be material differences between similar industry services, its plans and GoSocial® that must be considered prior to making a plan assessment for your business. 
+        </p>
+      </div>
+      <!-- Difference -->
+      <div id="difference-mobile">
+        <div class="chef-container">
+          <img src="./assets/whyGoSocial/why_chef.jpeg" />
+        </div>
+        <div class="textured">
+          <div class="head">
+           <div class="head-container">
+              <p class="catchphrase">
+                You're in good company
+              </p>
+              <h2 class="title">
+                The GoSocial&#174 Difference
+              </h2>
+              <p class="textblock">
+                Partnering with GoSocial® means we are an extension of your restaurant. From mom and pops to large groups, see what some of our restaurants have to say.
+              </p>
+              <div class="flex-container mt-4">
+                <button class="btn btn-green">
+                  Self-Serve Sign Up
+                </button>
+                <div class="get-pricing">
+                  <p>Get Pricing</p>
+                  <svg class="green-arrow"></svg>
+                </div>
+              </div>
+           </div>
+            <div class="chef-container-desktop">
+              <div class="height-container">
+                <img class="chef" src="./assets/whyGoSocial/why_chef.jpeg" />
+                <div class="left-arrow">
+                  <img src="./assets/icons/Left_Arrow.png" />
+                </div>
+                <div class="right-arrow">
+                  <img src="./assets/icons/Right_Arrow.png" />
+                </div>
+              </div>
+              <div id="desktop-card-carousel">
+                <div class="display-area">
+                  <div class="cards-wrapper">
+                    
+                    <div class="mobile-card-carousel">
+                      <img src="./assets/whyGoSocial/carousel-card.png" alt="">
+                      <div class="content">
+                        <h4 class="title">Spasso Italian Grill</h4>
+                        <div class="text">
+                          <p>We opted in for GoSocial’s reservation and waitlist software and its ability to add an extra touch to our customer service with new guest notifications and tagging.</p>
+                          <p class="mt-2"> - Cris, Owner</p>
+                        </div>
+                      </div>
+                    </div>
+    
+                    <div class="mobile-card-carousel">
+                      <img src="./assets/whyGoSocial/carousel-card.png" alt="">
+                      <div class="content">
+                        <h4 class="title">Brick & Brew</h4>
+                        <div class="text">
+                          <p>Using GoSocial® at our restaurants has been instrumental in how we manage
+                            our FOH seating arrangement and managing our guests. We really love it!
+                          </p>
+                          <p class="mt-2"> - Shelly, General Manager</p>
+                        </div>
+                      </div>
+                    </div>
+    
+                    <div class="mobile-card-carousel">
+                      <img src="./assets/whyGoSocial/carousel-card.png" alt="">
+                      <div class="content">
+                        <h4 class="title">Tank and Libby’s - 1</h4>
+                        <div class="text">
+                          <p>
+                            GoSocial® is easy to use, cost effective and saves us on walkouts which helps us
+    earn more revenue and keeps guests happy. I’m not sure if there’s much more
+    we could ask for.
+                          </p>
+                          <p class="mt-2"> - Alex, Co-owner
+                            </p>
+                        </div>
+                      </div>
+                    </div>
+    
+                    <div class="mobile-card-carousel">
+                      <img src="./assets/whyGoSocial/carousel-card.png" alt="">
+                      <div class="content">
+                        <h4 class="title">Tank and Libby’s - 2</h4>
+                        <div class="text">
+                          <p>
+                            We have been very happy with using GoSocial’s wait
+    -
+    list feature because it
+    takes the manual work away from our host having to estimate wait times and
+    saves us a lot of walkouts from inaccurate quoting which was an issue for us
+    before.
+    
+                          </p>
+                          <p class="mt-2"> - Jill, Host</p>
+                        </div>
+                      </div>
+                    </div>
+    
+                    <div class="mobile-card-carousel">
+                      <img src="./assets/whyGoSocial/carousel-card.png" alt="">
+                      <div class="content">
+                        <h4 class="title">Salt & Lime</h4>
+                        <div class="text">
+                          <p>What interests me the most about GoSocial® so far is the ability for me to send
+                            out marketing campaigns to our guests to help keep them coming back. I would
+                            have never been able to do this so easily before.</p>
+                          <p class="mt-2"> - Sandra, Owner</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="mobile-carousel">
+            <div class="display-area">
+              <div id="cards-wrapper-mobile" class="cards-wrapper">
+                
+                <div class="mobile-card-carousel">
+                  <img src="./assets/whyGoSocial/carousel-card.png" alt="">
+                  <div class="content">
+                    <h4 class="title">Spasso Italian Grill</h4>
+                    <div class="text">
+                      <p>We opted in for GoSocial’s reservation and waitlist software and its ability to add an extra touch to our customer service with new guest notifications and tagging.</p>
+                      <p class="mt-2"> - Cris, Owner</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mobile-card-carousel">
+                  <img src="./assets/whyGoSocial/carousel-card.png" alt="">
+                  <div class="content">
+                    <h4 class="title">Brick & Brew</h4>
+                    <div class="text">
+                      <p>Using GoSocial® at our restaurants has been instrumental in how we manage
+                        our FOH seating arrangement and managing our guests. We really love it!
+                      </p>
+                      <p class="mt-2"> - Shelly, General Manager</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mobile-card-carousel">
+                  <img src="./assets/whyGoSocial/carousel-card.png" alt="">
+                  <div class="content">
+                    <h4 class="title">Tank and Libby’s - 1</h4>
+                    <div class="text">
+                      <p>
+                        GoSocial® is easy to use, cost effective and saves us on walkouts which helps us
+earn more revenue and keeps guests happy. I’m not sure if there’s much more
+we could ask for.
+                      </p>
+                      <p class="mt-2"> - Alex, Co-owner
+                        </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mobile-card-carousel">
+                  <img src="./assets/whyGoSocial/carousel-card.png" alt="">
+                  <div class="content">
+                    <h4 class="title">Tank and Libby’s - 2</h4>
+                    <div class="text">
+                      <p>
+                        We have been very happy with using GoSocial’s wait
+-
+list feature because it
+takes the manual work away from our host having to estimate wait times and
+saves us a lot of walkouts from inaccurate quoting which was an issue for us
+before.
+
+                      </p>
+                      <p class="mt-2"> - Jill, Host</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mobile-card-carousel">
+                  <img src="./assets/whyGoSocial/carousel-card.png" alt="">
+                  <div class="content">
+                    <h4 class="title">Salt & Lime</h4>
+                    <div class="text">
+                      <p>What interests me the most about GoSocial® so far is the ability for me to send
+                        out marketing campaigns to our guests to help keep them coming back. I would
+                        have never been able to do this so easily before.</p>
+                      <p class="mt-2"> - Sandra, Owner</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="dots-wrapper">
+              <button class="dot active"></button>
+              <button class="dot"></button>
+              <button class="dot"></button>
+              <button class="dot"></button>
+              <button class="dot"></button>
+            </div>
+          </div>
+          <div id="blue-triangle-background">
+            <div class="blue-triangle-container">
+              <div id="white-triangle">
+                <div class="container">
+                  <h4>
+                    Low cost and flexible plans
+                  </h4>
+                  <p class="break">
+                    When was the last time something so important was this easy?
+                  </p>
+                  <p>
+                    <img class="checkmark" src="./assets/icons/checkmark_blue.svg" />
+                    Three simple plans to choose from, starting at $49/mo
+                  </p>
+                  <p>
+                    <img class="checkmark" src="./assets/icons/checkmark_blue.svg" />
+                    Get set up in minutes with a client specialist 
+                  </p>
+                  <p>
+                    <img class="checkmark" src="./assets/icons/checkmark_blue.svg" />
+                    No lock in periods, set up costs or hidden fees 
+                  </p>
+                  <div class="get-pricing">
+                    <p class="uppercase">View Our Plans Here</p>
+                    <svg class="blue-arrow"></svg>
+                  </div>
+                </div>
+              </div>
+              <div class="text">
+                <p>
+                  You Decide.
+                </p>
+                <br/>
+                <p>Unlimited notifications and cover – free pricing at your service.</p>
+                <br/>
+                <p>Connect with us to see if our software is the most cost effective and simplest way to manage your reservations, waitlist and more.</p>
+              </div>
+            </div>
+            <div id="glow"> 
+              <img src="./assets/whyGoSocial/Glow.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Contact Form -->
+      <section class="form">
+        <div class="mx-auto text container">
+          <h2 class="text-center my-4">Connect with us today</h2>
+          <h5 class="text-center">Fill out the form below to contact our sales team for a discovery call to see how GoSocial&#174 can fulfill your restaurant's needs and to receive email marketing communications from GoSocial&#174.<span class="mobile display-contents"> You can unsubscribe from GoSocial&#174 emails at any time.</span></h5>
+          <h5 class="desktop text-center">You can unsubscribe from GoSocial&#174 emails at any time.</h5>
+        </div>
+        <form class="container" id="contact_form">
+          <div class="row">
+            <div class="col-12 text-center  col-md-6">
+              <input placeholder="First name&#42;">
+              </input>
+            </div>
+            <div class="col-12 text-center col-md-6">
+              <input placeholder="Last name&#42;">
+              </input>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 text-center col-md-6">
+              <input placeholder="Email&#42;">
+              </input>
+            </div>
+            <div class="col-12 text-center col-md-6">
+              <input placeholder="Mobile phone&#42;">
+              </input>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 text-center col-md-6">
+              <input placeholder="Restaurant name&#42;">
+              </input>
+            </div>
+            <div class="col-12 text-center col-md-6">
+              <input placeholder="Number of restaurant units&#42;">
+              </input>
+            </div>
+          </div>
+        </form>
+        <div class="form_buttons">
+          <button class="btn btn-light-blue">
+            Contact Us
+          </button>
+          <p class="bold">or</p>
+          <button class="btn btn-green">
+            Self-Serve <br class="mobile"/> Sign Up
+          </button>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+   <footer>
+        <div class="text">
+          <div class="footer-brand" href="#"></div>
+          <p>Restaurant management made easy across digital platforms for your business</p>
+        </div>
+        <div class="social-icons">
+          <button class="btn circle"></button>
+          <button class="btn circle"></button>
+        </div>
+   </footer>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <!-- Optional JavaScript -->
+    <script src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+  </body>
+</html>
