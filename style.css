@@ -993,7 +993,7 @@ hr {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 320px;
+    padding: 0 25px;
     margin: auto;
     height: 150px;
 
@@ -1012,6 +1012,9 @@ hr {
     width: 40%;
     background-color: var(--color-grey);
     animation: fillGrey 0.5s ease;
+}
+#glow {
+    display: none;
 }
 .green-fill {
     display: flex;
@@ -1257,6 +1260,7 @@ h2.title {
     width: 100%;
     overflow-x: hidden;
     margin: auto;
+    position: relative;
 }
   
 .dots-wrapper {
@@ -1363,6 +1367,33 @@ h2.title {
 .chef-container-desktop {
     display: none;
 }
+
+.left-arrow img{
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 25px;
+    left: 25px;
+    bottom: 220px;
+}
+.left-arrow:hover {
+    cursor: pointer;
+}
+.right-arrow:hover {
+    cursor: pointer;
+}
+.right-arrow img{
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 25px;
+    right: 25px;
+    bottom: 220px;
+}
 /* -------------MEDIA QUERIEs----------------- */
 /* SMALL */
 @media (min-width: 576px){
@@ -1374,8 +1405,10 @@ h2.title {
         margin: 60px auto;
     }
     .charts-bars {
-        width: 90%;
-        max-width: 1450px;
+        width: 100%;
+        max-width: 1500px;
+        padding: 0 25px;
+}
     }
     #grey-bar, #chart {
         width: 100%;
@@ -1401,8 +1434,10 @@ h2.title {
 
     }
     .disclaimer {
-        width: 90%;
-        max-width: 1450px;
+        width: 100%;
+        max-width: 1500px;
+        padding: 0 25px;
+
     }
     .charts .title {
         width: 60%;
@@ -1506,6 +1541,7 @@ h2.title {
         position: absolute;
         right: 0;
         margin-top: -50px;
+        display: block;
     }
     #glow img {
         height: 700px;
@@ -1514,7 +1550,7 @@ h2.title {
     /* WHY */
     .head {
         display: flex;
-        padding: 0 25px;
+        padding: 0 0 0 25px;
         justify-content: center;
         padding-bottom: 0;
         max-width: 1500px;
@@ -1534,7 +1570,7 @@ h2.title {
         display: block;
         position: relative;
     }
-    .chef-container-desktop img {
+    .chef-container-desktop .height-container .chef{
         overflow: HIDDEN;
         background-position: center;
         background-size: cover;
@@ -1549,6 +1585,7 @@ h2.title {
         overflow-y: hidden;
     }
     .height-container {
+        position: relative;
         max-height: 580px;
         overflow: hidden;
     }

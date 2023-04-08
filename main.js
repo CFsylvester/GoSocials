@@ -13,6 +13,9 @@ const chartsEnterprise = document.getElementById('charts-enterprise')
 const greenChart = document.getElementById('green-chart')
 const darkBlueChart = document.getElementById('dark-blue-chart')
 const lightBlueChart = document.getElementById('light-blue-chart')
+const leftArrow = document.querySelector('.left-arrow');
+const rightArrow = document.querySelector('.right-arrow');
+let desktopCWClicks = 0; 
 
 const carouselClick = function() {
     if(this.innerHTML.trim() === "Core"){
@@ -86,9 +89,40 @@ const removeActive = function() {
 // In HTML, .display-area has the width of 4 cards = 880px. Each card is 200px width and margin set to 10px.
 // .display-area has a .cards-wrapper which contains all the cards. .cards-wrapper is set to display flex.
 // .display-area has overflow hidden to hide the portion of cards-wrapper which extends beyond the container's width.
+const wrapperDesktop = document.querySelector('.cards-wrapper');
+const desktopCarouselClick = function(e, direction) {
+    e.preventDefault(); 
+    
+    if(direction === 'left' && desktopCWClicks === 0) {
+        return;
+    }
 
-const wrapper = document.querySelector('.cards-wrapper');
-console.log(wrapper.clientWidth);
+    if(direction === 'right' && desktopCWClicks === 4) {
+        return;
+    }
+
+    if(direction === 'left'){
+        desktopCWClicks--; 
+    } else {
+        desktopCWClicks++; 
+        console.log(desktopCWClicks)
+    }
+        
+        // shift the wrapper
+        //let displayArea = wrapper.parentElement.clientWidth;
+        let pixels = (-355 * desktopCWClicks)
+        wrapperDesktop.style.transform = 'translateX('+ pixels + 'px)';
+//   //       remove the active class from the active dot
+//         dots[activeDotNum].classList.remove('active');
+//   //       add the active class to the clicked dot
+//         dots[clickedDotNum].classList.add('active');
+  //       now set the active dot number to the clicked dot;
+        // activeDotNum = clickedDotNum;
+      
+      
+
+}
+const wrapper = document.querySelector('#cards-wrapper-mobile');
 
 // grab the dots
 const dots = document.querySelectorAll('.dot');
@@ -110,7 +144,7 @@ dots.forEach((dot, idx) => {
     else {
       // shift the wrapper
       //let displayArea = wrapper.parentElement.clientWidth;
-      let pixels = (-275 * clickedDotNum)
+      let pixels = (-280 * clickedDotNum)
       wrapper.style.transform = 'translateX('+ pixels + 'px)';
 //       remove the active class from the active dot
       dots[activeDotNum].classList.remove('active');
@@ -130,3 +164,6 @@ if (carouselEnterprise !== null) carouselEnterprise.onclick = carouselClick;
 if (chartsBasic !== null) chartsBasic.onclick =  () => {removeActive(); chartsClick(greenChart); $(chartsBasic).addClass('active'); }
 if (chartsCore !== null) chartsCore.onclick =  () =>{removeActive(); chartsClick(darkBlueChart); $(chartsCore).addClass('active');} 
 if (chartsEnterprise !== null) chartsEnterprise.onclick =  () => {removeActive(); chartsClick(lightBlueChart); $(chartsEnterprise).addClass('active');}
+
+leftArrow.onclick = (e) => {desktopCarouselClick(e, 'left')}
+rightArrow.onclick = (e) => {desktopCarouselClick(e, 'right')}
