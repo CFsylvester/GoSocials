@@ -917,7 +917,7 @@ hr {
     background-position: right;
     background-size: cover;
     background-repeat: no-repeat;
-    max-width: 450px;
+    max-width: 650px;
     min-width: 315px;
     width: 100%;
 }
@@ -945,6 +945,7 @@ hr {
     color: white !important; 
     padding: 0 5px;
     font-size: 1rem;
+    text-decoration: none;
 }
   
 .header > div:first-child {
@@ -1001,7 +1002,6 @@ hr {
 
 #grey-bar, #chart {
     display: flex;
-    width: 320px;
     height: 66px;
     position: relative;
     background-color: var(--color-hover25);
@@ -1009,7 +1009,7 @@ hr {
 .dark-grey-fill {
     display: flex;
     height: 100%;
-    width: 40%;
+    width: 30%;
     background-color: var(--color-grey);
     animation: fillGrey 0.5s ease;
 }
@@ -1110,22 +1110,22 @@ svg.vector {
     color: var(--color-white);
 }
 svg.graph-logo-industry-average {
-    height: 13px;
+    height: 11px;
     display: block;
     align-self: center;
     right: 10px;
-    width: 165px;
+    width: 140px;
     position: absolute;
     background-position: center;
     background-size: cover;
     background-image: url(./assets/logos/industy_average.svg)
 }
 svg.graph-logo-basic {
-    height: 12px;
+    height: 10px;
     display: block;
     align-self: center;
     right: 10px;
-    width: 165px;
+    width: 140px;
     position: absolute;
     background-position: center;
     background-size: cover;
@@ -1136,12 +1136,10 @@ svg.graph-logo-basic, svg.graph-logo-industry-average, .charts-bars, #grey-bar, 
 }
 
 .disclaimer {
-    width: 60%;
     text-align: left;
-    min-width: 320px; 
     margin: 35px auto 0;
     font-size: 12px;
-    padding: 10px;
+    padding: 0px 25px;
 }
 /* Why GoSocial Difference MOBILE */
 .chef-container { 
@@ -1408,7 +1406,6 @@ h2.title {
         width: 100%;
         max-width: 1500px;
         padding: 0 25px;
-}
     }
     #grey-bar, #chart {
         width: 100%;
@@ -1731,26 +1728,21 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     .whyGoSocial .hero_image2 {
         width: fit-content;
         display: flex;
-        margin: 5vh auto;
+        margin: 5vh auto 0 0;
         height: 50vh;
-        position: absolute;
         right: 0;
         top: 15%;
-        max-width: 520px;
+        max-width: 650px;
     }
-    /* #mobileCharts{
-        opacity: 0;
-    }
-    #desktopCharts{
-        opacity: 0;
-    } */
     .whyGoSocial .hero_image2 img {
        width: fit-content; 
     }
     .jumbotron_container {
         position: relative;
-        width: 1050px;
+        width: 1500px;
         margin: 0 auto;
+        justify-content: center;
+        display: flex;
     }
     .whyGoSocial .jumbotron2 {
         flex-direction: row;
@@ -1775,10 +1767,8 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     .whyGoSocial .header2 {
         max-width: 570px; 
         height: 170px;
-        margin: 0;
-        margin: 0;
-        position: absolute !important;
-        top: 25vh;
+        margin: 0 0 0 auto;
+        top: 20vh;
         left: 3vw;
         text-align: left;
         justify-content: flex-start;
