@@ -1307,6 +1307,12 @@ h2.title {
     margin-top: 100px;
     background-image: url(./assets/whyGoSocial/blue-triangle-background.png);
 }
+.feature #blue-triangle-background {
+    background-image: url(./assets/features/blue-triangle.png);
+}
+.feature #blue-triangle-background .blue-triangle-container {
+    max-width: 1200px;
+}
 #blue-triangle-background .blue-triangle-container {
     display: flex;
     flex-direction: row;
@@ -1478,6 +1484,10 @@ h2.title {
     height: 35vh;
     position: relative;
 }
+.features section.form {
+    margin-top: 0px;
+    padding-top: 0px;
+}
 .bold {
     font-weight: var(--bold);
 }
@@ -1521,7 +1531,7 @@ ul li::marker {
 }
 .feature .content ul {
     width: 100%;
-    margin-right: 50px;
+    margin: 0 auto 50px;
     max-width: 600px;
 }
 /* -------------MEDIA QUERIEs----------------- */
@@ -1797,9 +1807,8 @@ ul li::marker {
         display: flex;
         flex-direction: row;
     }
-    .feature .content {
-        flex-direction: row;
-        padding: 50px;
+    .feature .content ul {
+        margin-right: 50px;
     }
     .feature-image {
         margin: auto auto auto 50px;
