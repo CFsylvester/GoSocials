@@ -92,7 +92,7 @@ td p {
 }
 
 .desktop {
-    display: none;
+    display: none !important;
     transition: all 0.16s ease-in;
 }
 
@@ -184,11 +184,11 @@ label.hamburger {
     height: 60px;
     position: relative;
     cursor: pointer;
- }
+}
  
  input#hamburger {
    display:none
- }
+}
  .navbar-toggler {
     border: none;
 }
@@ -316,38 +316,52 @@ label.hamburger {
 /* ------------------FOOTER------------------------ */
 footer {
     width: 100%;
-    padding: 0 6vw;
+    padding: 6vh 6vw;
     display: flex;
     min-height: 175px;
     justify-content: center;
     background-color: var(--color-primary-dark-blue);
 }
 
-footer p {
-    font-size: 0.85rem;
+footer .col:nth-child(1), footer .col:only-child{
+    font-size: 1rem !important;
     font-family: var(--font-family) !important;
     font-weight: var(--regular);
-    color: var(--color-white);
+    color: var(--color-white) !important;
     letter-spacing: 1.2 !important;
-    bottom: 0vh;
-    position: absolute;
+}
+footer a, footer p {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: var(--color-white) !important;
+    flex-wrap: nowrap !important; 
 }
 
+footer a:hover, footer p:hover {
+    color: var(--color-hover) !important; 
+    transition: all 0.16s ease-in;
+    cursor: pointer;
+}
+footer .desktop {
+    width: 1000px;
+}
 footer .text {
     position: relative;
     width: 100%;
     max-width: 200px;
     height: 155px;
-    margin: auto 0;
 }
 .footer-brand {
     width: 200px;
     height: 90px;
-    border: 2px solid white;
+}
+.footer-brand img {
+    width: 100%;
+    height: 100%;
 }
 .social-icons {
     display: flex;
-    margin: 2vh 0;
+    margin: 0 0 2vh 0;
     width: 95px;
     margin-left: 15px;
 }
@@ -355,7 +369,20 @@ button.btn.circle {
     width: 35px;
     height: 35px;
     margin: 0 5px;;
-    background-color: var(--color-white);
+}
+.facebook {
+    background-image: url(./assets/icons/Facebook.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 35px;
+}
+.instagram {
+    background-image: url(./assets/icons/Instagram.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 35px;
 }
 /* ------------------------------------------------ */
 /* Table */
@@ -1535,13 +1562,18 @@ ul li::marker {
     max-width: 600px;
 }
 /* -------------GOSOCIAL PASS----------------- */
+.pass {
+    background-repeat: no-repeat;
+    background-image: url(./assets/pass/gradient.png);
+    background-size: cover;
+}
 .pass .jumbotron2 {
     background-image: url(./assets/pass/Blue_Background.png);
     background-size: cover;
     border-radius: 0px !important;
     background-repeat: no-repeat;
     background-position: bottom;
-    height: 115vh;
+    height: 100vh;
     display: flex;
     position: relative;
     flex-direction: column;
@@ -1586,7 +1618,7 @@ ul li::marker {
 }
 .pass section.form {
     margin-top: 0px;
-    padding-top: 0px;
+    background-color: white;
 }
 /* -------------MEDIA QUERIEs----------------- */
 /* SMALL */
@@ -1671,7 +1703,7 @@ ul li::marker {
         padding: 0x !important;
     }
     .desktop {
-        display: block;
+        display: block !important;
     } 
 
     .header {
@@ -1866,6 +1898,9 @@ ul li::marker {
     }
     .feature-image {
         margin: auto auto auto 50px;
+    }
+    .social-icons {
+        margin: 2vh 0 2vh -5px;
     }
 }
 
