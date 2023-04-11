@@ -180,7 +180,7 @@ td p {
 /* Hamburger */
 label.hamburger {
     display: block;
-    width: 40px; /* less width = square hamburger */
+    width: 30px; /* less width = square hamburger */
     height: 60px;
     position: relative;
     cursor: pointer;
@@ -195,7 +195,7 @@ label.hamburger {
  
  .line {
     position: absolute;
-    height: 6px;
+    height: 3px;
     width: 100%;
     border-radius: 25px;
     background: var(--color-white);
@@ -203,8 +203,8 @@ label.hamburger {
  }
  /* steps of 12 are optional, could also be 10, 13 etc */
  .line:nth-child(1) { top: 3px; }
- .line:nth-child(2) { top: 15px; }
- .line:nth-child(3) { top: 28px; }
+ .line:nth-child(2) { top: 12px; }
+ .line:nth-child(3) { top: 21px; }
  
  /* translateY must be same as */
  #hamburger:checked + .hamburger .line:nth-child(1){
@@ -216,7 +216,7 @@ label.hamburger {
  }
  
  #hamburger:checked + .hamburger .line:nth-child(3){
-    transform: translateY(-15px) rotate(45deg);
+    transform: translateY(-8px) rotate(45deg);
  }
 /* Navbar */
 .navbar {
@@ -1534,6 +1534,60 @@ ul li::marker {
     margin: 0 auto 50px;
     max-width: 600px;
 }
+/* -------------GOSOCIAL PASS----------------- */
+.pass .jumbotron2 {
+    background-image: url(./assets/pass/Blue_Background.png);
+    background-size: cover;
+    border-radius: 0px !important;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 115vh;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    top: 0;
+    width: 100%;
+}
+.pass .header2 {
+    display: flex;
+    flex-wrap: wrap;
+    height: 270px;
+    margin: 10vh auto 0;
+    position: relative;
+    justify-content: center;
+}
+
+.pass .header2 .text-center{
+    width: 100%;
+}
+.pass .title {
+    padding-top: 5vh;
+    margin: 0 auto;
+    width: 75%;
+    text-align: center;
+}
+.pass .hero_image2 img {
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 650px;
+    min-width: 315px;
+    width: 100%;
+}
+
+.pass .hero_image2 {
+    max-width: 450px;
+    min-width: 315px;
+    width: 100%;
+    display: flex;
+    margin: 100px auto 0;
+    height: 45vh;
+    position: relative;
+}
+.pass section.form {
+    margin-top: 0px;
+    padding-top: 0px;
+}
 /* -------------MEDIA QUERIEs----------------- */
 /* SMALL */
 @media (min-width: 576px){
@@ -1888,7 +1942,16 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         top: 15%;
         max-width: 650px;
     }
-    .whyGoSocial .hero_image2 img, .features .hero_image2 img {
+    .pass .hero_image2 {
+        width: fit-content;
+        display: flex;
+        margin: 5vh auto 0 75px;
+        height: 60vh;
+        right: 0;
+        top: 15%;
+        max-width: 650px;
+    }
+    .whyGoSocial .hero_image2 img, .features .hero_image2 img, .pass .hero_image2 img {
        width: fit-content; 
     }
     .jumbotron_container {
@@ -1898,10 +1961,11 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         justify-content: center;
         display: flex;
     }
-    .whyGoSocial .jumbotron2, .features .jumbotron2 {
+    .whyGoSocial .jumbotron2, .features .jumbotron2, .pass .jumbotron2 {
         flex-direction: row;
+        background-image: url(./assets/pass/jumbotron.png);
     }
-    .whyGoSocial .jumbotron2 h1, .features .jumbotron2 h1{
+    .whyGoSocial .jumbotron2 h1, .features .jumbotron2 h1, .pass .jumbotron2 h1{
         text-align: left;
         white-space: normal !important;
         margin-bottom: 20px;
@@ -1913,15 +1977,15 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         letter-spacing: 1.2px;
         font-size: 1.5rem;
     } 
-    .features .jumbotron2 .lead2 {
+    .features .jumbotron2 .lead2, .pass .jumbotron2 .lead2 {
         text-align: left !important;
         margin: 0 0 40px;
         letter-spacing: 1.2px;
     }
-    .whyGoSocial .jumbotron2 .text-center, .features .jumbotron2 .text-center {
+    .whyGoSocial .jumbotron2 .text-center, .features .jumbotron2 .text-center, .pass .jumbotron2 .text-center {
         text-align: left !important;
     }
-    .whyGoSocial .header2, .features .header2 {
+    .whyGoSocial .header2, .features .header2, .pass .header2 {
         max-width: 570px; 
         height: 170px;
         margin: 0 0 0 auto;
@@ -1935,8 +1999,12 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         top: 15%;
         left: 0;
     }
+    .pass .header2 {
+        top: 20%;
+        left: 0;
+    }
 
-    .whyGoSocial .jumbotron2,  .features .jumbotron2{
+    .whyGoSocial .jumbotron2,  .features .jumbotron2,  .pass .jumbotron2{
         height: 100vh; 
     }
     .header-nav {
@@ -1956,7 +2024,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     .header2 .catchphrase {
         text-align: left;
     }
-    .features .mobile2 {
+    .features .mobile2,  .pass .mobile2 {
         display: none;
     }
 }
