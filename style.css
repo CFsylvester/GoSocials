@@ -999,6 +999,10 @@ hr {
     margin: 35px 0;
 }
 
+.pass .lead2 {
+    margin: 15px 0;
+}
+
 .features .lead2 {
     margin: 20px 0; 
 }
@@ -1459,7 +1463,15 @@ h2.title {
     right: 25px;
     bottom: 220px;
 }
-
+.arrow1 {
+    min-height: 25px !important;
+    min-width: 25px !important;
+    height: 110px !important;
+    width: 41px !important;
+    position: absolute;
+    right: 40px;
+    top: -30px;
+}
 
 /* -------------Features----------------- */
 .features .jumbotron2 {
@@ -1557,6 +1569,7 @@ ul li::marker {
 }
 .feature-image {
    margin: auto;
+   position: relative;
 }
 .feature-image img {
     background-position: center;
@@ -1594,6 +1607,7 @@ ul li::marker {
     background-position: bottom;
     height: 100vh;
     padding: 25px;
+    max-height: 700px;
     display: flex;
     position: relative;
     flex-direction: column;
@@ -1602,9 +1616,9 @@ ul li::marker {
 }
 .pass .header2 {
     max-height: 385px;
-    height: 100%;
     display: flex;
     flex-wrap: wrap;
+    height: 55%;
     margin: 10vh auto 0;
     position: relative;
     justify-content: center;
@@ -1619,6 +1633,13 @@ ul li::marker {
     width: 75%;
     text-align: center;
 }
+
+.pass .feature .title {
+    text-align: left;
+    line-height: 30px;
+    min-width: 300px;
+    max-width: 400px;
+}
 .pass .hero_image2 img {
     background-position: right;
     background-size: cover;
@@ -1628,8 +1649,8 @@ ul li::marker {
 }
 
 .pass .hero_image2 {
+    margin: 5px auto;
     max-width: 360px;
-    margin: 30px auto;
     width: 100%;
     max-height: 220px;
     display: flex;
@@ -1638,6 +1659,20 @@ ul li::marker {
 .pass section.form {
     margin-top: 0px;
     background-color: white;
+}
+.colorful-title {
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 0;
+}
+.noir {
+    color: #00002B;
+}
+.colorful-title h2 {
+    font-size: 18pt;
+    max-width: 380px;
+    line-height: 30px;
 }
 /* -------------MEDIA QUERIEs----------------- */
 /* SMALL */
