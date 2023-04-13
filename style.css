@@ -1206,15 +1206,23 @@ svg.graph-logo-basic, svg.graph-logo-industry-average, .charts-bars, #grey-bar, 
     background-image: url(./assets/whyGoSocial/texture.png);
 }
 .head {
-    padding: 5vh 0;
+    padding: 25px;
     padding-bottom: 0;
     width: 90%;
     min-width: 315px;
     max-width: 500px;
     margin: auto;
 }
+#difference-mobile .head {
+    min-width: 290px;
+    max-width: 740px;
+    margin: 0;
+    margin-left: auto;
+    padding: 0;
+}
 .head-container {
     max-width: 400px;
+    padding: 25px; 
 }
 .textured .head .flex-container {
     display: flex;
@@ -1259,7 +1267,6 @@ h2.title {
     margin: 15px 0;
 }
 #mobile-carousel {
-    width: 90%;
     min-width: 290px;
     max-width: 740px;
     margin-left: auto;
@@ -1831,6 +1838,18 @@ ul li::marker {
 
     /* WHY */
     .head {
+        display: flex;
+        padding: 0 0 0 25px;
+        justify-content: center;
+        padding-bottom: 0;
+        max-width: 1500px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        min-width: none;
+        margin: auto; 
+    }
+    #difference-mobile .head {
         display: flex;
         padding: 0 0 0 25px;
         justify-content: center;
