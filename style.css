@@ -1334,6 +1334,10 @@ h2.title {
     margin-top: 100px;
     background-image: url(./assets/whyGoSocial/blue-triangle-background.png);
 }
+.pass .feature #blue-triangle-background {
+    height: 350px;
+    background-image: url(./assets/pass/blue-vector.png);
+}
 .feature #blue-triangle-background {
     background-image: url(./assets/features/blue-triangle.png);
 }
@@ -1365,8 +1369,18 @@ h2.title {
 #white-triangle .container {
     margin-top: 35px; 
 }
+.pass #white-triangle .container {
+    margin-top: 45px; 
+}
+.spaced {
+    letter-spacing: 1px;
+}
 #white-triangle .container h4{
     font-size: 14pt;
+    white-space: nowrap;
+}
+.pass #white-triangle .container h4{
+    font-size: 12pt;
     white-space: nowrap;
 }
 #white-triangle .container p{
@@ -1384,7 +1398,7 @@ h2.title {
 #blue-triangle-background .blue-triangle-container .text {
     position: absolute;
     bottom: 0;
-    width: 300px;
+    width: 320px;
     top: 200px;
     left: 0;
     right: 0;
@@ -1395,11 +1409,16 @@ h2.title {
     font-size: 9pt;
     line-height: 25px;
 }
-
+.fourteen {
+    font-size: 12pt !important;
+}
 .container .get-pricing {
     margin-left: 0px !important;
     margin-top: 20px;
     width: 175px;
+}
+.pass .container .get-pricing {
+    margin-top: 0px;
 }
 .get-pricing .uppercase {
     margin-top: 0px !important;
@@ -1574,6 +1593,7 @@ ul li::marker {
     background-repeat: no-repeat;
     background-position: bottom;
     height: 100vh;
+    padding: 25px;
     display: flex;
     position: relative;
     flex-direction: column;
@@ -1581,9 +1601,10 @@ ul li::marker {
     width: 100%;
 }
 .pass .header2 {
+    max-height: 385px;
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
-    height: 270px;
     margin: 10vh auto 0;
     position: relative;
     justify-content: center;
@@ -1603,17 +1624,15 @@ ul li::marker {
     background-size: cover;
     background-repeat: no-repeat;
     max-width: 650px;
-    min-width: 315px;
     width: 100%;
 }
 
 .pass .hero_image2 {
-    max-width: 450px;
-    min-width: 315px;
+    max-width: 360px;
+    margin: 30px auto;
     width: 100%;
+    max-height: 220px;
     display: flex;
-    margin: 100px auto 0;
-    height: 45vh;
     position: relative;
 }
 .pass section.form {
@@ -1978,6 +1997,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         max-width: 650px;
     }
     .pass .hero_image2 {
+        max-height: 400px;
         width: fit-content;
         display: flex;
         margin: 5vh auto 0 75px;
