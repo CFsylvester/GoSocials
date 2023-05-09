@@ -19,7 +19,9 @@
     <!-- Navigation -->
     <nav class="navbar navbar-b navbar-reduce navbar-dark sticky-top navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
+          <a class="navbar-brand" href="#">
+            <img src="./assets/logos/business.svg"></img>
+          </a>
           <div class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <input type="checkbox" id="hamburger">
             <label for="hamburger" class="hamburger">
@@ -220,149 +222,393 @@
           </div>
           </div>
         </div>
-        <!-- Table - Mobile -->
-        <table class="mobile">
-          <thead>
+        <!-- Table - Mobile Basic Grid -->
+        <div id="mobile-basic-grid" >
+          <table class="mobile">
+            <thead>
+              <tr>
+                <td>
+                  <h4 class="text-uppercase grey">Pricing</h4>
+                </td>
+                <td>
+  
+                </td>
+              </tr>
+            </thead>
             <tr>
               <td>
-                <h4 class="text-uppercase grey">Pricing</h4>
+                <p class="semibold">
+                  Monthly subscription
+                </p>
               </td>
               <td>
-
+                <p class="semibold">
+                  $99/mo, no term
+                </p>
               </td>
             </tr>
-          </thead>
-          <tr>
-            <td>
-              <p class="semibold">
-                Monthly subscription
-              </p>
-            </td>
-            <td>
-              <p class="semibold">
-                $99/mo, no term
-              </p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <p class="semibold">
-                Reservation on your website & <br>
-                Per network cover reservation
-              </p>
-            </td>
-            <td>
-              <p class="semibold">
-                Free
-              </p>
-            </td>
-          </tr>
-          <thead>
             <tr>
               <td>
-                <h4 class="text-uppercase grey">Solutions</h4>
+                <p class="semibold">
+                  Reservation on your website & <br>
+                  Per network cover reservation
+                </p>
               </td>
               <td>
-
+                <div class="hyphen">
+                  <img  src="./assets/icons/Line.svg"/>
+                </div>
               </td>
             </tr>
-          </thead>
-          <tr>
-            <td>
-              <p>
-                In-house and online wait-list
-              </p>
-            </td>
-            <td>
-
-            </td>
-          </tr>
-          <tr>
-            <td>
-              On-demand, fully customizable floor plan
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>
-              1:1 onboarding and training
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>
-              Unlimited notifications
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>
-              Reservations
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>
-              Password protection and role permissions
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>
-              Table management
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>
-              Post dining surveys
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>
-              Customizable performance reports and analytics
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>
-              Availability and flow controls
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>
-              Employee scorecards with service recovery
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>
-              Customizable text message marketing to guests
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>
-              Social media scheduling
-            </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>
-              Dedicated account manager
-            </td>
-            <td></td>
-          </tr>
-        </table>
-        <div class="mobile my-5 container">
-          <div class='text-center'>
-            <button class="btn btn-light-blue text-uppercase">
-              Get Enterprise
-            </button>
-          </div>
+            <thead>
+              <tr>
+                <td>
+                  <h4 class="text-uppercase grey">Solutions</h4>
+                </td>
+                <td></td>
+              </tr>
+            </thead>
+            <tr>
+              <td>
+                <p>
+                  In-house and online wait-list
+                </p>
+              </td>
+              <td>
+                <img class="checkmark" src="./assets/icons/green_check.svg" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                On-demand, fully customizable floor plan
+              </td>
+              <td>
+                <img class="checkmark" src="./assets/icons/green_check.svg" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                1:1 onboarding and training
+              </td>
+              <td>
+                <img class="checkmark" src="./assets/icons/green_check.svg" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Unlimited notifications
+              </td>
+              <td>
+                <img class="checkmark" src="./assets/icons/green_check.svg" />
+              </td>
+            </tr>
+          </table>
+          <div class="mobile my-5 container">
+            <div class='text-center'>
+              <button class="btn btn-green text-uppercase">
+                Get Basic
+              </button>
+            </div>
         </div>
+        
+        </div>
+
+        <!-- Table - Mobile Core Grid -->
+        <div id="mobile-core-grid" class="initial hide" >
+          <table class="mobile">
+            <thead>
+              <tr>
+                <td>
+                  <h4 class="text-uppercase grey">Pricing</h4>
+                </td>
+                <td>
+  
+                </td>
+              </tr>
+            </thead>
+            <tr>
+              <td>
+                <p class="semibold">
+                  Monthly subscription
+                </p>
+              </td>
+              <td>
+                <p class="semibold">
+                  $99/mo, no term
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p class="semibold">
+                  Reservation on your website & <br>
+                  Per network cover reservation
+                </p>
+              </td>
+              <td>
+                <p class="semibold">
+                  FREE
+                </p>
+              </td>
+            </tr>
+            <thead>
+              <tr>
+                <td>
+                  <h4 class="text-uppercase grey">Solutions</h4>
+                </td>
+                <td>
+  
+                </td>
+              </tr>
+            </thead>
+            <tr>
+              <td>
+                <p>
+                  In-house and online wait-list
+                </p>
+              </td>
+              <td>
+                <img class="checkmark" src="./assets/icons/core_check.svg" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                On-demand, fully customizable floor plan
+              </td>
+              <td>
+                <img class="checkmark" src="./assets/icons/core_check.svg" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                1:1 onboarding and training
+              </td>
+              <td>
+                <img class="checkmark" src="./assets/icons/core_check.svg" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Unlimited notifications
+              </td>
+              <td>
+                <img class="checkmark" src="./assets/icons/core_check.svg" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Reservations
+              </td>
+              <td>
+                <img class="checkmark" src="./assets/icons/core_check.svg" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Password protection and role permissions
+              </td>
+              <td>
+                <img class="checkmark" src="./assets/icons/core_check.svg" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Table management
+              </td>
+              <td>
+                <img class="checkmark" src="./assets/icons/core_check.svg" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Post dining surveys
+              </td>
+              <td>
+                <img class="checkmark" src="./assets/icons/core_check.svg" />
+              </td>
+            </tr>
+          </table>
+          <div class="mobile my-5 container">
+            <div class='text-center'>
+              <button class="btn btn-dark-blue text-uppercase">
+                Get Core
+              </button>
+            </div>
+        </div>
+        
+        </div>
+
+        <!-- Table - Mobile Core Grid -->
+        <div id="mobile-enterprise-grid" class="initial hide" >
+          <table class="mobile">
+            <thead>
+              <tr>
+                <td>
+                  <h4 class="text-uppercase grey">Pricing</h4>
+                </td>
+                <td>
+  
+                </td>
+              </tr>
+            </thead>
+            <tr>
+              <td>
+                <p class="semibold">
+                  Monthly subscription
+                </p>
+              </td>
+              <td>
+                <p class="semibold">
+                  $99/mo, no term
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p class="semibold">
+                  Reservation on your website & <br>
+                  Per network cover reservation
+                </p>
+              </td>
+              <td>
+                <p class="semibold">Free</p>
+              </td>
+            </tr>
+            <thead>
+              <tr>
+                <td>
+                  <h4 class="text-uppercase grey">Solutions</h4>
+                </td>
+                <td>
+  
+                </td>
+              </tr>
+            </thead>
+            <tr>
+              <td>
+                <p>
+                  In-house and online wait-list
+                </p>
+              </td>
+              <td>
+                <img class="checkmark" src="./assets/icons/checkmark_blue.svg" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                On-demand, fully customizable floor plan
+              </td>
+              <td>
+                <img class="checkmark" src="./assets/icons/checkmark_blue.svg" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                1:1 onboarding and training
+              </td>
+              <td>
+                <img class="checkmark" src="./assets/icons/checkmark_blue.svg" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Unlimited notifications
+              </td>
+              <td>
+                <img class="checkmark" src="./assets/icons/checkmark_blue.svg" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Reservations
+              </td>
+              <td>
+                <img class="checkmark" src="./assets/icons/checkmark_blue.svg" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Password protection and role permissions
+              </td>
+              <td>
+                <img class="checkmark" src="./assets/icons/checkmark_blue.svg" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Table management
+              </td>
+              <td>
+                <img class="checkmark" src="./assets/icons/checkmark_blue.svg" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Post dining surveys
+              </td>
+              <td>
+                <img class="checkmark" src="./assets/icons/checkmark_blue.svg" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Customizable performance reports and analytics
+              </td>
+              <td>
+                <img class="checkmark" src="./assets/icons/checkmark_blue.svg" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Availability and flow controls
+              </td>
+              <td>
+                <img class="checkmark" src="./assets/icons/checkmark_blue.svg" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Employee scorecards with service recovery
+              </td>
+              <td>
+                <img class="checkmark" src="./assets/icons/checkmark_blue.svg" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Customizable text message marketing to guests
+              </td>
+              <td>
+                <img class="checkmark" src="./assets/icons/checkmark_blue.svg" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Social media scheduling
+              </td>
+              <td>
+                <img class="checkmark" src="./assets/icons/checkmark_blue.svg" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Dedicated account manager
+              </td>
+              <td>
+                <img class="checkmark" src="./assets/icons/checkmark_blue.svg" />
+              </td>
+            </tr>
+          </table>
+          <div class="mobile my-5 container">
+            <div class='text-center'>
+              <button class="btn btn-light-blue text-uppercase">
+                Get Enterprise
+              </button>
+            </div>
+        </div>
+        
+        </div>
+
         <!-- Table - Desktop -->
         <table class="desktop">
           <tr>
@@ -386,8 +632,12 @@
             
           <tr>
               <td><p>In-house and online wait-list</p></td>
-              <td></td>
-              <td></td>
+              <td>
+                <img class="checkmark" src="./assets/icons/green_check.svg" />
+              </td>
+              <td>
+                <img class="checkmark" src="./assets/icons/core_check.svg" />
+              </td>
               <td>
                 <img class="checkmark" src="./assets/icons/checkmark_blue.svg" />
               </td>
@@ -395,93 +645,139 @@
             
           <tr>
               <td><p>On-demand, fully customizable floor plan</p></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td>
+                <img class="checkmark" src="./assets/icons/green_check.svg" />
+              </td>
+              <td>
+                <img class="checkmark" src="./assets/icons/core_check.svg" />
+              </td>
+              <td>
+                <img class="checkmark" src="./assets/icons/checkmark_blue.svg" />
+              </td>
           </tr>
           
           <tr>
             <td><p>1:1 onboarding and training</p></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>
+              <img class="checkmark" src="./assets/icons/green_check.svg" />
+            </td>
+            <td>
+              <img class="checkmark" src="./assets/icons/core_check.svg" />
+            </td>
+            <td>
+              <img class="checkmark" src="./assets/icons/checkmark_blue.svg" />
+            </td>
         </tr>
           
         <tr>
           <td><p>Unlimited notifications</p></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td>
+            <img class="checkmark" src="./assets/icons/green_check.svg" />
+          </td>
+          <td>
+            <img class="checkmark" src="./assets/icons/core_check.svg" />
+          </td>
+          <td>
+            <img class="checkmark" src="./assets/icons/checkmark_blue.svg" />
+          </td>
         </tr>
 
         <tr>
           <td><p>Reservations</p></td>
           <td></td>
-          <td></td>
-          <td></td>
+          <td>
+            <img class="checkmark" src="./assets/icons/core_check.svg" />
+          </td>
+          <td>
+            <img class="checkmark" src="./assets/icons/checkmark_blue.svg" />
+          </td>
         </tr>
 
         <tr>
           <td><p>Password protection and role permissions</p></td>
           <td></td>
-          <td></td>
-          <td></td>
+          <td>
+            <img class="checkmark" src="./assets/icons/core_check.svg" />
+          </td>
+          <td>
+            <img class="checkmark" src="./assets/icons/checkmark_blue.svg" />
+          </td>
         </tr>
 
         <tr>
           <td><p>Table management</p></td>
           <td></td>
-          <td></td>
-          <td></td>
+          <td>
+            <img class="checkmark" src="./assets/icons/core_check.svg" />
+          </td>
+          <td>
+            <img class="checkmark" src="./assets/icons/checkmark_blue.svg" />
+          </td>
         </tr>
 
         <tr>
           <td><p>Post dining surveys</p></td>
           <td></td>
-          <td></td>
-          <td></td>
+          <td>
+            <img class="checkmark" src="./assets/icons/core_check.svg" />
+          </td>
+          <td>
+            <img class="checkmark" src="./assets/icons/checkmark_blue.svg" />
+          </td>
         </tr>
 
         <tr>
           <td><p>Customizable performance reports and analytics</p></td>
           <td></td>
           <td></td>
-          <td></td>
+          <td>
+            <img class="checkmark" src="./assets/icons/checkmark_blue.svg" />
+          </td>
         </tr>
 
         <tr>
           <td><p>Availability and flow controls</p></td>
           <td></td>
           <td></td>
-          <td></td>
+          <td>
+            <img class="checkmark" src="./assets/icons/checkmark_blue.svg" />
+          </td>
         </tr>
 
         <tr>
           <td><p>Employee scorecards with service recovery</p></td>
           <td></td>
           <td></td>
-          <td></td>
+          <td>
+            <img class="checkmark" src="./assets/icons/checkmark_blue.svg" />
+          </td>
         </tr>
 
         <tr>
           <td><p>Customizable text message marketing to guests</p></td>
           <td></td>
           <td></td>
-          <td></td>
+          <td>
+            <img class="checkmark" src="./assets/icons/checkmark_blue.svg" />
+          </td>
         </tr>
 
         <tr>
           <td><p>Social media scheduling</p></td>
           <td></td>
           <td></td>
-          <td></td>
+          <td>
+            <img class="checkmark" src="./assets/icons/checkmark_blue.svg" />
+          </td>
         </tr>
 
         <tr>
           <td><p>Dedicated account manager</p></td>
           <td></td>
           <td></td>
-          <td></td>
+          <td>
+            <img class="checkmark" src="./assets/icons/checkmark_blue.svg" />
+          </td>
         </tr>
         <tfoot>
           <tr>
@@ -519,7 +815,9 @@
           <tr>
             <td><p class="semibold">Reservation on your website & Per network cover reservation</p></td>
             <td>
-              <div class="line"></div>
+              <div class="hyphen">
+                <img  src="./assets/icons/Line.svg"/>
+              </div>
             </td>
             <td>
               <div><p class="semibold">Free</p></div>

@@ -66,8 +66,13 @@ h5 {
 }
 
 .navbar-brand {
-    margin: 10px;
+    margin: 10px 0;
 }
+
+.navbar-brand img {
+    width: 170px;
+}
+
 
 p {
     font-size: 1rem; 
@@ -181,7 +186,7 @@ td p {
 label.hamburger {
     display: block;
     width: 30px; /* less width = square hamburger */
-    height: 60px;
+    height: 25px;
     position: relative;
     cursor: pointer;
 }
@@ -202,13 +207,13 @@ label.hamburger {
     transition: 0.5s;
  }
  /* steps of 12 are optional, could also be 10, 13 etc */
- .line:nth-child(1) { top: 3px; }
+ .line:nth-child(1) { top: 5px; }
  .line:nth-child(2) { top: 12px; }
- .line:nth-child(3) { top: 21px; }
+ .line:nth-child(3) { top: 19px; }
  
  /* translateY must be same as */
  #hamburger:checked + .hamburger .line:nth-child(1){
-    transform: translateY(10px) rotate(-45deg);
+    transform: translateY(8px) rotate(-45deg);
  }
  
  #hamburger:checked + .hamburger .line:nth-child(2){
@@ -216,7 +221,7 @@ label.hamburger {
  }
  
  #hamburger:checked + .hamburger .line:nth-child(3){
-    transform: translateY(-8px) rotate(45deg);
+    transform: translateY(-6px) rotate(45deg);
  }
 /* Navbar */
 .navbar {
@@ -263,12 +268,7 @@ label.hamburger {
     padding-bottom: 0vh;
 }
 
-.navbar .show {
-    padding: 0px 0 25px 0px;
-}
-
 .navbar-toggler {
-    height: 5vh;
     margin: 10px 0;
 }
 
@@ -311,12 +311,12 @@ label.hamburger {
 }
 
 .container-fluid {
-    margin: 0 3vw
+    margin: 0 25px; 
 }
 /* ------------------FOOTER------------------------ */
 footer {
     width: 100%;
-    padding: 6vh 6vw;
+    padding: 25px;
     display: flex;
     min-height: 175px;
     justify-content: center;
@@ -387,8 +387,7 @@ button.btn.circle {
 /* ------------------------------------------------ */
 /* Table */
 section.grid {
-    MARGIN-TOP: 448PX;
-    padding-top: 20px;
+    margin-top: 65px;
 }
 
 /* Removing all unwanted border
@@ -514,9 +513,8 @@ table.mobile thead tr td{
 /* Texture - IPad */
 section.texture {
     padding: 6vw;
-    height: 175vw;
-    min-height: 200px;
-    max-height: 850px;
+    min-height: 650px;
+    max-height: 775px;
     background-image: url(./assets/index/texture.jpg);
     background-position: center;
     background-size: cover;
@@ -622,7 +620,7 @@ form#contact_form {
     background-repeat: no-repeat;
     height: 448px;
     display: flex;
-    position: absolute;
+    position: relative;
     top: 0;
     width: 100%;
 }
@@ -638,7 +636,7 @@ form#contact_form {
     display: flex;
     flex-wrap: wrap;
     max-width: 335px;
-    margin: 15vh auto 0;
+    margin: 85px auto 0;
     height: 270px;
 }
 
@@ -777,7 +775,15 @@ hr {
     cursor: pointer;
     color: var(--color-hover);
 }
-
+.active#mobile-basic-grid {
+    animation: fadein 1s forwards;
+}
+.active#mobile-enterprise-grid {
+    animation: fadein 1s forwards;
+}
+.active#mobile-core-grid {
+    animation: fadein 1s forwards;
+}
 .active#carousel-basic {
     border-bottom: 3px solid var(--color-primary-green);
     height: 35px;
@@ -808,7 +814,16 @@ hr {
     height: 35px;
     animation: fadein 1s forwards;
 }
-
+#carousel-enterprise{
+    border-bottom: 3px solid var(--color-hover);
+    height: 35px;
+    animation: fadein 1s forwards;
+}
+#carousel-basic{
+    border-bottom: 3px solid var(--color-hover);
+    height: 35px;
+    animation: fadein 1s forwards;
+}
 .active#charts-core {
     border-bottom: 3px solid var(--color-primary-dark-blue);
     height: 50px;
@@ -875,12 +890,30 @@ hr {
     -webkit-animation: none;
 
 }
-
+.initial.hide {
+    display: none;
+    animation: none;
+    -webkit-animation: none;
+}
+.hide#mobile-basic-grid{
+    opacity: 0;
+    -webkit-animation: fadeout 0.5s linear forwards;
+    animation: fadeout 0.5s linear forwards;
+}
+.hide#mobile-enterprise-grid{
+    opacity: 0;
+    -webkit-animation: fadeout 0.5s linear forwards;
+    animation: fadeout 0.5s linear forwards;
+}
+.hide#mobile-core-grid{
+    opacity: 0;
+    -webkit-animation: fadeout 0.5s linear forwards;
+    animation: fadeout 0.5s linear forwards;
+}
 .cards .colored-card.hide{
     opacity: 0;
     -webkit-animation: fadeout 0.5s linear forwards;
     animation: fadeout 0.5s linear forwards;
-
 }
 
 .cards > div:first-child {
@@ -910,7 +943,8 @@ hr {
     flex-direction: column;
     top: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    min-height: 480px;
 }
 
 .flex-center{
@@ -931,7 +965,7 @@ hr {
 .whyGoSocial .header2 {
     display: flex;
     flex-wrap: wrap;
-    height: 270px;
+    height: 100%;
     position: relative;
     justify-content: center;
 }
@@ -950,9 +984,7 @@ hr {
     background-position: right;
     background-size: cover;
     background-repeat: no-repeat;
-    max-width: 650px;
-    min-width: 315px;
-    width: 100%;
+    max-width: 95%;
 }
 
 .whyGoSocial .hero_image2 {
@@ -961,7 +993,7 @@ hr {
     width: 100%;
     display: flex;
     margin: 5vh auto;
-    height: 35vh;
+    justify-content: center;
     position: relative;
 }
 
@@ -1032,7 +1064,8 @@ hr {
 
 /* Why GoSocial Charts */
 .charts .title {
-    margin: 5vh auto 0;
+    margin: 0 auto;
+    padding: 65px  0 0; 
     width: 75%;
     text-align: center;
 }
@@ -1582,15 +1615,18 @@ h2.title {
 /* -------------Features----------------- */
 .features .jumbotron2 {
     background-image: url(./assets/features/features-jumbotron.png);
+    background-position: center;
     background-size: cover;
     border-radius: 0px !important;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 448px;
     display: flex;
     position: relative;
     flex-direction: column;
     top: 0;
     width: 100%;
+    height: 100%;
+    min-height: 480px;
 }
 
 .flex-center{
@@ -1611,7 +1647,7 @@ h2.title {
 .features .header2 {
     display: flex;
     flex-wrap: wrap;
-    height: 270px;
+    height: 100%;
     position: relative;
     justify-content: center;
 }
@@ -1619,13 +1655,14 @@ h2.title {
 .features .header2 .text-center{
     width: 100%;
 }
-
-
+.hyphen img {
+    width: 45px; 
+}
 .checkmark {
-    height: 10px;
+    height: 30px;
 }
 .features .title {
-    padding-top: 5vh;
+    padding-top: 65px;
     margin: 0 auto;
     width: 75%;
     text-align: center;
@@ -1634,9 +1671,7 @@ h2.title {
     background-position: right;
     background-size: cover;
     background-repeat: no-repeat;
-    max-width: 650px;
-    min-width: 315px;
-    width: 100%;
+    max-width: 95%;
 }
 
 .features .hero_image2 {
@@ -1644,8 +1679,8 @@ h2.title {
     min-width: 315px;
     width: 100%;
     display: flex;
-    margin: 100px auto 0;
-    height: 35vh;
+    margin: 25px auto;
+    justify-content: center;
     position: relative;
 }
 .features section.form {
@@ -1860,8 +1895,8 @@ ul li::marker {
         -webkit-backdrop-filter: blur(5px);
     }
     .navbar-nav {
-        width: 90%;
-        max-width: 1200px;
+        width: 100%;
+        max-width: 1000px;
         justify-content: space-evenly;
     }
     .nav-item.dropdown{
@@ -1887,6 +1922,7 @@ ul li::marker {
 
     .jumbotron {
         height: 100vh; 
+        max-height: 1000px;
     }
 
     .jumbotron h1 {
@@ -1896,7 +1932,6 @@ ul li::marker {
         font-size: 3.125rem;
     }
     section.grid {
-        MARGIN-TOP: 100vh;
         PADDING: 6vw;
     }
     .mobile {

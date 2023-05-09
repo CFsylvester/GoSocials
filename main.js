@@ -3,8 +3,11 @@ const carouselBasic = document.getElementById('carousel-basic')
 const carouselCore = document.getElementById('carousel-core')
 const carouselEnterprise = document.getElementById('carousel-enterprise')
 const basicCard= document.getElementById('basic-card');
+const basicGrid = document.getElementById('mobile-basic-grid'); 
 const coreCard = document.getElementById('core-card');
+const coreGrid = document.getElementById('mobile-core-grid'); 
 const enterpriseCard = document.getElementById('enterprise-card')
+const enterpriseGrid = document.getElementById('mobile-enterprise-grid'); 
 
 // Why Go Social
 const chartsBasic = document.getElementById('charts-basic')
@@ -21,37 +24,63 @@ const carouselClick = function() {
     if(this.innerHTML.trim() === "Core"){
         coreCard.classList.remove('initial');
         coreCard.classList.remove('hide');
+        coreGrid.classList.remove('hide'); 
 
         carouselBasic.classList.remove("active");
+        basicGrid.classList.remove("active")
+
         carouselEnterprise.classList.remove("active");
+        enterpriseGrid.classList.remove("active")
+
         carouselCore.classList.add("active");
+        coreGrid.classList.add("active")
 
         basicCard.classList.add('hide');
+        basicGrid.classList.add("hide");
+
         enterpriseCard.classList.add('hide'); 
+        enterpriseGrid.classList.add("hide");
     }
 
     if(this.innerHTML.trim() === "Enterprise"){
         enterpriseCard.classList.remove('initial');
         enterpriseCard.classList.remove('hide');
+        enterpriseGrid.classList.remove('hide');
 
         carouselBasic.classList.remove("active");
+        basicGrid.classList.remove("active"); 
+
         carouselCore.classList.remove("active");
+        coreGrid.classList.remove("active");
+
         carouselEnterprise.classList.add("active");
+        enterpriseGrid.classList.add("active");
 
         basicCard.classList.add('hide');
+        basicGrid.classList.add("hide");
+
         coreCard.classList.add('hide'); 
+        coreGrid.classList.add("hide");
     }
 
     if(this.innerHTML.trim() === "Basic"){
         basicCard.classList.remove('hide');
+        basicGrid.classList.remove('hide')
 
         carouselCore.classList.remove("active");
+        coreGrid.classList.remove("active");
+
         carouselEnterprise.classList.remove("active");
+        enterpriseGrid.classList.remove("active");
+
         carouselBasic.classList.add("active");
+        basicGrid.classList.add("active")
 
         coreCard.classList.add('hide');
-        enterpriseCard.classList.add('hide'); 
+        coreGrid.classList.add("hide");
 
+        enterpriseCard.classList.add('hide'); 
+        enterpriseGrid.classList.add("hide");
     }
 
 }
