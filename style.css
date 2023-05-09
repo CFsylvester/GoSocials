@@ -319,7 +319,6 @@ footer {
     padding: 25px;
     display: flex;
     min-height: 175px;
-    justify-content: center;
     background-color: var(--color-primary-dark-blue);
 }
 
@@ -387,7 +386,7 @@ button.btn.circle {
 /* ------------------------------------------------ */
 /* Table */
 section.grid {
-    margin-top: 65px;
+    padding-top: 65px;
 }
 
 /* Removing all unwanted border
@@ -513,8 +512,9 @@ table.mobile thead tr td{
 /* Texture - IPad */
 section.texture {
     padding: 6vw;
+    height: 75vh;
     min-height: 650px;
-    max-height: 775px;
+    max-height: 700px;
     background-image: url(./assets/index/texture.jpg);
     background-position: center;
     background-size: cover;
@@ -522,10 +522,10 @@ section.texture {
 }
 
 .texture .ipad {
-    height: 60vw;
+    width: 50vw;
+    min-width: 300px;
     min-height: 200px;
     max-height: 535px;
-    width: 90%;
     top: 100%;
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
@@ -554,7 +554,7 @@ section.texture {
 /* Section 3 - Contact Form */
 section.form {
     padding: 6vw;
-    margin-top: calc(20vh + 10vw);
+    margin-top: calc(10% + 10vh);
 }
 .form .container .row>* {
     padding-right: 0px !important;
@@ -606,6 +606,9 @@ form#contact_form {
 .form_buttons .btn {
     font-size: 0.85rem;
     height: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 .form_buttons p {
     margin: 10px;
@@ -749,10 +752,10 @@ hr {
 }
 
 #carousel .packages, .charts .packages {
-    max-width: 320px;
+    max-width: 400px;
     margin: auto;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 
@@ -810,17 +813,14 @@ hr {
     animation: fadein 1s forwards;
 }
 #carousel-core{
-    border-bottom: 3px solid var(--color-hover);
     height: 35px;
     animation: fadein 1s forwards;
 }
 #carousel-enterprise{
-    border-bottom: 3px solid var(--color-hover);
     height: 35px;
     animation: fadein 1s forwards;
 }
 #carousel-basic{
-    border-bottom: 3px solid var(--color-hover);
     height: 35px;
     animation: fadein 1s forwards;
 }
