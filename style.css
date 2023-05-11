@@ -315,6 +315,7 @@ label.hamburger {
 }
 /* ------------------FOOTER------------------------ */
 footer {
+    justify-content: space-between;
     width: 100%;
     padding: 25px;
     display: flex;
@@ -644,7 +645,7 @@ form#contact_form {
 }
 
 .features .header2 {
-    margin: 9vh auto 0;
+    margin: 20px auto 0;
 }
   
 .header2 .catchphrase {
@@ -1422,8 +1423,8 @@ h2.title {
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
-    width: 320px;
-    height: 250px;
+    width: 300px;
+    height: 260px;
     margin: 0 auto;
     top: -75px;
     bottom: 0;
@@ -1541,7 +1542,7 @@ h2.title {
     height: 45px !important;
     width: 75px !important;
     position: absolute;
-    left: -30px;
+    left: 25px;
     bottom: 97px;
 }
 
@@ -1551,18 +1552,18 @@ h2.title {
     height: 50px !important;
     width: 50px !important;
     position: absolute;
-    right: 0px;
-    bottom: 51px;
+    right: 70px;
+    bottom: 100px;
 }
 
 .arrow4 {
     min-height: 25px !important;
     min-width: 25px !important;
     height: 20px !important;
-    width: 105px !important;
+    width: 130px !important;
     position: absolute;
-    right: 75px;
     bottom: 80px;
+    left: 50px;
 }
 
 .arrow5 {
@@ -1586,7 +1587,7 @@ h2.title {
 .arrow2-text {
     position: absolute;
     top: 130px;
-    left: -50px;
+    left: 10px;
     width: 60px;
     text-align: left;
 }
@@ -1594,15 +1595,15 @@ h2.title {
 
 .arrow3-text {
     position: absolute;
-    right: -45px;
-    bottom: 65px;
+    right: 18px;
+    bottom: 95px;
     width: 50px;
     text-align: left;
 }
 
 .arrow4-text {
     position: absolute;
-    left: -30px;
+    left: 5px;
     bottom: 105px;
     width: 100px;
     text-align: left;
@@ -1623,10 +1624,11 @@ h2.title {
 }
 #iphone3 {
     width: 175px;
-    margin-left: 60px;
+    margin-left: 85px;
 }
 #iphone2{
     width: 185px;
+    margin-left: 55px;
 }
 
 .pass .feature #blue-triangle-background {
@@ -1762,6 +1764,7 @@ ul li::marker {
 .feature .content ul {
     width: 100%;
     max-width: 600px;
+    margin: 0 auto 60px;
 }
 /* -------------GOSOCIAL PASS----------------- */
 .pass {
@@ -1775,9 +1778,7 @@ ul li::marker {
     border-radius: 0px !important;
     background-repeat: no-repeat;
     background-position: bottom;
-    height: 100vh;
     padding: 25px;
-    min-height: 750px;
     display: flex;
     position: relative;
     flex-direction: column;
@@ -1789,16 +1790,17 @@ ul li::marker {
     display: flex;
     flex-wrap: wrap;
     height: 55%;
-    margin: 10vh auto 0;
+    margin: 65px auto 0;
     position: relative;
     justify-content: center;
+    
 }
 
 .pass .header2 .text-center{
     width: 100%;
 }
 .pass .title {
-    padding-top: 5vh;
+    padding-top: 65px;
     margin: 0 auto;
     width: 75%;
     text-align: center;
@@ -1815,16 +1817,15 @@ ul li::marker {
     background-position: right;
     background-size: cover;
     background-repeat: no-repeat;
-    max-width: 650px;
     width: 100%;
 }
 
 .pass .hero_image2 {
-    margin: 0px auto;
-    max-width: 360px;
+    max-width: 450px;
     width: 100%;
-    height: 260px;
     display: flex;
+    margin: 5vh auto;
+    justify-content: center;
     position: relative;
 }
 .pass section.form {
@@ -1843,6 +1844,13 @@ ul li::marker {
     font-size: 18pt;
     max-width: 330px;
     line-height: 30px;
+}
+.pass_mobile{
+    display: none;
+}
+.image {
+    margin: auto;
+    width: 320px;
 }
 /* -------------MEDIA QUERIEs----------------- */
 /* SMALL */
@@ -2086,6 +2094,15 @@ ul li::marker {
         margin: 0;
         margin-right: 100px;
     }
+    .pass  #white-triangle {
+        width: 600px !important;
+        height: 450px !important;
+        top: -140px !important;
+        right: auto;
+        position: relative;
+        margin: 0;
+        margin-right: 100px;
+    }
     #white-triangle .container {
         margin-top: 100px;
         width: 90%;
@@ -2130,10 +2147,13 @@ ul li::marker {
         flex-direction: row;
     }
     .feature .content ul {
-        margin-right: 50px;
+        margin: 0 50px 0 0;
     }
     .feature-image {
         margin: auto auto auto 50px;
+    }
+    .pass .feature-image {
+        margin: auto;
     }
     .social-icons {
         margin: 2vh 0 2vh -5px;
@@ -2203,25 +2223,99 @@ No media query since this is the default in Bootstrap because it is "mobile firs
  
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1245px) {  
-
+    #iphone2 {
+        width: 100%;
+    }
+    .pass .feature-image .cta_image {
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        min-height: 0;
+        min-width: auto;
+        max-width: 500px;
+        max-height: 700px;
+    }
+    .pass_mobile {
+        display: block;
+    }
+    .flex.pass_mobile.swap {
+        flex-direction: row-reverse;
+    }
+    .arrow1 {
+        height: 120px !important;
+        width: 41px !important;
+    }
+    .arrow2 {
+        min-height: 25px !important;
+        min-width: 25px !important;
+        height: 75px !important;
+        width: 80px !important;
+        position: absolute;
+        left: 70px;
+        bottom: 235px;
+    }
+    .arrow2-text {
+        position: absolute;
+        top: 345px;
+        left: 35px;
+        width: 60px;
+        text-align: left;
+    }
+    .arrow3 {
+        min-height: 25px !important;
+        min-width: 25px !important;
+        height: 65px !important;
+        width: 75px !important;
+        position: absolute;
+        right: -30px;
+        top: 360px;
+        bottom: 51px;
+    }
+    .arrow3-text {
+        position: absolute;
+        right: -90px;
+        bottom: 275px;
+        width: 50px;
+        text-align: left;
+    }
+    .cta {
+        height: 100%;
+        width: 825px;
+        margin: auto;
+        align-items: center;
+    }
+    .flex.pass_mobile {
+        display: flex;
+        max-width: 1000px;
+        margin: auto;
+    }
     .whyGoSocial .hero_image2, .features .hero_image2 {
         width: fit-content;
         display: flex;
-        margin: 5vh auto 0 75px;
+        margin: 0vh auto 0 75px;
         height: 50vh;
         right: 0;
         top: 15%;
         max-width: 650px;
     }
     .pass .hero_image2 {
-        height: 100%;
-        max-height: 65vh;
-        width: fit-content;
         display: flex;
-        margin: 5vh auto 0 75px;
-        right: 0;
-        top: 15%;
+        margin: 165px 25px 0;
+        height: 50vh;
         max-width: 650px;
+        overflow: hidden;
+    
+    }
+    .circle_features{
+        background-repeat: no-repeat;
+        background-image: url(./assets/pass/Circle_Textures_Top.png);
+        background-size: cover;
+    }
+    .circle_features_bottom{
+        background-repeat: no-repeat;
+        background-image: url(./assets/pass/circles_bottom.png);
+        background-size: cover;
     }
     .whyGoSocial .hero_image2 img, .features .hero_image2 img, .pass .hero_image2 img {
        width: fit-content; 
@@ -2230,6 +2324,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         position: relative;
         width: 1500px;
         margin: 0 auto;
+        padding: 0 65px;
         justify-content: center;
         display: flex;
     }
@@ -2298,6 +2393,73 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     }
     .features .mobile2,  .pass .mobile2 {
         display: none;
+    }
+    .pass .feature .title {
+        max-width: 1000px;
+    }
+    .pass .title {
+        width: 100%;
+    }
+    .colorful-title {
+        width: 700px;
+        margin: auto;
+        display: block;
+    }
+    .colorful-title h2 {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        line-height: 18px;
+    }
+    .align-right {
+        text-align: right !important;
+    }
+    .align-left {
+        text-align: left !important;
+    }
+    #iphone3 {
+        width: 100%;
+        margin: auto;
+    }
+    .arrow4 {
+        min-height: 25px !important;
+        min-width: 25px !important;
+        height: 35px !important;
+        width: 236px !important;
+        position: absolute;
+        left: -30px;
+        bottom: 200px;
+    }
+    .arrow4-text {
+        position: absolute;
+        left: -75px;
+        bottom: 250px;
+        width: 100px;
+        text-align: left;
+    }
+    .arrow5 {
+        min-height: 25px !important;
+        min-width: 25px !important;
+        height: 75px !important;
+        width: 75px !important;
+        position: absolute;
+        right: 100px;
+        bottom: -45px;
+    }
+    .arrow5-text {
+        position: absolute;
+        right: 185px;
+        bottom: -45px;
+        width: 100px;
+        text-align: right;
+    }
+    .pass #white-triangle .container h4 {
+        margin-top: 10px;
+        font-size: 20pt;
+        white-space: nowrap;
+    }
+    .pass #white-triangle .container {
+        margin-top: 85px;
     }
 }
  

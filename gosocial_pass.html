@@ -24,51 +24,53 @@
   <body class="pass">
     <!-- Navigation -->
     <nav class="navbar navbar-b navbar-reduce navbar-dark sticky-top navbar-expand-lg">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="./index.html">Navbar</a>
-          <div class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <input type="checkbox" id="hamburger">
-            <label for="hamburger" class="hamburger">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </label>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">
+          <img src="./assets/logos/business.svg"></img>
+        </a>
+        <div class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <input type="checkbox" id="hamburger">
+          <label for="hamburger" class="hamburger">
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+          </label>
+      </div>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html#plans_pricing">Plans & Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./why_goSocial.html">Why GoSocial</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Features
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="./features.html#pre-service-features">Pre-Service Features</a></li>
+                <li><a class="dropdown-item" href="./features.html#during-service-features">During Service Features</a></li>
+                <li><a class="dropdown-item" href="./features.html#post-service-features">Post-Service Features</a></li>
+                <li><a class="dropdown-item" href="./gosocial_pass.html">GoSocial Pass</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://getgosocial.com/Account/Login" target="_blank">Login</a>
+            </li>
+            <li class="nav-item desktop">
+              <a href="./self_serve.html" class="btn btn-green">
+                  Self-Serve Sign up
+              </a>
+            </li>
+            <li class="nav-item desktop">
+              <a href="./index.html#request_demo" class="btn btn-light-blue">
+                  Request a Demo
+              </a>
+            </li>
+          </ul>
         </div>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Plans & Pricing</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./why_goSocial.html">Why GoSocial</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Features
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="./features.html#pre-service-features">Pre-Service Features</a></li>
-                  <li><a class="dropdown-item" href="./features.html#during-service-features">During Service Features</a></li>
-                  <li><a class="dropdown-item" href="./features.html#post-service-features">Post-Service Features</a></li>
-                  <li><a class="dropdown-item" href="./gosocial_pass.html">GoSocial Pass</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Login</a>
-              </li>
-              <li class="nav-item desktop">
-                <button class="btn btn-green">
-                    Self-Serve Sign up
-                </button>
-              </li>
-              <li class="nav-item desktop">
-                <button class="btn btn-light-blue">
-                    Request a Demo
-                </button>
-              </li>
-            </ul>
-          </div>
-        </div>
+      </div>
     </nav>
    <!-- Main Body -->
     <main>
@@ -87,9 +89,9 @@
                     No One Wants to Wait in Line
 Grow your revenue and strengthen your brand, use GoSocial Pass™ for line control and to give your guests a VIP experience by allowing them to skip the line. 
                 </p>
-                <button class="btn btn-light-blue">
+                <a href="#contact_form" class="btn btn-light-blue">
                   Connect with us
-                </button>
+                </a>
             </div>
           </div>
           <div class="hero_image2">
@@ -99,30 +101,50 @@ Grow your revenue and strengthen your brand, use GoSocial Pass™ for line contr
         
       </div>
       <!-- Feature Insights -->
-      <div class="feature mb-5">
+      <div class="circle_features feature mb-5">
         <div class="title">
           <div class="colorful-title">
-            <h2 class="text-white">GoSocial Pass™ empowers the <span class="noir">best nightlife </span>and <span class="dark-blue">live music venues</span></h2>
+            <h2 class="text-white"><span class="align-left">GoSocial Pass™ empowers the </span><span class="align-right"><br class="pass_mobile" /> <span class="noir">best nightlife </span>and <span class="dark-blue">live music venues</span></span></h2>
           </div>
-          <p class="text-white catchphrase">
-            Feature Insights
-          </p>
-          <h2 class="text-white mb-3">
-            What is GoSocial Pass™?
-          </h2>
-          <p class="text-white mb-2">
-            GoSocial Pass™ is a mobile ticketing service that allows your customers to pay a fee to jump the line at your venue. Speed up customer access and offer back to your guests the most important commodity, their time.
-          </p>
+         <div class="mobile2">
+            <p class="text-white catchphrase">
+              Feature Insights
+            </p>
+            <h2 class="text-white mb-3">
+              What is GoSocial Pass™?
+            </h2>
+            <p class="text-white mb-2">
+              GoSocial Pass™ is a mobile ticketing service that allows your customers to pay a fee to jump the line at your venue. Speed up customer access and offer back to your guests the most important commodity, their time.
+            </p>
+         </div>
         </div>
-        <div class="content mt-5">
+        <div class="image mobile2 mt-5">
           <div class="feature-image">
             <img src="./assets/pass/iphone1.png" />
+          </div>
+        </div>
+        <div class="flex pass_mobile">
+          <div class="cta pass_mobile">
+            <p class="text-white catchphrase">
+              Feature Insights
+            </p>
+            <h2 class="text-white mb-3">
+              What is GoSocial Pass™?
+            </h2>
+            <p class="text-white mb-2">
+              GoSocial Pass™ is a mobile ticketing service that allows your customers to pay a fee to jump the line at your venue. Speed up customer access and offer back to your guests the most important commodity, their time.
+            </p>
+          </div>
+          <div class="content mt-5">
+            <div class="feature-image">
+              <img class="cta_image" src="./assets/pass/iphone1.png" />
+            </div>
           </div>
         </div>
       </div>
       <!-- For Decision Makers -->
       <div class="feature mb-5">
-        <div class="title">
+        <div class="title mobile2">
           <p class="text-white catchphrase">
             For Decision Makers
           </p>
@@ -133,7 +155,7 @@ Grow your revenue and strengthen your brand, use GoSocial Pass™ for line contr
             You have complete control over pricing and the number of electronic GoSocial Passes available for your venue on any day at any given time. If you charge a cover fee, your venue has the option to include or not include your cover fee in the GoSocial Pass™. Offer as many or as few GoSocial Passes as your venue sees fit- on demand.
           </p>
         </div>
-        <div class="content mt-5">
+        <div class="image mobile2 pt-3 mt-5">
           <div class="feature-image mt-5">
             <div class="arrow1-text">
               <p>
@@ -146,10 +168,36 @@ Grow your revenue and strengthen your brand, use GoSocial Pass™ for line contr
             <img src="./assets/pass/graph.png" />
           </div>
         </div>
+        <div class="flex pass_mobile swap">
+          <div class="cta pass_mobile">
+            <p class="text-white catchphrase">
+              For Decision Makers
+            </p>
+            <h2 class="text-white mb-3">
+              You're in control
+            </h2>
+            <p class="text-white">
+              You have complete control over pricing and the number of electronic GoSocial Passes available for your venue on any day at any given time. If you charge a cover fee, your venue has the option to include or not include your cover fee in the GoSocial Pass™. Offer as many or as few GoSocial Passes as your venue sees fit- on demand.
+            </p>
+          </div>
+          <div class="content mt-5">
+            <div class="feature-image mt-5">
+              <div class="arrow1-text">
+                <p>
+                  Offer as many or as few GoSocial Passes 
+                  <br/>
+                  as your venue sees fit- on demand
+                </p>
+              </div>
+              <img class="arrow1" src="./assets/pass/arrow1.png" />
+              <img class="cta_image" src="./assets/pass/graph.png" />
+            </div>
+          </div>
+        </div>
       </div>
       <!-- Cost Effective -->
       <div class="feature mb-5">
-        <div class="title">
+        <div class="title mobile2">
           <p class="text-white catchphrase">
             Cost Effective
           </p>
@@ -160,7 +208,7 @@ Grow your revenue and strengthen your brand, use GoSocial Pass™ for line contr
             With the GoSocial Pass™ feature, we don’t charge set up costs, monthly fees, and we don’t take from what you earn. We only earn revenue through our separate service fee built into the GoSocial Pass™ feature when the guest utilizes priority access at your venue. 
           </p>
         </div>
-        <div class="content mt-5">
+        <div class="image mobile2 mt-5">
           <div class="feature-image mt-3">
             <div class="arrow2-text">
               <p>
@@ -181,10 +229,44 @@ Grow your revenue and strengthen your brand, use GoSocial Pass™ for line contr
             <img id="iphone2" src="./assets/pass/iphone2.png" />
           </div>
         </div>
+        <div class="flex pass_mobile">
+          <div class="cta pass_mobile">
+            <p class="text-white catchphrase">
+              Cost Effective
+            </p>
+            <h2 class="text-white mb-3">
+              Keep more of what you earn
+            </h2>
+            <p class="text-white mb-2">
+              With the GoSocial Pass™ feature, we don’t charge set up costs, monthly fees, and we don’t take from what you earn. We only earn revenue through our separate service fee built into the GoSocial Pass™ feature when the guest utilizes priority access at your venue. 
+            </p>
+          </div>
+          <div class="content mt-5">
+            <div class="feature-image mt-3">
+              <div class="arrow2-text">
+                <p>
+                  Guest facing
+                  <br/>
+                  service fee
+                </p>
+              </div>
+              <img class="arrow2" src="./assets/pass/arrow2.png" />
+              <div class="arrow3-text">
+                <p>
+                  Keep what
+                  <br/>
+                 you earn
+                </p>
+              </div>
+              <img class="arrow3" src="./assets/pass/arrow3.png" />
+              <img class="cta_image" id="iphone2" src="./assets/pass/iphone2.png" />
+            </div>
+          </div>
+        </div>
       </div>
       <!-- Check Them at the Door -->
       <div class="feature mb-5">
-        <div class="title">
+        <div class="title mobile2">
           <p class="text-white catchphrase">
             Check them at the door
           </p>
@@ -197,7 +279,7 @@ Grow your revenue and strengthen your brand, use GoSocial Pass™ for line contr
             If that wasn’t enough we even built in an anti screenshot feature so the GoSocial Pass™ cannot be screenshotted to share.
           </p>
         </div>
-        <div class="content mt-5">
+        <div class="image mobile2 mt-5">
           <div class="feature-image">
             <div class="arrow4-text">
               <p>
@@ -210,10 +292,40 @@ Grow your revenue and strengthen your brand, use GoSocial Pass™ for line contr
             <img id="iphone3" src="./assets/pass/iphone3.png" />
           </div>
         </div>
+        <div class="flex pass_mobile swap">
+          <div class="cta pass_mobile">
+            <p class="text-white catchphrase">
+              Check them at the door
+            </p>
+            <h2 class="text-white mb-3">
+              Verify and verify some more 
+            </h2>
+            <p class="text-white mb-2">
+              Aside from checking IDs at the door, when the guest purchases the electronic GoSocial Pass™ it shows their name, party, your venues name and the date, with a check mark that they have paid that includes a unique and custom code per GoSocial 
+              Pass™ purchase that the usher can verify. 
+              If that wasn’t enough we even built in an anti screenshot feature so the GoSocial Pass™ cannot be screenshotted to share.
+            </p>
+          </div>
+          <div class="content mt-5">
+            <div class="feature-image">
+              <div class="arrow4-text">
+                <p>
+                  Unique and verifiable 
+                  <br/>
+                  confirmation code
+                </p>
+              </div>
+              <img class="arrow4" src="./assets/pass/arrow4.png" />
+              <img class="cta_image" id="iphone3" src="./assets/pass/iphone3.png" />
+            </div>
+          </div>
+        </div>
       </div>
+
       <!-- Customer Targeting -->
-      <div class="feature">
+      <div class=" circle_features_bottom feature">
         <div class="title">
+         <div class="mobile2">
           <p class="text-white catchphrase">
             Customer Targeting
           </p>
@@ -226,8 +338,9 @@ Grow your revenue and strengthen your brand, use GoSocial Pass™ for line contr
           <p class="text-white mb-2">
             Text message marketing has up to a 98% open rate and texts are generally opened within 90 seconds.
           </p>
+         </div>
         </div>
-        <div class="content mt-5">
+        <div class="image mobile2 mt-5">
           <div class="feature-image">
             <div class="arrow5-text">
               <p>
@@ -238,6 +351,35 @@ Grow your revenue and strengthen your brand, use GoSocial Pass™ for line contr
             </div>
             <img class="arrow5" src="./assets/pass/arrow5.png" />
             <img src="./assets/pass/graph2.png" />
+          </div>
+        </div>
+        <div class="flex pass_mobile">
+          <div class="cta pass_mobile">
+            <p class="text-white catchphrase">
+              Customer Targeting
+            </p>
+            <h2 class="text-white mb-3">
+              Promote your venue and events - at scale
+            </h2>
+            <p class="text-white mb-2">
+              Give your venue the edge it deserves. Whether you are planning ahead or are trying to fill capacity last minute , send out mass text message marketing campaigns to your casual and regular customers through GoSocial’s text message marketing tool which is included with the GoSocial Pass™ service. 
+            </p>
+            <p class="text-white mb-2">
+              Text message marketing has up to a 98% open rate and texts are generally opened within 90 seconds.
+            </p>
+          </div>
+          <div class="content mt-5">
+            <div class="feature-image">
+              <div class="arrow5-text">
+                <p>
+                  send mass text
+                  <br/>
+                  messages with a click
+                </p>
+              </div>
+              <img class="arrow5" src="./assets/pass/arrow5.png" />
+              <img class="cta_image" src="./assets/pass/graph2.png" />
+            </div>
           </div>
         </div>
         <div id="blue-triangle-background">
@@ -263,10 +405,10 @@ Grow your revenue and strengthen your brand, use GoSocial Pass™ for line contr
                   No lock in periods, set up costs or hidden fees 
                 </p>
                 <p class="bold spaced">Does your venue couple as a restaurant?</p>
-                <div class="get-pricing">
+                <a href="./index.html#plans_pricing" class="get-pricing">
                   <p class="uppercase">View Our Plans Here</p>
                   <svg class="blue-arrow"></svg>
-                </div>
+                </a>
               </div>
             </div>
             <div class="text">
@@ -281,8 +423,9 @@ Grow your revenue and strengthen your brand, use GoSocial Pass™ for line contr
           </div>
         </div>
       </div>
+
       <!-- Contact Form -->
-      <section class="form">
+      <section id="contact_form" class="form">
         <div class="mx-auto text container">
           <h2 class="text-center my-4">Connect with us today</h2>
           <h5 class="text-center">Fill out the form below to contact our sales team for a discovery call to see how GoSocial&#174 can fulfill your restaurant's needs and to receive email marketing communications from GoSocial&#174.<span class="mobile display-contents"> You can unsubscribe from GoSocial&#174 emails at any time.</span></h5>
@@ -332,48 +475,48 @@ Grow your revenue and strengthen your brand, use GoSocial Pass™ for line contr
       </section>
     </main>
     <!-- Footer -->
-   <footer>
-        <div class="text">
-          <div class="footer-brand" href="#">
-            <img src="./assets/icons/rectangle_logo.png" />
+    <footer>
+      <div class="text">
+        <div class="footer-brand" href="#">
+          <img src="./assets/icons/rectangle_logo.png" />
+        </div>
+        <p class="mt-3">Restaurant management made easy across digital platforms for your business</p>
+      </div>
+      <div class="desktop">
+          <div class="row mx-5">
+              <div class="col">
+                  <a  href="./index.html#plans_pricing">Plans & Pricing</a>
+              </div>
+              <div class="col">
+                  <a href="./why_goSocial.html">Why GoSocial</a>
+              </div>
+              <div class="col-3">
+                  <p>Features</p>
+                  <a href="./features.html#pre-service-features">Pre-Service Features</a>
+                  <br />
+                  <a href="./features.html#during-service-features">During Service Features</a>
+                  <br />
+                  <a href="./features.html#post-service-features">Post-Service Features</a>
+                  <br />
+                  <a href="./gosocial_pass.html">GoSocial Pass</a>
+              </div>
+              <div class="col">
+                  <a href="./index.html#request_demo">Request a Demo</a>
+              </div>
+              <!-- <div class="col">
+                  <p>Find us at:</p>
+                  <div class="social-icons">
+                      <button class="btn circle facebook"></button>
+                      <button class="btn circle instagram"></button>
+                    </div>
+              </div> -->
           </div>
-          <p class="mt-3">Restaurant management made easy across digital platforms for your business</p>
-        </div>
-        <div class="desktop">
-            <div class="row mx-5">
-                <div class="col">
-                    <a>Plans & Pricing</a>
-                </div>
-                <div class="col">
-                    <a href="./why_goSocial.html">Why GoSocial</a>
-                </div>
-                <div class="col-3">
-                    <p>Features</p>
-                    <a href="./features.html#pre-service-features">Pre-Service Features</a>
-                    <br />
-                    <a href="./features.html#during-service-features">During Service Features</a>
-                    <br />
-                    <a href="./features.html#post-service-features">Post-Service Features</a>
-                    <br />
-                    <a href="./gosocial_pass.html">GoSocial Pass</a>
-                </div>
-                <div class="col">
-                    <a>Request a Demo</a>
-                </div>
-                <div class="col">
-                    <p>Find us at:</p>
-                    <div class="social-icons">
-                        <button class="btn circle facebook"></button>
-                        <button class="btn circle instagram"></button>
-                      </div>
-                </div>
-            </div>
-        </div>
-        <div class="social-icons mobile">
-          <button class="btn circle facebook"></button>
-          <button class="btn circle instagram"></button>
-        </div>
-   </footer>
+      </div>
+      <!-- <div class="social-icons mobile">
+        <button class="btn circle facebook"></button>
+        <button class="btn circle instagram"></button>
+      </div> -->
+     </footer>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <!-- Optional JavaScript -->
