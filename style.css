@@ -1887,6 +1887,7 @@ ul li::marker {
     text-decoration: underline !important;
 }
 
+
 a:hover {
     cursor: pointer;
 }
@@ -2269,6 +2270,9 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         display: flex;
         flex-direction: row;
         justify-content: center;
+    }
+    .flex.pass_mobile{
+        display: none;
     }
     .textured .head .flex-container {
         flex-direction: row;
