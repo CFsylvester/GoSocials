@@ -231,18 +231,20 @@ label.hamburger {
 .nav-item .dropdown-toggle {
     padding: 0px 0px 8px 0px !important; 
 }
+
 .navbar-b {
     -webkit-transition: all .5s ease-in-out;
     height: 100%;
-    position: FIXED;
-    HEIGHT: FIT-CONTENT;
+    position: fixed;
+    HEIGHT: fit-content;
     WIDTH: 100%;
     transition: all 0.5s ease-in-out;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5); 
     box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
 }
+
 
 .transparent {
     transition: all 0.5s ease-in-out;
@@ -561,7 +563,7 @@ section.form {
     padding-right: 0px !important;
     padding-left: 0px !important;
 }
-input {
+input, select {
     width: 96%;
     border: none;
     border-bottom: 1px solid var(--color-hover);
@@ -1852,6 +1854,67 @@ ul li::marker {
     margin: auto;
     width: 320px;
 }
+/* -------------Self Serve----------------- */
+.sign_up {
+    height: 100%;
+    min-height: 100vh;
+    background: url(./assets/whyGoSocial/texture.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 100px;
+    
+}
+.text-primary {
+    color: var(--color-primary-blue) !important; 
+}
+.sign_up input, .sign_up select {
+    background-color: white;
+    margin-bottom: 0px;
+    color: var(--color-black);
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flex a {
+    font-size: 1rem;
+    font-family: var(--font-family);
+    font-weight: var(--semibold);
+    text-decoration: underline !important;
+}
+
+a:hover {
+    cursor: pointer;
+}
+.dark.navbar {
+    -webkit-transition: all .5s ease-in-out;
+    height: 100%;
+    position: absolute;
+    HEIGHT: fit-content;
+    WIDTH: 100%;
+    transition: all 0.5s ease-in-out;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background:none; 
+    box-shadow: none;
+}
+.dark.navbar a {
+    color: var(--color-black);
+}
+.dark.navbar .dropdown-item {
+    color: var(--color-black) !important;
+}
+a.btn {
+    color: white !important; 
+}
+
+.hamburger.dark .line {
+    background-color: var(--color-black);
+}
 /* -------------MEDIA QUERIEs----------------- */
 /* SMALL */
 @media (min-width: 576px){
@@ -2104,11 +2167,13 @@ ul li::marker {
         margin-right: 100px;
     }
     #white-triangle .container {
-        margin-top: 100px;
+        margin-top: 85px !important;
         width: 90%;
     }
     #white-triangle .container h4 {
-        font-size: 20pt;
+        margin-top: 10px;
+        font-size: 20pt !important;
+        white-space: nowrap !important;
     }
     #white-triangle .container .checkmark {
         height: 25px;
@@ -2200,6 +2265,11 @@ Extra small devices (portrait phones, less than 576px)
 No media query since this is the default in Bootstrap because it is "mobile first"
 */
 @media (min-width: 375px) {
+    .flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
     .textured .head .flex-container {
         flex-direction: row;
     }
@@ -2223,6 +2293,9 @@ No media query since this is the default in Bootstrap because it is "mobile firs
  
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1245px) {  
+    .sign_up {
+        min-height: calc(100vh - 205px);
+    }
     #iphone2 {
         width: 100%;
     }
