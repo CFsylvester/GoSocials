@@ -1402,12 +1402,14 @@ h2.title {
 .dot {
     border: none;
     background: rgba(0, 0, 0, 0.2);
-    height: 3vh !important;
-    width: 3vh !important;
+    height: 2vh !important;
+    width: 2vh !important;
     margin: 5px;
     border-radius: 50%;
     outline: none;
     box-sizing:border-box; 
+    font-size: xx-small;
+    line-height: none;
 }
 .dot:hover {
     background: rgba(0, 0, 0, 0.3);
