@@ -1761,9 +1761,6 @@ ul li {
 ul li p {
     margin-left: 10px;
 }
-td p.bold {
-    white-space: nowrap; 
-}
 ul li h6 {
     margin-left: 10px;
     margin-bottom: 10px;
