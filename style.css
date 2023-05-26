@@ -1405,7 +1405,7 @@ h2.title {
     width: 12px;
     height: 12px;
     margin: 5px;
-    border-radius: 50px;
+    border-radius: 50%;
     outline: none;
     box-sizing:border-box; 
 }
