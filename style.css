@@ -526,7 +526,7 @@ section.texture {
 }
 
 .texture .ipad {
-    width: 342px;
+    width: 90%;
     min-width: 300px;
     min-height: 200px;
     max-height: 535px;
@@ -534,7 +534,7 @@ section.texture {
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
     border-radius: 45px;
-    max-width: 780px;
+    max-width: 700px;
     position: absolute;
     box-shadow: 0px 0px 15px -4px rgb(0 0 0 / 20%);
 }
@@ -616,8 +616,8 @@ form#contact_form {
 /* ------------------------------------------------ */
 /* Index */
 .jumbotron {
-    background-image: url(./assets/heroes/index_hero.jpg);
-    background-position: center;
+    background-image: url(./assets/whyGoSocial/hero.png);
+    background-position: top;
     background-size: cover;
     border-radius: 0px !important;
     background-repeat: no-repeat;
@@ -626,17 +626,6 @@ form#contact_form {
     position: relative;
     top: 0;
     width: 100%;
-}
-
-.jumbotron::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 0;
-    background: linear-gradient(to top, transparent 0%, black 100%);
 }
 
 .jumbotron h1 {
@@ -662,6 +651,7 @@ form#contact_form {
     text-align: center;
     color: white;
     margin-bottom: 10px;
+    letter-spacing: 1px;
 }
 .header > div:first-child {
     flex: 1 0 100%;
@@ -760,8 +750,15 @@ hr {
     padding: 5vh 0 0;
 }
 
-#carousel .packages, .charts .packages {
-    max-width: 260px;
+#carousel .packages {
+    max-width: 270px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.charts .packages {
+    max-width: 320px;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -948,14 +945,17 @@ hr {
     background-size: cover;
     border-radius: 0px !important;
     background-repeat: no-repeat;
-    height: 448px;
     display: flex;
     position: relative;
     flex-direction: column;
     top: 0;
     width: 100%;
+    height: 828px;
+}
+
+.whyGoSocial .jumbotron2 .jumbotron_container {
     height: 100%;
-    min-height: 480px;
+    position: relative;
 }
 
 .flex-center{
@@ -976,7 +976,7 @@ hr {
 .whyGoSocial .header2 {
     display: flex;
     flex-wrap: wrap;
-    height: 100%;
+    height: 300px;
     position: relative;
     justify-content: center;
 }
@@ -997,13 +997,16 @@ hr {
     background-repeat: no-repeat;
     max-width: 95%;
 }
-
+.whyGoSocial h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
 .whyGoSocial .hero_image2 {
-    max-width: 450px;
+    max-width: 342px;
     min-width: 315px;
     width: 100%;
     display: flex;
-    margin: 5vh auto;
+    margin: 35px auto;
     justify-content: center;
     position: relative;
 }
@@ -1013,10 +1016,13 @@ hr {
     justify-content: space-around;
     margin: 10px auto;
     text-align: center;
-    max-width: 450px;
     width: 100%;
+    bottom: 25px;
+    position: absolute;
 }
-
+#saving_money .title p {
+    font-size: 18px;
+}
 .features .header-nav {
     max-width: 1000px;
     margin: 1% auto;
@@ -1025,7 +1031,7 @@ hr {
 .header-nav a {
     color: white !important; 
     padding: 0 5px;
-    font-size: 1rem;
+    font-size: 12px;
     text-decoration: none;
 }
   
@@ -1087,6 +1093,7 @@ hr {
     padding: 0 5px;
     margin: auto;
     height: 150px;
+    max-width: 343px;
 
 }
 
@@ -1193,20 +1200,20 @@ svg.vector {
     justify-content: center;
     display: flex;
     width: 100%;
-    margin-left: 110%;
+    margin-left: 125%;
     text-align: center;
     color: var(--color-white);
 }
 svg.graph-logo-industry-average {
-    height: 11px;
+    height: 10px;
     display: block;
     align-self: center;
     right: 10px;
-    width: 140px;
+    width: 115px;
     position: absolute;
     background-position: center;
     background-size: cover;
-    background-image: url(./assets/logos/industy_average.svg)
+    background-image: url(./assets/logos/industy_average.svg);
 }
 svg.graph-logo-basic {
     height: 10px;
@@ -1250,6 +1257,7 @@ svg.graph-logo-basic, svg.graph-logo-industry-average, .charts-bars, #grey-bar, 
     margin: 35px auto 0;
     font-size: 12px;
     padding: 0px 5px;
+    max-width: 340px;
 }
 /* Why GoSocial Difference MOBILE */
 .chef-container { 
@@ -1278,7 +1286,8 @@ svg.graph-logo-basic, svg.graph-logo-industry-average, .charts-bars, #grey-bar, 
     margin: auto;
 }
 #difference-mobile .head {
-    min-width: 290px;
+    min-width: 320px;
+    width: 95%;
     max-width: 740px;
     margin: 0;
     margin-left: auto;
@@ -1286,13 +1295,15 @@ svg.graph-logo-basic, svg.graph-logo-industry-average, .charts-bars, #grey-bar, 
 }
 .head-container {
     max-width: 400px;
-    padding: 25px; 
+    padding: 25px 0;
 }
 .textured .head .flex-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
-
+.textured .head .flex-container .btn {
+    margin: 0px;
+}
 .get-pricing {
     width: 125px;
     margin-top: 25px;
@@ -1304,6 +1315,7 @@ svg.graph-logo-basic, svg.graph-logo-industry-average, .charts-bars, #grey-bar, 
 
 .get-pricing p {
     white-space: nowrap;
+    font-weight: var(--bold);
 }
 
 .get-pricing svg {
@@ -1331,6 +1343,9 @@ svg.graph-logo-basic, svg.graph-logo-industry-average, .charts-bars, #grey-bar, 
 h2.title {
     margin: 15px 0;
 }
+.textblock {
+    font-size: 18px;
+}
 #mobile-carousel {
     min-width: 290px;
     max-width: 740px;
@@ -1338,11 +1353,11 @@ h2.title {
 }
 .mobile-card-carousel {
     position: relative;
-    height: 250px;
+    height: 200px;
     color: black;
     font-size: 40px;
     margin-right: 10px;
-    flex: 275px 0 0;
+    flex: 249px 0 0;
 }
 .mobile-card-carousel img {
     height: 100%;
@@ -1360,17 +1375,17 @@ h2.title {
 }
 .cards-wrapper .content .title {
     text-transform: capitalize;
-    font-size: 16pt;
+    font-size: 16px;
+    font-weight: var(--bold);
     font-family: var(--font-family);
     color: var(--color-primary-dark-blue);
-    font-weight: var(--semibold);
-    margin: 5px 20px 10px;
+    margin: 0px 20px 10px;
 }
 .cards-wrapper .content .text {
     margin: 0 20px;
 }
-.cards-wrapper .content .text p {
-    font-size: 10pt;
+.content .text p {
+    line-height: 14px;
 }
 .display-area {
     width: 100%;
@@ -1384,15 +1399,15 @@ h2.title {
     margin-top: 15px;
     margin-left: 5px;
 }
-  
 .dot {
     border: none;
     background: rgba(0, 0, 0, 0.2);
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
     margin: 5px;
-    border-radius: 50%;
+    border-radius: 50px;
     outline: none;
+    box-sizing:border-box; 
 }
 .dot:hover {
     background: rgba(0, 0, 0, 0.3);
@@ -1433,8 +1448,10 @@ h2.title {
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
-    width: 300px;
-    height: 260px;
+    width: 100%;
+    min-width: 300px;
+    max-width: 353px;
+    height: 247px;
     margin: 0 auto;
     top: -75px;
     bottom: 0;
@@ -1993,6 +2010,18 @@ a.btn {
     table.desktop {
         display: table;
     }
+    .jumbotron {
+        background-image: url(./assets/heroes/index_hero.jpg);
+        background-position: top;
+        background-size: cover;
+        border-radius: 0px !important;
+        background-repeat: no-repeat;
+        height: 448px;
+        display: flex;
+        position: relative;
+        top: 0;
+        width: 100%;
+    }
 
     .dropdown-menu{
         background: rgba(0, 0, 0, 1);
@@ -2164,7 +2193,7 @@ a.btn {
         height: 550px;
     }
     #white-triangle {
-        width: 600px !important;
+        max-width: 600px !important;
         height: 450px !important;
         top: 35px !important;
         right: auto;
@@ -2238,6 +2267,12 @@ a.btn {
     .social-icons {
         margin: 2vh 0 2vh -5px;
     }
+    table tr td {
+        border: 1px solid var(--color-hover);
+        width: 25%;
+        text-align: center;
+        height: 7vh;
+    }
 }
 
 /* Bootstrap 5 introduces a new breakpoint to the grid system XXL. Below are the Bootstrap media queries used for the grid system breakpoints for you to add to your projects CSS file to customize things.
@@ -2305,6 +2340,10 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     }
     h1 {
         font-size: 3rem !important; 
+    }
+    .whyGoSocial h1 {
+        font-size: 2.5rem !important;
+        letter-spacing: 1px;
     }
 }
  

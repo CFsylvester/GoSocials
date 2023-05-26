@@ -173,7 +173,7 @@ dots.forEach((dot, idx) => {
     else {
       // shift the wrapper
       //let displayArea = wrapper.parentElement.clientWidth;
-      let pixels = (-280 * clickedDotNum)
+      let pixels = (-240 * clickedDotNum)
       wrapper.style.transform = 'translateX('+ pixels + 'px)';
 //       remove the active class from the active dot
       dots[activeDotNum].classList.remove('active');
