@@ -1767,6 +1767,9 @@ ul li h6 {
     font-weight: var(--semibold);
     font-size: 1rem;
 }
+.nowrap {
+    white-space: nowrap; 
+}
 ul li::marker {
     font-size: 2.5rem;
 }
