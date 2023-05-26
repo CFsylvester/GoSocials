@@ -24,7 +24,7 @@
 /* Base CSS */
 
 h1 {
-    font-size: 3rem; 
+    font-size: 2.5rem; 
     font-family: var(--font-family) !important;
     font-weight: var(--extra-bold) !important;
     color: var(--color-white) !important;
@@ -62,6 +62,7 @@ h5 {
     font-weight: var(--semibold) !important;
     color: var(--color-black) !important;
     letter-spacing: 1.2 !important;
+    font-size: 1.15rem; !important
     margin: 0px;
 }
 
@@ -70,12 +71,12 @@ h5 {
 }
 
 .navbar-brand img {
-    width: 170px;
+    width: 233px;
 }
 
 
 p {
-    font-size: 1rem; 
+    font-size: 0.75rem;
     font-family: var(--font-family);
     font-weight: var(--semibold);
     color: var(--color-black);
@@ -84,7 +85,7 @@ p {
 }
 
 td p {
-    font-weight: var(--regular);
+    font-size: 14px !important;
 }
 
 .flex-row {
@@ -128,16 +129,23 @@ td p {
 }
 
 .btn {
-    white-space: nowrap; 
+    white-space: nowrap;
     border-radius: 25px;
     width: 175px;
+    align-items: center;
+    letter-spacing: 1px;
+    DISPLAY: flex;
+    justify-content: center;
+    MARGIN: auto;
+    align-items: CENTER;
+    font-size: 0.85rem;
     height: 40px;
     font-weight: var(--bold);
     font-family: var(--font-family);
     color: var(--color-white);
     transition: all 0.16s ease-in;
-    box-shadow: -1px 3px 3px 0 rgba(80, 80, 80, .2);
-}
+    box-shadow: -1px 3px 3px 0 rgb(80 80 80 / 20%);
+   }
 
 .btn:hover {
     font-family: var(--font-family); 
@@ -235,14 +243,14 @@ label.hamburger {
 .navbar-b {
     -webkit-transition: all .5s ease-in-out;
     height: 100%;
-    position: fixed;
+    position: absolute;
     HEIGHT: fit-content;
     WIDTH: 100%;
     transition: all 0.5s ease-in-out;
-    backdrop-filter: blur(5px);
+    /* backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     background: rgba(0, 0, 0, 0.5); 
-    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px; */
 }
 
 
@@ -389,7 +397,7 @@ button.btn.circle {
 /* ------------------------------------------------ */
 /* Table */
 section.grid {
-    padding-top: 65px;
+    padding-top: 35px;
 }
 
 /* Removing all unwanted border
@@ -413,11 +421,6 @@ table tr:first-child td:first-child {
     vertical-align: bottom;
     padding-bottom: 20px;
 }
-
-/* Add extra padding to buttons */
-table tr:first-child td:not(:first-child){
-    padding: 30px 0;
-}
          
 /* Removing all unwanted border
 from right hand side by calling
@@ -432,8 +435,8 @@ tr:nth-child(odd):not(:first-child) {
 }
 
 table tr td {
-    border: 1px solid var(--color-hover); 
-    width: 25%;
+    border: 1px solid var(--color-hover);
+    width: 35%;
     text-align: center;
     height: 7vh;
 }
@@ -483,7 +486,7 @@ table tfoot tr:nth-child(3) td .line {
 /* Table - Mobile */
 table.mobile {
     display: table;
-    margin: 100px 0 0 0;
+    margin: 20px 0 0 0;
 }
 table.mobile tr:nth-child(odd) td {
     background-color: rgba(0, 0, 0, 0.05);
@@ -500,7 +503,7 @@ table.mobile thead tr td{
 }
 table.mobile tr td:first-child {
     text-align: left;
-    padding: 10px 10px 10px 30px;
+    padding: 0px 10px 0px 30px;
 }
 table.mobile tr:first-child td:first-child {
     vertical-align: middle;
@@ -514,10 +517,8 @@ table.mobile thead tr td{
 }
 /* Texture - IPad */
 section.texture {
-    padding: 6vw;
-    height: 75vh;
-    min-height: 650px;
-    max-height: 700px;
+    padding: 1vw;
+    height: 593px;
     background-image: url(./assets/index/texture.jpg);
     background-position: center;
     background-size: cover;
@@ -525,7 +526,7 @@ section.texture {
 }
 
 .texture .ipad {
-    width: 50vw;
+    width: 342px;
     min-width: 300px;
     min-height: 200px;
     max-height: 535px;
@@ -544,10 +545,6 @@ section.texture {
     width: 100%;
     border-radius: 8%;
     box-shadow: 0px 0px 41px -4px rgb(0 0 0 / 97%);
-}
-
-.texture .btn {
-    font-size: 0.9rem;
 }
 
 .texture .text {
@@ -631,11 +628,21 @@ form#contact_form {
     width: 100%;
 }
 
+.jumbotron::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    background: linear-gradient(to top, transparent 0%, black 100%);
+}
+
 .jumbotron h1 {
     text-align: center;
     white-space: nowrap;
-    font-size: 2.5rem;
-
+    letter-spacing: 1px;
 }
 
 .header, .header2 {
@@ -644,6 +651,7 @@ form#contact_form {
     max-width: 335px;
     margin: 85px auto 0;
     height: 270px;
+    z-index: 1;
 }
 
 .features .header2 {
@@ -727,18 +735,16 @@ hr {
 }
 
 .content .flexRow{
-    margin-top: 25px;
     align-items: end;
 }
 
 
 
 .content h4 {
-    text-transform: uppercase;
     font-family: var(--font-family);
     font-size: 1.5rem;
     font-weight: var(--semibold);
-    margin-bottom: 25px;
+    margin-bottom: 10px;
 }
 
 .content div h4 {
@@ -755,7 +761,7 @@ hr {
 }
 
 #carousel .packages, .charts .packages {
-    max-width: 400px;
+    max-width: 260px;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -774,7 +780,7 @@ hr {
 }
 
 .packages h4 {
-    font-size: 1.3rem;
+    font-size: 1.15rem;
 }
 
 .packages h4:hover {
@@ -864,27 +870,29 @@ hr {
 }
 
 .cards .content {
-    width: 80%;
+    width: 85%;
+    height: 80%;
 }
        
 .cards .card-text {
-    height: 80px;
-    line-height: 1.2rem;
+    height: 60px;
+    line-height: 1rem;
 }
+
 .cards .colored-card {
     border: 1px solid var(--color-hover);
     position: absolute;
     display: flex !important;
     background-position: top;
     width: 100%;
-    min-height: 250px;
-    max-width: 400px;
+    min-height: 175px;
+    max-width: 280px;
     min-width: 270px;
-    max-height: 25vw;
+    max-height: 65px;
     -webkit-animation: fadein 1s forwards;
     animation: fadein 1s forwards;
     opacity: 1;
-    box-shadow: 0 0 25px rgb(0 0 0 / 50%);
+    box-shadow: 0 0 10px rgb(0 0 0 / 50%);
 }
 
 .cards .colored-card.initial.hide {
@@ -1685,7 +1693,7 @@ h2.title {
     width: 45px; 
 }
 .checkmark {
-    height: 30px;
+    height: 23px;
 }
 .features .title {
     padding-top: 65px;
@@ -2291,9 +2299,12 @@ No media query since this is the default in Bootstrap because it is "mobile firs
  
  
 /* Small devices (landscape phones, 400px and up) */
-@media (min-width: 400px) {  
+@media (min-width: 390px) {  
     .form_buttons .btn .mobile {
         display: none;
+    }
+    h1 {
+        font-size: 3rem !important; 
     }
 }
  
