@@ -1402,8 +1402,8 @@ h2.title {
 .dot {
     border: none;
     background: rgba(0, 0, 0, 0.2);
-    width: 12px !important;
-    height: 12px !important;
+    height: 2vh !important;
+    width: 2vh !important;
     margin: 5px;
     border-radius: 50%;
     outline: none;
