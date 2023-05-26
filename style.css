@@ -503,7 +503,7 @@ table.mobile thead tr td{
 }
 table.mobile tr td:first-child {
     text-align: left;
-    padding: 0px 10px 0px 30px;
+    padding: 0px 10px 0px 20px;
 }
 table.mobile tr:first-child td:first-child {
     vertical-align: middle;
@@ -1756,6 +1756,7 @@ h2.title {
 .feature
 ul li {
     list-style-image: url("./assets/icons/checkmark_blue.svg");
+    padding-bottom: 25px; 
 }
 ul li p {
     margin-left: 10px;
