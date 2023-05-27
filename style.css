@@ -270,8 +270,18 @@ label.hamburger {
     width: 100%;
     max-width: 1200px;
     justify-content: space-evenly;
-    align-items: flex-end;
+    align-items: center;
     margin: 0;
+    
+}
+.nav-link {
+    color: white; 
+}
+.show {
+    display: block !important;
+}
+.mobile-navbar .navbar-nav .nav-item a {
+    color: black !important;
 }
 
 .navbar-reduce .navbar-nav {
@@ -280,6 +290,9 @@ label.hamburger {
 
 .navbar-toggler {
     margin: 10px 0;
+    position: absolute;
+    right: 25px;
+    top: 8px;
 }
 
 .navbar div {
@@ -308,7 +321,6 @@ label.hamburger {
 .dropdown-item {
     font-weight: var(--semibold);
     font-family: var(--font-family);
-    color: var(--color-white) !important;
 }
 
 .dropdown-item:hover {
@@ -1767,6 +1779,62 @@ ul li h6 {
     font-weight: var(--semibold);
     font-size: 1rem;
 }
+.mobile-navbar {
+    background-image: url(./assets/index/texture.jpg) !important;
+    background-position: center !important;
+    background-size: cover !important;
+    position: relative !important;
+    z-index: 0;
+}
+
+.mobile-navbar .nav-item a {
+    color: black;
+    padding: 10px;
+    font-weight: var(--semibold);
+}
+.primary-blue {
+    color: var(--color-primary-blue) !important;
+}
+.hamburger {
+    z-index: 1;
+}
+.mobile-navbar .container-fluid {
+    justify-content: flex-end;
+}
+.navbar-collapse {
+    display: none;
+}
+.mobile-navbar .navbar-collapse {
+    display: flex;
+}
+.mobile-navbar #navbarNavDropdown {
+    display: flex;
+    animation: none !important; 
+}
+.mobile-navbar .navbar-toggler {
+    z-index: 1;
+}
+.mobile-navbar .navbar-brand {
+    display: none;
+}
+.mobile-navbar .line {
+    background: black;
+}
+.mobile-navbar .navbar-nav {
+    display: none !important;
+}
+.navbar-nav-mobile {
+    display: none;
+}
+
+.mobile-navbar .navbar-nav-mobile {
+    list-style-type: none;
+    width: 100%;
+    padding-top: 60px;
+}
+.mobile-navbar .navbar-nav-mobile li a{
+    text-align: center !important;
+}
 .nowrap {
     white-space: nowrap; 
 }
@@ -1951,9 +2019,6 @@ a:hover {
 .dark.navbar a {
     color: var(--color-black);
 }
-.dark.navbar .dropdown-item {
-    color: var(--color-black) !important;
-}
 a.btn {
     color: white !important; 
 }
@@ -2023,6 +2088,11 @@ a.btn {
     /* Index */
     table.desktop {
         display: table;
+    }
+    .navbar-expand-lg .navbar-nav .dropdown-menu {
+        position: absolute;
+        background-color: white;
+        border-radius: 0;
     }
     .jumbotron {
         background-image: url(./assets/heroes/index_hero.jpg);

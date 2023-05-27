@@ -18,7 +18,27 @@ const darkBlueChart = document.getElementById('dark-blue-chart')
 const lightBlueChart = document.getElementById('light-blue-chart')
 const leftArrow = document.querySelector('.left-arrow');
 const rightArrow = document.querySelector('.right-arrow');
+const hamburger = document.getElementById('hamburger')
 let desktopCWClicks = 0; 
+
+const toggler = document.querySelector('.navbar-toggler');
+const navMobile = document.querySelector('.navbar-nav-mobile');
+const navbar = document.querySelector('.navbar'); 
+
+const togglerClick = function(e) {
+    e.preventDefault();
+
+    const attribute = toggler.getAttribute('aria-expanded');
+    if (attribute === 'true'){
+        navMobile.classList.add('show'); 
+        navbar.classList.add('mobile-navbar'); 
+        hamburger.setAttribute('checked', 'checked'); 
+    } else {
+        navMobile.classList.remove('show'); 
+        navbar.classList.remove('mobile-navbar'); 
+        $('#hamburger').removeAttr('checked'); 
+    }
+}
 
 const carouselClick = function() {
     if(this.innerHTML.trim() === "Core"){
@@ -194,5 +214,7 @@ if (chartsBasic !== null) chartsBasic.onclick =  () => {removeActive(); chartsCl
 if (chartsCore !== null) chartsCore.onclick =  () =>{removeActive(); chartsClick(darkBlueChart); $(chartsCore).addClass('active');} 
 if (chartsEnterprise !== null) chartsEnterprise.onclick =  () => {removeActive(); chartsClick(lightBlueChart); $(chartsEnterprise).addClass('active');}
 
-leftArrow.onclick = (e) => {desktopCarouselClick(e, 'left')}
-rightArrow.onclick = (e) => {desktopCarouselClick(e, 'right')}
+if (leftArrow !== null) leftArrow.onclick = (e) => {desktopCarouselClick(e, 'left')}
+if (rightArrow !== null) rightArrow.onclick = (e) => {desktopCarouselClick(e, 'right')}
+
+if (toggler !== null) toggler.onclick = (e) => {togglerClick(e)}; 
