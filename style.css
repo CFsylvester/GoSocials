@@ -1831,6 +1831,7 @@ ul li h6 {
     list-style-type: none;
     width: 100%;
     padding-top: 60px;
+    padding-left: 0;
 }
 .mobile-navbar .navbar-nav-mobile li a{
     text-align: center !important;
