@@ -546,7 +546,7 @@ section.texture {
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
     border-radius: 45px;
-    max-width: 700px;
+    max-width: 600px;;
     position: absolute;
     box-shadow: 0px 0px 15px -4px rgb(0 0 0 / 20%);
 }
@@ -562,11 +562,16 @@ section.texture {
 .texture .text {
     max-width: 350px;
 }
-
+#plans_pricing h5.text-center {
+    font-weight: 100 !important;
+}
 /* Section 3 - Contact Form */
 section.form {
     padding: 6vw;
-    margin-top: calc(10% + 10vh);
+        margin-top: calc(10% + 10vh);
+        max-width: 1200px !important;
+        margin: calc(10% + 10vh) auto 0;
+
 }
 .form .container .row>* {
     padding-right: 0px !important;
@@ -583,7 +588,7 @@ input, select {
     color: var(--color-grey);
     margin: 0px;
     padding: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
     background-color: rgb(0 0 0 / 5%);
 }
 
@@ -601,6 +606,7 @@ input:focus-visible {
 
 form#contact_form {
     margin-top: 6vw;
+    max-width: 930px !important;
 }
 
 .display-contents {
@@ -629,7 +635,7 @@ form#contact_form {
 /* Index */
 .jumbotron {
     background-image: url(./assets/whyGoSocial/hero.png);
-    background-position: top;
+    background-position: bottom;
     background-size: cover;
     border-radius: 0px !important;
     background-repeat: no-repeat;
@@ -688,15 +694,12 @@ hr {
 }
 
 .colored-cards {
-    position: absolute;
     display: none;
-    flex-direction: row;
+    position: relative;
+    width: 90vw;
+    min-width: 992px;
+    max-width: 1200px;
     justify-content: space-between;
-    bottom: -1px;
-    left: 6vw;
-    max-width: 1400px;
-    right: 6vw;
-    
 }
 
 .colored-cards > div:first-child {
@@ -711,20 +714,33 @@ hr {
 .colored-cards > div:nth-child(3) {
     background-image: url(./assets/cards/card-light-blue.png);
 }
-
+.header_container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-self: end;
+}
 .colored-card {
     position: relative;
     width: 30vw;
     height: 30vw;
-    max-height: 380px;
-    max-width: 450px;
+    max-height: 355px;
+    max-width: 375px;
     background-position: right top;
     background-size: cover;
     justify-content: center;
     align-items: center;
     display: flex
 }
-  
+.colored-cards .card-text {
+    height: 120px;
+    font-size: 18px;
+    margin: 25px 0;
+}
+.colored-cards p {
+    font-size: 18px;
+    font-weight: 100;
+}
 .flexRow {
     display: flex;
     flex-direction: row;
@@ -740,7 +756,9 @@ hr {
     align-items: end;
 }
 
-
+.colored-cards .content h4 {
+    font-size: 30px;
+}
 
 .content h4 {
     font-family: var(--font-family);
@@ -1729,7 +1747,7 @@ h2.title {
     width: 45px; 
 }
 .checkmark {
-    height: 23px;
+    height: 30px;
 }
 .features .title {
     padding-top: 45px;
@@ -2087,6 +2105,12 @@ a.btn {
 
 @media (min-width: 992px) {
     /* Index */
+    td {
+        padding: 25px 0;
+    }
+    .texture .ipad { 
+        max-width: 700px;
+    }
     table.desktop {
         display: table;
     }
@@ -2130,14 +2154,17 @@ a.btn {
         display: block !important;
     } 
 
+    .header_container {
+        margin: 0 auto;
+    }
+
     .header {
-        max-width: 570px; 
-        height: 170px;
-        margin: 0;
-        margin: 0;
-        position: absolute;
-        top: 25vh;
-        left: 6vw;
+        max-width: 570px;
+    height: 170px;
+    margin: 0;
+    margin: 0;
+    position: absolute;
+    top: 20vh;
     }
 
     .jumbotron {
