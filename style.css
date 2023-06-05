@@ -236,10 +236,6 @@ label.hamburger {
     height: 10vh;
     padding: 0px;
 }
-.nav-item .dropdown-toggle {
-    padding: 0px 0px 8px 0px !important; 
-}
-
 .navbar-b {
     -webkit-transition: all .5s ease-in-out;
     height: 100%;
@@ -569,7 +565,6 @@ section.texture {
 section.form {
     padding: 6vw;
         margin-top: calc(10% + 10vh);
-        max-width: 1200px !important;
         margin: calc(10% + 10vh) auto 0;
 
 }
@@ -661,6 +656,10 @@ form#contact_form {
     z-index: 1;
 }
 
+.header2 a {
+    margin: auto; 
+}
+
 .features .header2 {
     margin: 20px auto 0;
 }
@@ -724,13 +723,15 @@ hr {
     position: relative;
     width: 30vw;
     height: 30vw;
+    min-width: 320px;
     max-height: 355px;
+    min-height: 315px;
     max-width: 375px;
     background-position: right top;
     background-size: cover;
     justify-content: center;
     align-items: center;
-    display: flex
+    display: flex;
 }
 .colored-cards .card-text {
     height: 120px;
@@ -1042,13 +1043,18 @@ hr {
 }
 
 .header-nav {
-    display: flex;
-    justify-content: space-around;
     margin: 10px auto;
     text-align: center;
     width: 100%;
     bottom: 25px;
     position: absolute;
+}
+.header-nav div {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 500px;
+    margin: auto;
+    width: 100%;
 }
 #saving_money .title p {
     font-size: 18px;
@@ -1324,9 +1330,11 @@ svg.graph-logo-basic, svg.graph-logo-industry-average, .charts-bars, #grey-bar, 
     padding: 0;
 }
 .head-container {
-    max-width: 400px;
     padding: 25px 0;
+    padding-right: 25px;
+    max-width: 400px;
 }
+
 .textured .head .flex-container {
     display: flex;
     flex-direction: row;
@@ -1375,6 +1383,7 @@ h2.title {
 }
 .textblock {
     font-size: 18px;
+    line-height: 30px !important;
 }
 #mobile-carousel {
     min-width: 290px;
@@ -1383,11 +1392,11 @@ h2.title {
 }
 .mobile-card-carousel {
     position: relative;
-    height: 200px;
     color: black;
     font-size: 40px;
     margin-right: 10px;
-    flex: 249px 0 0;
+    height: 245px;
+    flex: 275px 0 0;
 }
 .mobile-card-carousel img {
     height: 100%;
@@ -1409,20 +1418,25 @@ h2.title {
     font-weight: var(--bold);
     font-family: var(--font-family);
     color: var(--color-primary-dark-blue);
-    margin: 0px 20px 10px;
+    margin: 10px 20px 10px;
 }
 .cards-wrapper .content .text {
     margin: 0 20px;
 }
 .content .text p {
-    line-height: 14px;
+    line-height: 20px;
 }
 .display-area {
     width: 100%;
-    overflow-x: hidden;
+    overflow-x: scroll;
     margin: auto;
     position: relative;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
+.display-area::-webkit-scrollbar {
+    display: none;
+  }
   
 .dots-wrapper {
     display: flex;
@@ -1470,7 +1484,7 @@ h2.title {
 #blue-triangle-background .blue-triangle-container {
     display: flex;
     flex-direction: row;
-    max-width: 1500px;
+    max-width: 1200px;
     width: 100%;
     margin: 0 auto;
     padding: 0 25px;
@@ -2057,7 +2071,7 @@ a.btn {
     }
     .charts-bars {
         width: 100%;
-        max-width: 1500px;
+        max-width: 1200px;
         padding: 0 25px;
     }
     #grey-bar, #chart {
@@ -2085,7 +2099,7 @@ a.btn {
     }
     .disclaimer {
         width: 100%;
-        max-width: 1500px;
+        max-width: 1200px;
         padding: 0 25px;
 
     }
@@ -2260,6 +2274,8 @@ a.btn {
     .chef-container-desktop {
         display: block;
         position: relative;
+        width: 55%;
+        margin-left: auto;
     }
     .chef-container-desktop .height-container .chef{
         overflow: HIDDEN;
@@ -2267,10 +2283,6 @@ a.btn {
         background-size: cover;
         background-repeat: no-repeat;
         width: 100%;
-        max-width: 1075px;
-    }
-    .cards-wrapper .content .title {
-        font-size: 20pt;
     }
     .display-area {
         overflow-y: hidden;
@@ -2284,8 +2296,8 @@ a.btn {
         display: none;
     }
     .mobile-card-carousel {
-        height: 300px;
-        flex: 350px 0 0;
+        height: 245px;
+    flex: 275px 0 0;
     }
     .cards-wrapper {
         padding-top: 0px;
@@ -2298,8 +2310,7 @@ a.btn {
         font-size: 2.5rem;
     }
     .content .text p, .head-container .textblock {
-        line-height: 25px;
-        font-size: 12.5pt !important;
+        line-height: 20px;
     }
     #blue-triangle-background {
         height: 550px;
@@ -2464,7 +2475,19 @@ No media query since this is the default in Bootstrap because it is "mobile firs
 }
  
 /* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1245px) {  
+@media (min-width: 1245px) { 
+    .header-nav div {
+        max-width: 700px;
+    }
+    .head-container {
+        padding: 25px 0;
+        padding-right: 0;
+        max-width: 30%;
+        margin-left: auto;
+    }
+    .header2 a {
+        margin: 35px 0 0 0; 
+    }
     .sign_up {
         min-height: calc(100vh - 205px);
     }
@@ -2537,12 +2560,12 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     }
     .whyGoSocial .hero_image2, .features .hero_image2 {
         width: fit-content;
-        display: flex;
-        margin: 0vh auto 0 75px;
-        height: 50vh;
-        right: 0;
-        top: 15%;
-        max-width: 650px;
+    display: flex;
+    /* margin: 0vh auto 0 75px; */
+    height: 60vh;
+    right: 0;
+    top: 15%;
+    max-width: 700px;
     }
     .pass .hero_image2 {
         display: flex;
@@ -2573,7 +2596,10 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         justify-content: center;
         display: flex;
     }
-    .whyGoSocial .jumbotron2, .features .jumbotron2, .pass .jumbotron2 {
+    .whyGoSocial .jumbotron2 {
+        flex-direction: row;
+    }
+    .features .jumbotron2, .pass .jumbotron2 {
         flex-direction: row;
         background-image: url(./assets/pass/jumbotron.png);
     }
@@ -2581,7 +2607,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         text-align: left;
         white-space: normal !important;
         margin-bottom: 20px;
-        font-size: 3.125rem;
+        font-size: 55px !important;
     }
     .whyGoSocial .jumbotron2 .lead2 {
         text-align: left !important;
@@ -2630,7 +2656,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         margin: auto;
     }
     .header-nav a {
-        font-size: 1.25rem;
+        font-size: 25px;
     }
     
     .header2 .catchphrase {
