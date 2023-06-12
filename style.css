@@ -1058,6 +1058,7 @@ hr {
 }
 #saving_money .title p {
     font-size: 18px;
+    font-weight: 100;
 }
 .features .header-nav {
     max-width: 1000px;
@@ -1142,9 +1143,14 @@ hr {
 .dark-grey-fill {
     display: flex;
     height: 100%;
-    width: 50%;
+    width: 0%;
     background-color: var(--color-grey);
-    animation: fillGrey 0.5s ease;
+    opacity: 0;
+}
+.dark-grey-fill.filled {
+    width: 30%;
+    display: flex !important;
+    opacity: 1;
 }
 #glow {
     display: none;
@@ -1173,7 +1179,7 @@ hr {
     opacity: 0;
 }
 .green-fill.filled {
-    width: 13%;
+    width: 7%;
     display: flex !important;
 }
 .hide {
@@ -1961,7 +1967,10 @@ ul li::marker {
     background-repeat: no-repeat;
     width: 100%;
 }
-
+h5.text-center {
+    max-width: 1000px;
+    margin: AUTO;
+}
 .pass .hero_image2 {
     max-width: 450px;
     width: 100%;
@@ -2241,18 +2250,6 @@ a.btn {
     }
 
     /* WHY */
-    .head {
-        display: flex;
-        padding: 0 0 0 25px;
-        justify-content: center;
-        padding-bottom: 0;
-        max-width: 1500px;
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        min-width: none;
-        margin: auto; 
-    }
     #difference-mobile .head {
         display: flex;
         padding: 0 0 0 25px;
@@ -2264,7 +2261,15 @@ a.btn {
         margin-right: auto;
         min-width: none;
         margin: auto; 
+        height: 65vh;
     }
+    .head {
+        max-width: 1200px !important;
+        width: 100%;
+        margin: auto !important; 
+        justify-content: flex-start !important;
+    }
+   
     .head-container {
         margin-top: 75px;
     }
@@ -2273,7 +2278,8 @@ a.btn {
     }
     .chef-container-desktop {
         display: block;
-        position: relative;
+        position: absolute;
+        right: 0; 
         width: 55%;
         margin-left: auto;
     }
@@ -2479,12 +2485,6 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     .header-nav div {
         max-width: 700px;
     }
-    .head-container {
-        padding: 25px 0;
-        padding-right: 0;
-        max-width: 30%;
-        margin-left: auto;
-    }
     .header2 a {
         margin: 35px 0 0 0; 
     }
@@ -2559,13 +2559,12 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         margin: auto;
     }
     .whyGoSocial .hero_image2, .features .hero_image2 {
-        width: fit-content;
     display: flex;
     /* margin: 0vh auto 0 75px; */
     height: 60vh;
     right: 0;
     top: 15%;
-    max-width: 700px;
+    max-width: 100%;
     }
     .pass .hero_image2 {
         display: flex;
@@ -2586,7 +2585,9 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         background-size: cover;
     }
     .whyGoSocial .hero_image2 img, .features .hero_image2 img, .pass .hero_image2 img {
-       width: fit-content; 
+        min-height: 375px;
+        height: 28vw;
+        max-width: 800px;
     }
     .jumbotron_container {
         position: relative;
@@ -2613,7 +2614,8 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         text-align: left !important;
         margin: 15px 0;
         letter-spacing: 1.2px;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
+        max-width: 525px;
     } 
     .features .jumbotron2 .lead2, .pass .jumbotron2 .lead2 {
         text-align: left !important;
@@ -2624,11 +2626,10 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         text-align: left !important;
     }
     .whyGoSocial .header2, .features .header2, .pass .header2 {
-        max-width: 570px; 
+        max-width: 100%; 
         height: 170px;
         margin: 0 0 0 auto;
         top: 25vh;
-        left: 3vw;
         text-align: left;
         justify-content: flex-start;
     }

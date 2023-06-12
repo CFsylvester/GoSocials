@@ -16,6 +16,9 @@ const chartsEnterprise = document.getElementById('charts-enterprise')
 const greenChart = document.getElementById('green-chart')
 const darkBlueChart = document.getElementById('dark-blue-chart')
 const lightBlueChart = document.getElementById('light-blue-chart')
+const basicGrey = document.getElementById('basic-grey')
+const coreGrey = document.getElementById('core-grey')
+const enterpriseGrey = document.getElementById('enterprise-grey');
 const leftArrow = document.querySelector('.left-arrow');
 const rightArrow = document.querySelector('.right-arrow');
 const hamburger = document.getElementById('hamburger')
@@ -105,8 +108,8 @@ const carouselClick = function() {
 
 }
 
-const chartsClick = function(e) {
-    $('#chart div').each(function(key, chart){
+const chartsClick = function(e, g) {
+    $('#chart div').each(function(){
         if($(this).data('percentage') !== $(e).data('percentage')) {
             $(this).removeClass('active').animate({
                 'width' : '0%',
@@ -117,13 +120,35 @@ const chartsClick = function(e) {
             }, 500)
         }
     })
+
+    $('#grey-bar div').each(function(){
+        if($(this).data('percentage') !== $(g).data('percentage')) {
+            $(this).removeClass('active').animate({
+                'width' : '0%',
+                'opacity': '0'
+            }, 500)
+            $(this).find('.price').animate({
+                'opacity': '0'
+            }, 500)
+        }
+    })
     
-    var percentage = $(e).data('percentage');
+    var percent = $(e).data('percentage');
     $(e).delay(500).animate({
-        'width' : percentage + '%',
+        'width' : percent + '%',
         'opacity': '1'
     }, 500)
     $(e).find('.price').animate({
+        'opacity': '1',
+        'width' : '100%'
+    }, 500)
+
+    var percentage = $(g).data('percentage');
+    $(g).delay(500).animate({
+        'width' : percentage + '%',
+        'opacity': '1'
+    }, 500)
+    $(g).find('.price').animate({
         'opacity': '1',
         'width' : '100%'
     }, 500)
@@ -154,12 +179,11 @@ const desktopCarouselClick = function(e, direction) {
         desktopCWClicks--; 
     } else {
         desktopCWClicks++; 
-        console.log(desktopCWClicks)
     }
         
         // shift the wrapper
         //let displayArea = wrapper.parentElement.clientWidth;
-        let pixels = (-355 * desktopCWClicks)
+        let pixels = (-275 * desktopCWClicks)
         wrapperDesktop.style.transform = 'translateX('+ pixels + 'px)';
 //   //       remove the active class from the active dot
 //         dots[activeDotNum].classList.remove('active');
@@ -210,9 +234,9 @@ if (carouselBasic !== null) carouselBasic.onclick = carouselClick;
 if (carouselCore !== null) carouselCore.onclick = carouselClick;
 if (carouselEnterprise !== null) carouselEnterprise.onclick = carouselClick;
 
-if (chartsBasic !== null) chartsBasic.onclick =  () => {removeActive(); chartsClick(greenChart); $(chartsBasic).addClass('active'); }
-if (chartsCore !== null) chartsCore.onclick =  () =>{removeActive(); chartsClick(darkBlueChart); $(chartsCore).addClass('active');} 
-if (chartsEnterprise !== null) chartsEnterprise.onclick =  () => {removeActive(); chartsClick(lightBlueChart); $(chartsEnterprise).addClass('active');}
+if (chartsBasic !== null) chartsBasic.onclick =  () => {removeActive(); chartsClick(greenChart, basicGrey); $(chartsBasic).addClass('active'); }
+if (chartsCore !== null) chartsCore.onclick =  () =>{removeActive(); chartsClick(darkBlueChart, coreGrey); $(chartsCore).addClass('active');} 
+if (chartsEnterprise !== null) chartsEnterprise.onclick =  () => {removeActive(); chartsClick(lightBlueChart, enterpriseGrey); $(chartsEnterprise).addClass('active');}
 
 if (leftArrow !== null) leftArrow.onclick = (e) => {desktopCarouselClick(e, 'left')}
 if (rightArrow !== null) rightArrow.onclick = (e) => {desktopCarouselClick(e, 'right')}
