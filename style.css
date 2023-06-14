@@ -62,12 +62,12 @@ h5 {
     font-weight: var(--semibold) !important;
     color: var(--color-black) !important;
     letter-spacing: 1.2 !important;
-    font-size: 1.15rem; !important
+    font-size: 1.15rem !important; 
     margin: 0px;
 }
 
 .navbar-brand {
-    margin: 10px 0;
+    margin: 10px; 
 }
 
 .navbar-brand img {
@@ -1708,7 +1708,6 @@ h2.title {
 }
 #iphone2{
     width: 185px;
-    margin-left: 55px;
 }
 
 .pass .feature #blue-triangle-background {
@@ -1746,7 +1745,7 @@ h2.title {
 
 .jumbotron2 .lead2 {
     font-weight: var(--semibold) !important;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 .features .header2 {
     display: flex;
@@ -1893,6 +1892,7 @@ ul li::marker {
     width: 100%;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 .feature-image img {
     background-position: center;
@@ -2028,16 +2028,21 @@ h5.text-center {
     color: var(--color-primary-blue) !important; 
 }
 .sign_up input, .sign_up select {
-    background-color: white;
+    background-color: white !important;
     margin-bottom: 0px;
     color: var(--color-black);
-}
-.sign_up select {
-    background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+) no-repeat 95% 50%;
-	-moz-appearance: none; 
-	-webkit-appearance: none; 
-	appearance: none;
-    
+    width: 96%;
+    border: none;
+    border-bottom: 1px solid var(--color-hover);
+    font-size: 1.10rem;
+    font-family: var(--font-family) !important;
+    font-weight: var(--semibold);
+    letter-spacing: 1.2 !important;
+    margin: 0px;
+    padding: 15px;
+    border-radius: 0;
+    margin-bottom: 35px;
+    background-color: rgb(0 0 0 / 5%);
 }
 .flex {
     display: flex;
@@ -2078,6 +2083,11 @@ a.btn {
 .hamburger.dark .line {
     background-color: var(--color-black);
 }
+
+#step_one p.text-black {
+    font-size: 1rem;
+}
+
 /* -------------MEDIA QUERIEs----------------- */
 /* SMALL */
 @media (min-width: 576px){
@@ -2398,7 +2408,7 @@ a.btn {
         margin: 0 50px 0 0;
     }
     .feature-image {
-        display: flex;
+        display: flex !important;
         justify-content: center;
     }
     .pass .feature-image {
@@ -2456,7 +2466,7 @@ Bootstrap 5 breakpoints
 Extra small devices (portrait phones, less than 576px) 
 No media query since this is the default in Bootstrap because it is "mobile first"
 */
-@media (min-width: 375px) {
+@media (min-width: 320px) {
     .flex {
         display: flex;
         flex-direction: row;
@@ -2495,6 +2505,17 @@ No media query since this is the default in Bootstrap because it is "mobile firs
  
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1245px) { 
+    .arrow1-text p, .arrow2-text p, .arrow3-text p, .arrow4-text p, .arrow5-text p {
+        font-family: 'Kalam', cursive;
+        font-size: 1rem;
+    }
+    .arrow1-text {
+        position: absolute;
+        right: 120px;
+        top: -58px;
+        width: 300px;
+        text-align: right;
+    }
     .header-nav div {
         max-width: 1300px;
     }
@@ -2505,6 +2526,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         min-height: calc(100vh - 205px);
     }
     #iphone2 {
+        max-width: 350px;
         width: 100%;
     }
     .pass .feature-image .cta_image {
@@ -2517,30 +2539,38 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         max-width: 500px;
         max-height: 700px;
     }
+    #iphone1{
+        max-width: 350px;
+        margin-top: 100px;
+    }
     .pass_mobile {
         display: block;
     }
     .flex.pass_mobile.swap {
         flex-direction: row-reverse;
     }
+   
     .arrow1 {
-        height: 120px !important;
-        width: 41px !important;
+        height: 125px !important;
+        width: 75px !important;
+        right: 29px;
+        top: -35px;
     }
+    
     .arrow2 {
         min-height: 25px !important;
         min-width: 25px !important;
-        height: 75px !important;
-        width: 80px !important;
+        height: 100px !important;
+        width: 100px !important;
         position: absolute;
-        left: 70px;
-        bottom: 235px;
+        left: 80px;
+        bottom: 175px;
     }
     .arrow2-text {
         position: absolute;
-        top: 345px;
-        left: 35px;
-        width: 60px;
+        top: 265px;
+        left: 32px;
+        width: 90px;
         text-align: left;
     }
     .arrow3 {
@@ -2549,15 +2579,14 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         height: 65px !important;
         width: 75px !important;
         position: absolute;
-        right: -30px;
-        top: 360px;
-        bottom: 51px;
+        right: 90px;
+        top: 300px;
     }
     .arrow3-text {
         position: absolute;
-        right: -90px;
-        bottom: 275px;
-        width: 50px;
+        right: 10px;
+        bottom: 215px;
+        width: 75px;
         text-align: left;
     }
     .cta {
@@ -2565,6 +2594,16 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         width: 825px;
         margin: auto;
         align-items: center;
+    }
+    .cta p {
+        font-size: 1rem;
+        font-weight: 100;
+        letter-spacing: 1px;
+        line-height: 1.75rem;
+    }
+    .cta .catchphrase {
+        font-size: 12px;
+        font-weight: 600;
     }
     .flex.pass_mobile {
         display: flex;
@@ -2581,11 +2620,9 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     }
     .pass .hero_image2 {
         display: flex;
-        margin: 165px 25px 0;
-        height: 50vh;
-        max-width: 650px;
+        margin: 150px 0px 50px;
         overflow: hidden;
-    
+        max-width: 750px;
     }
     .circle_features{
         background-repeat: no-repeat;
@@ -2597,18 +2634,26 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         background-image: url(./assets/pass/circles_bottom.png);
         background-size: cover;
     }
-    .whyGoSocial .hero_image2 img, .features .hero_image2 img, .pass .hero_image2 img {
+    .whyGoSocial .hero_image2 img, .features .hero_image2 img{
         min-height: 375px;
         height: 28vw;
         max-width: 800px;
+    }
+    .pass .hero_image2 img {
+        aspect-ratio: 1;
+        height: 45vw;
+        max-height: 700px;
     }
     .jumbotron_container {
         position: relative;
         width: 1500px;
         margin: 0 auto;
-        padding: 0 65px;
         justify-content: center;
         display: flex;
+    }
+    .features .jumbotron_container, .whyGoSocial .jumbotron_container {
+        width: 1200px;
+        padding: 0 50px;
     }
     .whyGoSocial .jumbotron2 {
         flex-direction: row;
@@ -2649,21 +2694,28 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         text-align: left;
         justify-content: flex-start;
     }
-    .features .header2, .pass .header2 {
+    .features .header2 {
         max-width: 600px; 
         height: 170px;
         margin: 0 0 0 auto;
         text-align: left;
         justify-content: flex-start;
     }
-    
+    .pass .header2 {
+        max-width: 500px; 
+        height: 170px;
+        margin-left: 0;
+        text-align: left;
+        justify-content: flex-start;
+    }
     .features .header2{
         top: 20%;
         left: 0;
     }
     .pass .header2 {
-        top: 20%;
+        top: 160px;
         left: 0;
+        margin: 0 100px 0 0;
     }
 
     .whyGoSocial .jumbotron2,  .features .jumbotron2,  .pass .jumbotron2{
@@ -2696,7 +2748,6 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         width: 100%;
     }
     .colorful-title {
-        width: 700px;
         margin: auto;
         display: block;
     }
@@ -2704,7 +2755,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         display: flex;
         flex-direction: column;
         max-width: 100%;
-        line-height: 18px;
+        font-size: 26pt;
     }
     .align-right {
         text-align: right !important;
@@ -2713,24 +2764,28 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         text-align: left !important;
     }
     #iphone3 {
+        max-width: 300px;
         width: 100%;
-        margin: auto;
     }
     .arrow4 {
         min-height: 25px !important;
         min-width: 25px !important;
         height: 35px !important;
-        width: 236px !important;
+        width: 165px !important;
         position: absolute;
-        left: -30px;
-        bottom: 200px;
+        left: 145px;
+        bottom: 150px;
     }
     .arrow4-text {
         position: absolute;
-        left: -75px;
-        bottom: 250px;
-        width: 100px;
+        left: 15px;
+        bottom: 165px;
+        width: 145px;
         text-align: left;
+    }
+    #graph2 {
+        max-width: 350px;
+        width: 100%;
     }
     .arrow5 {
         min-height: 25px !important;
@@ -2738,14 +2793,14 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         height: 75px !important;
         width: 75px !important;
         position: absolute;
-        right: 100px;
-        bottom: -45px;
+        right: 160px;
+        bottom: -50px;
     }
     .arrow5-text {
         position: absolute;
-        right: 185px;
-        bottom: -45px;
-        width: 100px;
+        right: 240px;
+        bottom: -62px;
+        width: 155px;
         text-align: right;
     }
     .pass #white-triangle .container h4 {
