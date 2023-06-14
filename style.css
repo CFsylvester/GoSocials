@@ -1060,7 +1060,7 @@ hr {
     font-weight: 100;
 }
 .features .header-nav {
-    max-width: 1300px;
+    max-width: 1200px;
     margin: 1% auto;
     display: flex;
     justify-content: space-between;
@@ -2517,7 +2517,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         text-align: right;
     }
     .header-nav div {
-        max-width: 1300px;
+        max-width: 1200px;
     }
     .header2 a {
         margin: 35px 0 0 0; 
@@ -2637,7 +2637,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     .whyGoSocial .hero_image2 img, .features .hero_image2 img{
         min-height: 375px;
         height: 28vw;
-        max-width: 800px;
+        max-width: 675px;
     }
     .pass .hero_image2 img {
         aspect-ratio: 1;
@@ -2652,8 +2652,8 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         display: flex;
     }
     .features .jumbotron_container, .whyGoSocial .jumbotron_container {
-        width: 1200px;
         padding: 0 50px;
+        max-width: 1400px;
     }
     .whyGoSocial .jumbotron2 {
         flex-direction: row;
