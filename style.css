@@ -28,16 +28,16 @@ h1 {
     font-family: var(--font-family) !important;
     font-weight: var(--extra-bold) !important;
     color: var(--color-white) !important;
-    letter-spacing: 1.2 !important;
+    letter-spacing: 1.2px !important;
     margin: 0px;
 }
 
 h2 {
-    font-size: 2rem; 
+    font-size: 2.5rem; 
     font-family: var(--font-family) !important;
     font-weight: var(--semibold) !important;
     color: var(--color-black) !important;
-    letter-spacing: 1.2 !important;
+    letter-spacing: 1.2px !important;
     margin: 0px;
 }
 
@@ -61,8 +61,8 @@ h5 {
     font-family: var(--font-family) !important;
     font-weight: var(--semibold) !important;
     color: var(--color-black) !important;
-    letter-spacing: 1.2 !important;
-    font-size: 1.15rem !important; 
+    letter-spacing: 1px !important;
+    font-size: 1.5rem !important;
     margin: 0px;
 }
 
@@ -76,7 +76,7 @@ h5 {
 
 
 p {
-    font-size: 0.75rem;
+    font-size: 1rem;
     font-family: var(--font-family);
     font-weight: var(--semibold);
     color: var(--color-black);
@@ -139,7 +139,7 @@ td p {
     MARGIN: auto;
     align-items: CENTER;
     font-size: 0.85rem;
-    height: 40px;
+    height: 48px;
     font-weight: var(--bold);
     font-family: var(--font-family);
     color: var(--color-white);
@@ -576,10 +576,10 @@ input, select {
     width: 96%;
     border: none;
     border-bottom: 1px solid var(--color-hover);
-    font-size: 1.10rem; 
+    font-size: 1.5rem; 
     font-family: var(--font-family) !important;
     font-weight: var(--semibold);
-    letter-spacing: 1.2 !important;
+    letter-spacing: 1.2px !important;
     color: var(--color-grey);
     margin: 0px;
     padding: 15px;
@@ -588,10 +588,10 @@ input, select {
 }
 
 input::placeholder {
-    font-size: 1.10rem; 
+    font-size: 1.5rem; 
     font-family: var(--font-family) !important;
     font-weight: var(--semibold);
-    letter-spacing: 1.2 !important;
+    letter-spacing: 1.2px !important;
     color: var(--color-hover);
 }
 
@@ -601,7 +601,7 @@ input:focus-visible {
 
 form#contact_form {
     margin-top: 6vw;
-    max-width: 930px !important;
+    max-width: 1200px !important;
 }
 
 .display-contents {
@@ -1037,7 +1037,7 @@ hr {
     min-width: 315px;
     width: 100%;
     display: flex;
-    margin: 35px auto;
+    margin: 55px auto;
     justify-content: center;
     position: relative;
 }
@@ -1060,7 +1060,7 @@ hr {
     font-weight: 100;
 }
 .features .header-nav {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 1% auto;
     display: flex;
     justify-content: space-between;
@@ -1137,7 +1137,7 @@ hr {
 
 #grey-bar, #chart {
     display: flex;
-    height: 66px;
+    height: 80px;
     position: relative;
     background-color: var(--color-hover25);
 }
@@ -1195,7 +1195,7 @@ hr {
     display: flex !important;
 }
 .green-fill .price {
-    line-height: 66px;
+    line-height: 80px;
     position: relative;
     justify-content: center;
     display: flex;
@@ -1219,7 +1219,7 @@ svg.vector {
 .dark-grey-fill .price {
     opacity: 1;
     width: 100%;
-    line-height: 66px;
+    line-height: 80px;
     position: relative;
     justify-content: center;
     display: flex;
@@ -1228,7 +1228,7 @@ svg.vector {
     color: var(--color-white);
 }
 .dark-blue-fill .price {
-    line-height: 66px;
+    line-height: 80px;
     position: relative;
     justify-content: center;
     display: flex;
@@ -1237,8 +1237,14 @@ svg.vector {
     text-align: center;
     color: var(--color-white);
 }
+.price {
+    font-size: 1.25rem;
+}
+.price p {
+    font-size: 1.25rem;
+}
 .light-blue-fill .price {
-    line-height: 66px;
+    line-height: 80px;
     position: relative;
     justify-content: center;
     display: flex;
@@ -1298,7 +1304,7 @@ svg.graph-logo-basic, svg.graph-logo-industry-average, .charts-bars, #grey-bar, 
 .disclaimer {
     text-align: left;
     margin: 35px auto 0;
-    font-size: 12px;
+    font-size: 14px;
     padding: 0px 5px;
     max-width: 340px;
 }
@@ -1419,6 +1425,9 @@ h2.title {
     top: 30px;
     width: 100% !important;
 }
+.cards-wrapper .content .text p{
+    font-size: 10pt;
+}
 .cards-wrapper .content .title {
     text-transform: capitalize;
     font-size: 16px;
@@ -1485,9 +1494,9 @@ h2.title {
 .feature #blue-triangle-background {
     background-image: url(./assets/features/blue-triangle.png);
 }
-.feature #blue-triangle-background .blue-triangle-container {
+/* .feature #blue-triangle-background .blue-triangle-container {
     max-width: 1000px;
-}
+} */
 #blue-triangle-background .blue-triangle-container {
     display: flex;
     flex-direction: row;
@@ -1526,7 +1535,7 @@ h2.title {
     white-space: nowrap;
 }
 .pass #white-triangle .container h4{
-    font-size: 12pt;
+    font-size: 22pt !important;
     white-space: nowrap;
 }
 #white-triangle .container p{
@@ -1557,7 +1566,8 @@ h2.title {
     line-height: 25px;
 }
 .fourteen {
-    font-size: 12pt !important;
+    font-size: 16pt !important;
+    font-weight: var(--semibold);
 }
 .container .get-pricing {
     margin-left: 0px !important;
@@ -1711,7 +1721,7 @@ h2.title {
 }
 
 .pass .feature #blue-triangle-background {
-    margin-top: 200px;
+    margin-top: 300px;
 }
 
 /* -------------Features----------------- */
@@ -1978,7 +1988,7 @@ ul li::marker {
     width: 100%;
 }
 h5.text-center {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: AUTO;
 }
 .pass .hero_image2 {
@@ -2094,6 +2104,22 @@ a.btn {
     .form .container .buttons {
        flex-direction: row;
     }
+    .charts .packages {
+        max-width: 1200px;
+        padding: 0 25px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    .charts .packages > h4 {
+        width: 33%;
+        margin: 0;
+        font-size: 1rem;
+        line-height: 50px;
+    }
+    .charts .packages > h4:nth-child(2) {
+        margin: 0 50px;
+    }
     .form .container .buttons {
         max-width: 400px;
         margin: 60px auto;
@@ -2139,6 +2165,9 @@ a.btn {
     .features .title {
         width: 60%;
         max-width: 1000px;
+    }
+    .hide {
+        display: none;
     }
    
 }
@@ -2266,7 +2295,7 @@ a.btn {
         display: block;
     }
     #glow img {
-        height: 700px;
+        height: 500px;
     }
 
     /* WHY */
@@ -2281,7 +2310,7 @@ a.btn {
         margin-right: auto;
         min-width: none;
         margin: auto; 
-        height: 65vh;
+        height: 700px;
     }
     .head {
         max-width: 1200px !important;
@@ -2365,7 +2394,8 @@ a.btn {
     }
     #white-triangle .container h4 {
         margin-top: 10px;
-        font-size: 20pt !important;
+        font-weight: 600;
+        font-size: 24pt !important;
         white-space: nowrap !important;
     }
     #white-triangle .container .checkmark {
@@ -2385,7 +2415,7 @@ a.btn {
         margin-bottom: 30px;
     }
     #blue-triangle-background .blue-triangle-container .text {
-        width: 345px;
+        width: 385px;
         top: initial;
         position: relative;
         margin: auto 0;
@@ -2517,7 +2547,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         text-align: right;
     }
     .header-nav div {
-        max-width: 1200px;
+        max-width: 1000px;
     }
     .header2 a {
         margin: 35px 0 0 0; 
@@ -2526,22 +2556,19 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         min-height: calc(100vh - 205px);
     }
     #iphone2 {
-        max-width: 350px;
         width: 100%;
     }
     .pass .feature-image .cta_image {
         background-position: center;
-        background-size: cover;
+        background-size: contain;
         width: 100%;
         height: 100%;
         min-height: 0;
         min-width: auto;
-        max-width: 500px;
-        max-height: 700px;
+        max-height: 725px;
+        max-width: fit-content;
     }
     #iphone1{
-        max-width: 350px;
-        margin-top: 100px;
     }
     .pass_mobile {
         display: block;
@@ -2551,7 +2578,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     }
    
     .arrow1 {
-        height: 125px !important;
+        height: 150px !important;
         width: 75px !important;
         right: 29px;
         top: -35px;
@@ -2564,34 +2591,34 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         width: 100px !important;
         position: absolute;
         left: 80px;
-        bottom: 175px;
+        bottom: 235px;
     }
     .arrow2-text {
         position: absolute;
-        top: 265px;
-        left: 32px;
+        top: 340px;
+        left: 40px;
         width: 90px;
         text-align: left;
     }
     .arrow3 {
         min-height: 25px !important;
         min-width: 25px !important;
-        height: 65px !important;
-        width: 75px !important;
+        height: 80px !important;
+        width: 80px !important;
         position: absolute;
-        right: 90px;
-        top: 300px;
+        right: 120px;
+        top: 369px;
     }
     .arrow3-text {
         position: absolute;
-        right: 10px;
-        bottom: 215px;
+        right: 40px;
+        bottom: 265px;
         width: 75px;
         text-align: left;
     }
     .cta {
         height: 100%;
-        width: 825px;
+        width: 750px;
         margin: auto;
         align-items: center;
     }
@@ -2607,7 +2634,8 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     }
     .flex.pass_mobile {
         display: flex;
-        max-width: 1000px;
+        max-width: 1200px;
+        padding: 0 50px;
         margin: auto;
     }
     .whyGoSocial .hero_image2, .features .hero_image2 {
@@ -2620,9 +2648,9 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     }
     .pass .hero_image2 {
         display: flex;
-        margin: 150px 0px 50px;
         overflow: hidden;
-        max-width: 750px;
+        max-width: none;
+        margin: 100px 0px 50px;
     }
     .circle_features{
         background-repeat: no-repeat;
@@ -2635,18 +2663,18 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         background-size: cover;
     }
     .whyGoSocial .hero_image2 img, .features .hero_image2 img{
-        min-height: 375px;
+        /* min-height: 375px;
         height: 28vw;
-        max-width: 675px;
+        max-width: 675px; */
     }
     .pass .hero_image2 img {
-        aspect-ratio: 1;
-        height: 45vw;
-        max-height: 700px;
+        background-size: contain;
+        width: auto;
     }
     .jumbotron_container {
         position: relative;
-        width: 1500px;
+        width: 1300px;
+        padding: 0 50px;
         margin: 0 auto;
         justify-content: center;
         display: flex;
@@ -2713,9 +2741,9 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         left: 0;
     }
     .pass .header2 {
-        top: 160px;
+        top: 125px;
         left: 0;
-        margin: 0 100px 0 0;
+        margin: 0 50px 0 0;
     }
 
     .whyGoSocial .jumbotron2,  .features .jumbotron2,  .pass .jumbotron2{
@@ -2733,6 +2761,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     }
     .header-nav a {
         font-size: 25px;
+        font-weight: 600;
     }
     
     .header2 .catchphrase {
@@ -2742,7 +2771,8 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         display: none;
     }
     .pass .feature .title {
-        max-width: 1000px;
+        max-width: 1200px;
+        padding: 100px 50px;
     }
     .pass .title {
         width: 100%;
@@ -2755,7 +2785,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         display: flex;
         flex-direction: column;
         max-width: 100%;
-        font-size: 26pt;
+        font-size: 30pt;
     }
     .align-right {
         text-align: right !important;
@@ -2764,33 +2794,32 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         text-align: left !important;
     }
     #iphone3 {
-        max-width: 300px;
         width: 100%;
     }
     .arrow4 {
         min-height: 25px !important;
         min-width: 25px !important;
-        height: 35px !important;
-        width: 165px !important;
+        height: 45px !important;
+        width: 220px !important;
         position: absolute;
         left: 145px;
-        bottom: 150px;
+        bottom: 205px;
     }
     .arrow4-text {
         position: absolute;
-        left: 15px;
-        bottom: 165px;
+        left: 25px;
+        bottom: 250px;
         width: 145px;
         text-align: left;
     }
     #graph2 {
-        max-width: 350px;
+        max-width: 450px;
         width: 100%;
     }
     .arrow5 {
         min-height: 25px !important;
         min-width: 25px !important;
-        height: 75px !important;
+        height: 90px !important;
         width: 75px !important;
         position: absolute;
         right: 160px;
