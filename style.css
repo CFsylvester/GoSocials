@@ -526,7 +526,8 @@ table.mobile thead tr td{
 /* Texture - IPad */
 section.texture {
     padding: 1vw;
-    height: 593px;
+    min-height: 750px;
+    height: 100%;
     background-image: url(./assets/index/texture.jpg);
     background-position: center;
     background-size: cover;
@@ -1240,9 +1241,6 @@ svg.vector {
 .price {
     font-size: 1.25rem;
 }
-.price p {
-    font-size: 1.25rem;
-}
 .light-blue-fill .price {
     line-height: 80px;
     position: relative;
@@ -1532,10 +1530,6 @@ h2.title {
 }
 #white-triangle .container h4{
     font-size: 14pt;
-    white-space: nowrap;
-}
-.pass #white-triangle .container h4{
-    font-size: 22pt !important;
     white-space: nowrap;
 }
 #white-triangle .container p{
@@ -2097,8 +2091,20 @@ a.btn {
 #step_one p.text-black {
     font-size: 1rem;
 }
+.pass #white-triangle .container h4{
+    font-size: 13pt;
+    white-space: nowrap;
+}
 
 /* -------------MEDIA QUERIEs----------------- */
+@media (min-width: 480px){
+    .texture .ipad {
+        top: 800px;
+    }
+    .index section.form {
+        margin: 200px auto 0;
+    }
+}
 /* SMALL */
 @media (min-width: 576px){
     .form .container .buttons {
@@ -2182,6 +2188,7 @@ a.btn {
     }
     .texture .ipad { 
         max-width: 700px;
+        top: 700px;
     }
     table.desktop {
         display: table;
@@ -2535,9 +2542,16 @@ No media query since this is the default in Bootstrap because it is "mobile firs
  
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1245px) { 
+    .pass #white-triangle .container h4{
+        font-size: 22pt !important;
+        white-space: nowrap;
+    }
     .arrow1-text p, .arrow2-text p, .arrow3-text p, .arrow4-text p, .arrow5-text p {
         font-family: 'Kalam', cursive;
         font-size: 1rem;
+    }
+    .price p {
+        font-size: 1.25rem;
     }
     .arrow1-text {
         position: absolute;
