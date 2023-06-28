@@ -67,7 +67,7 @@ h5 {
 }
 
 .navbar-brand {
-    margin: 10px; 
+    margin: 10px 0; 
 }
 
 .navbar-brand img {
@@ -234,7 +234,7 @@ label.hamburger {
 /* Navbar */
 .navbar {
     height: 10vh;
-    padding: 0px;
+    padding: 15px 0;
 }
 .navbar-b {
     -webkit-transition: all .5s ease-in-out;
@@ -1025,9 +1025,9 @@ hr {
 
 .whyGoSocial .hero_image2 img {
     background-position: right;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
-    max-width: 95%;
+    max-width: 100%;
 }
 .whyGoSocial h1 {
     font-size: 2rem;
@@ -1061,7 +1061,6 @@ hr {
     font-weight: 100;
 }
 .features .header-nav {
-    max-width: 1000px;
     margin: 1% auto;
     display: flex;
     justify-content: space-between;
@@ -1498,7 +1497,7 @@ h2.title {
 #blue-triangle-background .blue-triangle-container {
     display: flex;
     flex-direction: row;
-    max-width: 1200px;
+    max-width: 1350px;
     width: 100%;
     margin: 0 auto;
     padding: 0 25px;
@@ -1882,13 +1881,14 @@ ul li h6 {
     white-space: nowrap; 
 }
 ul li::marker {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
 }
 .nomax {
     max-height: none !important;
 }
 .container-fluid {
-    max-width: 1350px;
+    max-width: 1400px;
+    padding: 0 25px !important;
     margin: auto;
 }
 .feature-image {
@@ -1918,9 +1918,9 @@ ul li::marker {
 .feature .content {
     display: flex;
     flex-direction: column;
-    max-width: 1000px;
+    max-width: 1400px;
     width: 100%;
-    padding: 20px;
+    padding: 0 25px;
     margin: auto;
 }
 .feature .content ul {
@@ -2111,7 +2111,7 @@ a.btn {
        flex-direction: row;
     }
     .charts .packages {
-        max-width: 1200px;
+        max-width: 1350px;
         padding: 0 25px;
         margin: auto;
         display: flex;
@@ -2132,7 +2132,7 @@ a.btn {
     }
     .charts-bars {
         width: 100%;
-        max-width: 1200px;
+        max-width: 1350px;
         padding: 0 25px;
     }
     #grey-bar, #chart {
@@ -2160,7 +2160,7 @@ a.btn {
     }
     .disclaimer {
         width: 100%;
-        max-width: 1200px;
+        max-width: 1350px;
         padding: 0 25px;
 
     }
@@ -2220,7 +2220,7 @@ a.btn {
     .navbar-nav {
         width: 100%;
         max-width: 1000px;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
     .nav-item.dropdown{
         display: flex;
@@ -2320,7 +2320,8 @@ a.btn {
         height: 700px;
     }
     .head {
-        max-width: 1200px !important;
+        max-width: 1350px !important;
+        padding: 0 25px;
         width: 100%;
         margin: auto !important; 
         justify-content: flex-start !important;
@@ -2542,6 +2543,20 @@ No media query since this is the default in Bootstrap because it is "mobile firs
  
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1245px) { 
+    ul li h6 {
+        margin-left: 10px;
+        margin-bottom: 10px;
+        font-weight: var(--semibold);
+        font-size: 1.25rem;
+    }
+    .feature-image img {
+        height: auto;
+    }
+    .feature .content ul {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto 60px;
+    }
     .pass #white-triangle .container h4{
         font-size: 22pt !important;
         white-space: nowrap;
@@ -2561,7 +2576,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         text-align: right;
     }
     .header-nav div {
-        max-width: 1000px;
+        max-width: 1350px;
     }
     .header2 a {
         margin: 35px 0 0 0; 
@@ -2652,19 +2667,28 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         padding: 0 50px;
         margin: auto;
     }
-    .whyGoSocial .hero_image2, .features .hero_image2 {
-    display: flex;
-    /* margin: 0vh auto 0 75px; */
-    height: 60vh;
-    right: 0;
-    top: 15%;
-    max-width: 100%;
+    .whyGoSocial .hero_image2{
+        display: flex;
+        height: 550px;
+        right: 0;
+        top: 200px;
+        margin: 0;
+        max-width: fit-content;
+    }
+    .features .hero_image2 {
+        height: 550px;
+        text-align: end;
+        top: 150px;
+        margin: 0;
+        max-width: 100%;
+        display: block;
     }
     .pass .hero_image2 {
         display: flex;
         overflow: hidden;
         max-width: none;
-        margin: 100px 0px 50px;
+        max-height: 675px;
+        margin: 150px 0px 50px;
     }
     .circle_features{
         background-repeat: no-repeat;
@@ -2676,10 +2700,11 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         background-image: url(./assets/pass/circles_bottom.png);
         background-size: cover;
     }
-    .whyGoSocial .hero_image2 img, .features .hero_image2 img{
-        /* min-height: 375px;
-        height: 28vw;
-        max-width: 675px; */
+    .features .hero_image2 img{
+        background-position: right;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100%;
     }
     .pass .hero_image2 img {
         background-size: contain;
@@ -2687,15 +2712,15 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     }
     .jumbotron_container {
         position: relative;
-        width: 1300px;
-        padding: 0 50px;
         margin: 0 auto;
         justify-content: center;
         display: flex;
+        padding: 0 25px;
+        max-width: 1400px;
     }
     .features .jumbotron_container, .whyGoSocial .jumbotron_container {
-        padding: 0 50px;
         max-width: 1400px;
+        padding: 0 25px;
     }
     .whyGoSocial .jumbotron2 {
         flex-direction: row;
@@ -2732,7 +2757,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         max-width: 100%; 
         height: 170px;
         margin: 0 0 0 auto;
-        top: 25vh;
+        top: 300px;
         text-align: left;
         justify-content: flex-start;
     }
@@ -2751,17 +2776,18 @@ No media query since this is the default in Bootstrap because it is "mobile firs
         justify-content: flex-start;
     }
     .features .header2{
-        top: 20%;
+        top: 150px;
         left: 0;
     }
     .pass .header2 {
-        top: 125px;
+        top: 175px;
         left: 0;
         margin: 0 50px 0 0;
     }
 
     .whyGoSocial .jumbotron2,  .features .jumbotron2,  .pass .jumbotron2{
         height: 100vh; 
+        max-height: 950px;
     }
     .header-nav {
         position: absolute;
